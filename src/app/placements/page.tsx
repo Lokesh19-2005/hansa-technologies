@@ -6,21 +6,21 @@ import Link from "next/link";
 export default function PlacementsPage() {
   return (
     <>
-      <section style={{ padding: "100px 24px" }}>
-        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+      <section className="px-5 sm:px-6 py-16 sm:py-24">
+        <div className="max-w-[700px] mx-auto">
           <FadeIn>
-            <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, lineHeight: 1.15, color: "#ffffff", marginBottom: "20px" }}>
+            <h1 className="text-[2rem] sm:text-[2.8rem] font-bold leading-[1.15] text-white mb-5" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
               From learning<br /><span style={{ color: "#4cd964" }}>to earning.</span>
             </h1>
-            <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.4)", lineHeight: 1.7, maxWidth: "500px" }}>
+            <p className="text-[14px] sm:text-[15px] leading-relaxed max-w-[500px]" style={{ color: "rgba(255,255,255,0.4)" }}>
               Complete career support — from training to placement. We provide everything you need to land your first (or next) tech job.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      <section style={{ padding: "0 24px 80px" }}>
-        <div style={{ maxWidth: "700px", margin: "0 auto", display: "flex", flexWrap: "wrap", gap: "40px" }}>
+      <section className="px-5 sm:px-6 pb-16 sm:pb-20">
+        <div className="max-w-[700px] mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6">
           {[
             { v: "1,000+", l: "Placed" },
             { v: "200+", l: "Partners" },
@@ -29,7 +29,7 @@ export default function PlacementsPage() {
           ].map((s, i) => (
             <FadeIn key={s.l} delay={i * 0.05}>
               <div>
-                <span className="stat-value" style={{ display: "block", fontSize: "28px" }}>{s.v}</span>
+                <span className="stat-value block text-[22px] sm:text-[28px]">{s.v}</span>
                 <span className="stat-label">{s.l}</span>
               </div>
             </FadeIn>
@@ -37,12 +37,12 @@ export default function PlacementsPage() {
         </div>
       </section>
 
-      <section style={{ padding: "80px 24px", borderTop: "1px solid rgba(255,255,255,0.04)" }}>
-        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+      <section className="px-5 sm:px-6 py-16 sm:py-20" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
+        <div className="max-w-[700px] mx-auto">
           <FadeIn>
-            <h2 style={{ fontSize: "24px", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, color: "#ffffff", marginBottom: "40px" }}>How we help</h2>
+            <h2 className="text-[22px] sm:text-[24px] font-semibold text-white mb-8 sm:mb-10" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>How we help</h2>
           </FadeIn>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "32px" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {[
               { t: "Placement Assistance", d: "Dedicated cell connecting trained students with hiring companies." },
               { t: "Interview Preparation", d: "Mock interviews, technical rounds, HR prep, and GD training." },
@@ -53,8 +53,8 @@ export default function PlacementsPage() {
             ].map((s, i) => (
               <FadeIn key={s.t} delay={i * 0.04}>
                 <div>
-                  <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#ffffff", marginBottom: "6px" }}>{s.t}</h3>
-                  <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)", lineHeight: 1.7 }}>{s.d}</p>
+                  <h3 className="text-[14px] font-semibold text-white mb-1.5">{s.t}</h3>
+                  <p className="text-[13px] leading-relaxed" style={{ color: "rgba(255,255,255,0.35)" }}>{s.d}</p>
                 </div>
               </FadeIn>
             ))}
@@ -62,10 +62,10 @@ export default function PlacementsPage() {
         </div>
       </section>
 
-      <section style={{ padding: "80px 24px", borderTop: "1px solid rgba(255,255,255,0.04)" }}>
-        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+      <section className="px-5 sm:px-6 py-16 sm:py-20" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
+        <div className="max-w-[700px] mx-auto">
           <FadeIn>
-            <h2 style={{ fontSize: "24px", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, color: "#ffffff", marginBottom: "40px" }}>Career transformations</h2>
+            <h2 className="text-[22px] sm:text-[24px] font-semibold text-white mb-8 sm:mb-10" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Career transformations</h2>
           </FadeIn>
           {[
             { name: "Arun Prasad", from: "BSc Graduate", to: "Software Engineer, Cognizant" },
@@ -75,18 +75,18 @@ export default function PlacementsPage() {
             { name: "Venkat Rao", from: "B.Com Graduate", to: "SAP Consultant, Deloitte" },
           ].map((s, i) => (
             <FadeIn key={s.name} delay={i * 0.04}>
-              <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", padding: "18px 0", borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
-                <span style={{ fontSize: "14px", fontWeight: 500, color: "#ffffff" }}>{s.name}</span>
-                <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)" }}>{s.from}</span>
-                  <span style={{ fontSize: "12px", color: "#4cd964" }}>→</span>
-                  <span style={{ fontSize: "12px", fontWeight: 500, color: "rgba(255,255,255,0.6)" }}>{s.to}</span>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between py-4" style={{ borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
+                <span className="text-[14px] font-medium text-white">{s.name}</span>
+                <div className="flex items-center gap-2 mt-1 sm:mt-0">
+                  <span className="text-[12px]" style={{ color: "rgba(255,255,255,0.3)" }}>{s.from}</span>
+                  <span className="text-[12px]" style={{ color: "#4cd964" }}>→</span>
+                  <span className="text-[12px] font-medium" style={{ color: "rgba(255,255,255,0.6)" }}>{s.to}</span>
                 </div>
               </div>
             </FadeIn>
           ))}
           <FadeIn delay={0.3}>
-            <div style={{ marginTop: "40px" }}>
+            <div className="mt-10">
               <Link href="/contact" className="btn-primary">Start Your Journey</Link>
             </div>
           </FadeIn>
