@@ -46,7 +46,7 @@ export default function Navbar() {
             alt="Hansa Technologies"
             width={200}
             height={100}
-            style={{ height: "65px", width: "auto" }}
+            style={{ height: "130px", width: "auto" }}
             priority
           />
         </Link>
