@@ -18,21 +18,26 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section style={{ backgroundColor: "#18181b", color: "#ffffff", padding: "80px 24px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+      <section style={{ position: "relative", padding: "120px 24px 100px", overflow: "hidden" }}>
+        {/* Background gradient orbs */}
+        <div style={{ position: "absolute", top: "-200px", left: "-100px", width: "500px", height: "500px", background: "radial-gradient(circle, rgba(76,217,100,0.06) 0%, transparent 70%)", borderRadius: "50%" }} />
+        <div style={{ position: "absolute", bottom: "-200px", right: "-100px", width: "600px", height: "600px", background: "radial-gradient(circle, rgba(52,199,89,0.04) 0%, transparent 70%)", borderRadius: "50%" }} />
+        
+        <div style={{ maxWidth: "1100px", margin: "0 auto", position: "relative" }}>
           <FadeIn>
-            <div style={{ maxWidth: "600px" }}>
-              <img src="/logo.png" alt="Hansa Technologies" style={{ height: "100px", marginBottom: "32px" }} />
+            <div style={{ maxWidth: "650px" }}>
+              <img src="/logo.png" alt="Hansa Technologies" style={{ height: "100px", marginBottom: "40px" }} />
 
-              <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, lineHeight: 1.15, letterSpacing: "-0.02em", marginBottom: "20px" }}>
-                Learn software skills that get you hired.
+              <h1 style={{ fontSize: "clamp(2.4rem, 5vw, 3.6rem)", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, lineHeight: 1.1, letterSpacing: "-0.03em", marginBottom: "24px", color: "#ffffff" }}>
+                Learn software skills<br />
+                <span style={{ color: "#4cd964" }}>that get you hired.</span>
               </h1>
 
-              <p style={{ fontSize: "16px", color: "#a1a1aa", lineHeight: 1.6, marginBottom: "32px" }}>
+              <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.45)", lineHeight: 1.7, marginBottom: "36px", maxWidth: "480px" }}>
                 Master in-demand skills in Python, AI, Data Science, and more through practical training, real projects, and dedicated placement support.
               </p>
 
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", marginBottom: "32px" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", marginBottom: "40px" }}>
                 <Link href="/courses" className="btn-primary">Start Learning</Link>
                 <Link href="/contact" className="btn-secondary">Book Free Consultation</Link>
               </div>
@@ -48,15 +53,15 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section style={{ backgroundColor: "#ffffff", borderBottom: "1px solid #f4f4f5", padding: "24px" }}>
+      <section style={{ borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)", padding: "32px 24px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "24px" }}>
           <FadeIn>
-            <div style={{ display: "flex", gap: "40px" }}>
+            <div style={{ display: "flex", gap: "48px" }}>
               {[
                 { v: "30+", l: "Years" },
-                { v: "5,000+", l: "Students Trained" },
-                { v: "1,000+", l: "Placements" },
-                { v: "5★", l: "Google Rating" },
+                { v: "5,000+", l: "Students" },
+                { v: "1,000+", l: "Placed" },
+                { v: "5★", l: "Google" },
               ].map((s) => (
                 <div key={s.l} style={{ textAlign: "center" }}>
                   <span className="stat-value" style={{ display: "block" }}>{s.v}</span>
@@ -65,29 +70,31 @@ export default function Home() {
               ))}
             </div>
           </FadeIn>
-          <span style={{ fontSize: "12px", color: "#a1a1aa" }}>AI-Based Training Institute · Since 1994</span>
+          <span style={{ fontSize: "11px", color: "rgba(255,255,255,0.25)", letterSpacing: "0.05em" }}>AI-BASED TRAINING · SINCE 1994</span>
         </div>
       </section>
 
       {/* Find your path */}
-      <section style={{ backgroundColor: "#ffffff", padding: "80px 24px" }}>
+      <section style={{ padding: "100px 24px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontSize: "26px", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, marginBottom: "8px", color: "#18181b" }}>Find your path</h2>
-            <p style={{ fontSize: "14px", color: "#71717a", marginBottom: "40px" }}>Choose the track that matches your goals.</p>
+            <h2 style={{ fontSize: "32px", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, color: "#ffffff", marginBottom: "8px" }}>
+              Find your path
+            </h2>
+            <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.35)", marginBottom: "48px" }}>Choose the track that matches your goals.</p>
           </FadeIn>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "16px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "16px" }}>
             {[
-              { title: "I'm starting fresh", desc: "Zero experience? We'll take you from basics to job-ready with step-by-step courses and hands-on projects.", cta: "Explore Beginner Programs →" },
-              { title: "I want to switch careers", desc: "Already working but want to move into tech? Our accelerated programs are designed for career changers.", cta: "View Career Tracks →" },
-              { title: "I want to upskill", desc: "Already in tech? Level up with AI, data science, and advanced programming to stay ahead.", cta: "Browse Advanced Courses →" },
+              { title: "I'm starting fresh", desc: "Zero experience? We take you from basics to job-ready with hands-on projects and mentorship.", cta: "Explore Beginner Programs →" },
+              { title: "I want to switch careers", desc: "Working in another field? Our accelerated programs are designed for career changers moving into tech.", cta: "View Career Tracks →" },
+              { title: "I want to upskill", desc: "Already in tech? Level up with AI, data science, and advanced programming to stay ahead of the curve.", cta: "Browse Advanced Courses →" },
             ].map((p, i) => (
               <FadeIn key={p.title} delay={i * 0.08}>
                 <Link href="/courses" className="card-muted" style={{ display: "block", height: "100%", textDecoration: "none" }}>
-                  <h3 style={{ fontSize: "15px", fontWeight: 600, color: "#18181b", marginBottom: "8px" }}>{p.title}</h3>
-                  <p style={{ fontSize: "13px", color: "#71717a", lineHeight: 1.6, marginBottom: "16px" }}>{p.desc}</p>
-                  <span style={{ fontSize: "13px", fontWeight: 500, color: "#18181b" }}>{p.cta}</span>
+                  <h3 style={{ fontSize: "16px", fontWeight: 600, color: "#ffffff", marginBottom: "10px" }}>{p.title}</h3>
+                  <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)", lineHeight: 1.7, marginBottom: "20px" }}>{p.desc}</p>
+                  <span style={{ fontSize: "13px", fontWeight: 500, color: "#4cd964" }}>{p.cta}</span>
                 </Link>
               </FadeIn>
             ))}
@@ -96,28 +103,28 @@ export default function Home() {
       </section>
 
       {/* Popular Programs */}
-      <section style={{ backgroundColor: "#fafafa", padding: "80px 24px" }}>
+      <section style={{ padding: "100px 24px", backgroundColor: "rgba(255,255,255,0.01)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <FadeIn>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "40px" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "48px" }}>
               <div>
-                <h2 style={{ fontSize: "26px", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, color: "#18181b", marginBottom: "8px" }}>Popular Programs</h2>
-                <p style={{ fontSize: "14px", color: "#71717a" }}>Every program includes projects, mentorship & placement support.</p>
+                <h2 style={{ fontSize: "32px", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, color: "#ffffff", marginBottom: "8px" }}>Popular Programs</h2>
+                <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.35)" }}>Every program includes projects, mentorship & placement support.</p>
               </div>
-              <Link href="/courses" style={{ fontSize: "13px", fontWeight: 500, color: "#18181b", textDecoration: "none" }}>View All →</Link>
+              <Link href="/courses" style={{ fontSize: "13px", fontWeight: 500, color: "#4cd964", textDecoration: "none" }}>View All →</Link>
             </div>
           </FadeIn>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "16px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "16px" }}>
             {topCourses.map((course, i) => (
               <FadeIn key={course.name} delay={i * 0.05}>
                 <Link href="/courses" className="card" style={{ display: "block", textDecoration: "none", height: "100%" }}>
-                  <div style={{ display: "flex", gap: "8px", marginBottom: "12px" }}>
-                    <span style={{ fontSize: "11px", color: "#a1a1aa", backgroundColor: "#f4f4f5", padding: "2px 8px", borderRadius: "4px" }}>{course.level}</span>
-                    <span style={{ fontSize: "11px", color: "#a1a1aa" }}>{course.duration}</span>
+                  <div style={{ display: "flex", gap: "8px", marginBottom: "14px" }}>
+                    <span style={{ fontSize: "11px", color: "#4cd964", backgroundColor: "rgba(76,217,100,0.08)", padding: "3px 10px", borderRadius: "12px" }}>{course.level}</span>
+                    <span style={{ fontSize: "11px", color: "rgba(255,255,255,0.3)", padding: "3px 0" }}>{course.duration}</span>
                   </div>
-                  <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#18181b", marginBottom: "6px" }}>{course.name}</h3>
-                  <p style={{ fontSize: "13px", color: "#71717a", lineHeight: 1.5 }}>{course.desc}</p>
+                  <h3 style={{ fontSize: "15px", fontWeight: 600, color: "#ffffff", marginBottom: "8px" }}>{course.name}</h3>
+                  <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)", lineHeight: 1.6 }}>{course.desc}</p>
                 </Link>
               </FadeIn>
             ))}
@@ -126,13 +133,13 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section style={{ backgroundColor: "#ffffff", padding: "80px 24px" }}>
+      <section style={{ padding: "100px 24px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontSize: "26px", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, color: "#18181b", marginBottom: "40px" }}>Student success stories</h2>
+            <h2 style={{ fontSize: "32px", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, color: "#ffffff", marginBottom: "48px" }}>Student success stories</h2>
           </FadeIn>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "16px" }}>
             {[
               { text: "From zero coding knowledge to a developer role at TCS in 8 months. The practical approach made all the difference.", name: "Sai Krishna", role: "Full Stack Developer, TCS" },
               { text: "Got placed at Infosys within a month of course completion. The mentors are genuinely invested in your success.", name: "Priya Reddy", role: "Data Analyst, Infosys" },
@@ -140,10 +147,10 @@ export default function Home() {
               { text: "Career switch from mechanical engineering to IT. The Python course gave me everything I needed.", name: "Kiran Reddy", role: "Python Developer, Infosys" },
             ].map((t, i) => (
               <FadeIn key={t.name} delay={i * 0.06}>
-                <div style={{ backgroundColor: "#fafafa", borderRadius: "12px", padding: "24px" }}>
-                  <p style={{ fontSize: "14px", color: "#52525b", lineHeight: 1.6, marginBottom: "16px" }}>&ldquo;{t.text}&rdquo;</p>
-                  <p style={{ fontSize: "13px", fontWeight: 500, color: "#18181b" }}>{t.name}</p>
-                  <p style={{ fontSize: "12px", color: "#a1a1aa" }}>{t.role}</p>
+                <div className="card">
+                  <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.5)", lineHeight: 1.7, marginBottom: "20px" }}>&ldquo;{t.text}&rdquo;</p>
+                  <p style={{ fontSize: "13px", fontWeight: 500, color: "#ffffff" }}>{t.name}</p>
+                  <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.3)" }}>{t.role}</p>
                 </div>
               </FadeIn>
             ))}
@@ -152,11 +159,12 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section style={{ backgroundColor: "#18181b", color: "#ffffff", padding: "80px 24px", textAlign: "center" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+      <section style={{ padding: "100px 24px", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: "600px", height: "600px", background: "radial-gradient(circle, rgba(76,217,100,0.05) 0%, transparent 60%)", borderRadius: "50%" }} />
+        <div style={{ maxWidth: "1100px", margin: "0 auto", textAlign: "center", position: "relative" }}>
           <FadeIn>
-            <h2 style={{ fontSize: "26px", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, marginBottom: "12px" }}>Ready to start your learning journey?</h2>
-            <p style={{ fontSize: "14px", color: "#a1a1aa", marginBottom: "32px" }}>Join 5,000+ students who transformed their careers. Free consultation available.</p>
+            <h2 style={{ fontSize: "32px", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, color: "#ffffff", marginBottom: "12px" }}>Ready to transform your career?</h2>
+            <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.35)", marginBottom: "36px", maxWidth: "400px", margin: "0 auto 36px" }}>Join 5,000+ students who built successful careers. Free consultation available.</p>
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "12px" }}>
               <Link href="/contact" className="btn-primary">Get Started Free</Link>
               <a href="https://wa.me/919949960200" target="_blank" rel="noopener noreferrer" className="btn-secondary">WhatsApp Us</a>

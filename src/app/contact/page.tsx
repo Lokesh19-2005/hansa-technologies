@@ -4,13 +4,13 @@ import { FadeIn } from "@/components/AnimatedText";
 
 export default function ContactPage() {
   return (
-    <section style={{ backgroundColor: "#ffffff", padding: "80px 24px" }}>
+    <section style={{ padding: "100px 24px" }}>
       <div style={{ maxWidth: "800px", margin: "0 auto" }}>
         <FadeIn>
-          <h1 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, color: "#18181b", marginBottom: "10px" }}>
+          <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, color: "#ffffff", marginBottom: "8px" }}>
             Get in touch
           </h1>
-          <p style={{ fontSize: "15px", color: "#71717a", marginBottom: "48px", maxWidth: "400px" }}>
+          <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.35)", marginBottom: "56px", maxWidth: "400px" }}>
             Book a free career consultation. We&apos;ll help you choose the right program.
           </p>
         </FadeIn>
@@ -21,21 +21,21 @@ export default function ContactPage() {
             <form style={{ display: "flex", flexDirection: "column", gap: "20px" }} onSubmit={(e) => e.preventDefault()}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
                 <div>
-                  <label style={{ fontSize: "12px", color: "#a1a1aa", marginBottom: "6px", display: "block" }}>Name</label>
-                  <input type="text" placeholder="Your name" style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", backgroundColor: "#fafafa", border: "none", fontSize: "14px", color: "#18181b", outline: "none" }} />
+                  <label style={{ fontSize: "11px", color: "rgba(255,255,255,0.3)", marginBottom: "8px", display: "block", textTransform: "uppercase", letterSpacing: "0.05em" }}>Name</label>
+                  <input type="text" placeholder="Your name" style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", fontSize: "14px", color: "#ffffff", outline: "none" }} />
                 </div>
                 <div>
-                  <label style={{ fontSize: "12px", color: "#a1a1aa", marginBottom: "6px", display: "block" }}>Phone</label>
-                  <input type="tel" placeholder="+91" style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", backgroundColor: "#fafafa", border: "none", fontSize: "14px", color: "#18181b", outline: "none" }} />
+                  <label style={{ fontSize: "11px", color: "rgba(255,255,255,0.3)", marginBottom: "8px", display: "block", textTransform: "uppercase", letterSpacing: "0.05em" }}>Phone</label>
+                  <input type="tel" placeholder="+91" style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", fontSize: "14px", color: "#ffffff", outline: "none" }} />
                 </div>
               </div>
               <div>
-                <label style={{ fontSize: "12px", color: "#a1a1aa", marginBottom: "6px", display: "block" }}>Email</label>
-                <input type="email" placeholder="you@email.com" style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", backgroundColor: "#fafafa", border: "none", fontSize: "14px", color: "#18181b", outline: "none" }} />
+                <label style={{ fontSize: "11px", color: "rgba(255,255,255,0.3)", marginBottom: "8px", display: "block", textTransform: "uppercase", letterSpacing: "0.05em" }}>Email</label>
+                <input type="email" placeholder="you@email.com" style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", fontSize: "14px", color: "#ffffff", outline: "none" }} />
               </div>
               <div>
-                <label style={{ fontSize: "12px", color: "#a1a1aa", marginBottom: "6px", display: "block" }}>Interested Program</label>
-                <select style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", backgroundColor: "#fafafa", border: "none", fontSize: "14px", color: "#71717a", outline: "none" }}>
+                <label style={{ fontSize: "11px", color: "rgba(255,255,255,0.3)", marginBottom: "8px", display: "block", textTransform: "uppercase", letterSpacing: "0.05em" }}>Program</label>
+                <select style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", fontSize: "14px", color: "rgba(255,255,255,0.4)", outline: "none" }}>
                   <option value="">Select a program</option>
                   <option>Full Stack Python</option>
                   <option>Data Science & ML</option>
@@ -47,50 +47,50 @@ export default function ContactPage() {
                 </select>
               </div>
               <div>
-                <label style={{ fontSize: "12px", color: "#a1a1aa", marginBottom: "6px", display: "block" }}>Message</label>
-                <textarea rows={3} placeholder="Tell us about your goals..." style={{ width: "100%", padding: "10px 14px", borderRadius: "8px", backgroundColor: "#fafafa", border: "none", fontSize: "14px", color: "#18181b", outline: "none", resize: "none" }} />
+                <label style={{ fontSize: "11px", color: "rgba(255,255,255,0.3)", marginBottom: "8px", display: "block", textTransform: "uppercase", letterSpacing: "0.05em" }}>Message</label>
+                <textarea rows={3} placeholder="Tell us about your goals..." style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", fontSize: "14px", color: "#ffffff", outline: "none", resize: "none" }} />
               </div>
-              <button type="submit" className="btn-dark" style={{ width: "fit-content" }}>Send Message</button>
+              <button type="submit" className="btn-primary" style={{ width: "fit-content", marginTop: "4px" }}>Send Message</button>
             </form>
           </FadeIn>
 
           {/* Info */}
           <FadeIn delay={0.15}>
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
               <div>
-                <p style={{ fontSize: "11px", color: "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>Phone</p>
-                <a href="tel:+919849127749" style={{ fontSize: "14px", color: "#18181b", textDecoration: "none" }}>+91 98491 27749</a>
+                <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.25)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "6px" }}>Phone</p>
+                <a href="tel:+919849127749" style={{ fontSize: "14px", color: "#ffffff", textDecoration: "none" }}>+91 98491 27749</a>
               </div>
               <div>
-                <p style={{ fontSize: "11px", color: "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>WhatsApp</p>
-                <a href="https://wa.me/919949960200" style={{ fontSize: "14px", color: "#18181b", textDecoration: "none" }}>+91 99499 60200</a>
+                <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.25)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "6px" }}>WhatsApp</p>
+                <a href="https://wa.me/919949960200" style={{ fontSize: "14px", color: "#ffffff", textDecoration: "none" }}>+91 99499 60200</a>
               </div>
               <div>
-                <p style={{ fontSize: "11px", color: "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>Email</p>
-                <a href="mailto:hansatechnologies94@gmail.com" style={{ fontSize: "14px", color: "#18181b", textDecoration: "none" }}>hansatechnologies94@gmail.com</a>
+                <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.25)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "6px" }}>Email</p>
+                <a href="mailto:hansatechnologies94@gmail.com" style={{ fontSize: "14px", color: "#ffffff", textDecoration: "none" }}>hansatechnologies94@gmail.com</a>
               </div>
               <div>
-                <p style={{ fontSize: "11px", color: "#a1a1aa", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>Hours</p>
-                <p style={{ fontSize: "14px", color: "#18181b" }}>Mon–Sat, 9:00 AM – 9:00 PM</p>
-                <p style={{ fontSize: "12px", color: "#a1a1aa" }}>Sunday closed</p>
+                <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.25)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "6px" }}>Hours</p>
+                <p style={{ fontSize: "14px", color: "#ffffff" }}>Mon–Sat, 9:00 AM – 9:00 PM</p>
+                <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)" }}>Sunday closed</p>
               </div>
 
-              <div style={{ marginTop: "16px", paddingTop: "20px", borderTop: "1px solid #f4f4f5" }}>
-                <div style={{ marginBottom: "12px" }}>
-                  <p style={{ fontSize: "13px", fontWeight: 500, color: "#18181b", marginBottom: "2px" }}>Palakollu Branch</p>
-                  <p style={{ fontSize: "12px", color: "#a1a1aa" }}>Near Desalamma Temple</p>
+              <div style={{ marginTop: "16px", paddingTop: "24px", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+                <div style={{ marginBottom: "16px" }}>
+                  <p style={{ fontSize: "13px", fontWeight: 500, color: "#ffffff", marginBottom: "4px" }}>Palakollu Branch</p>
+                  <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)" }}>Near Desalamma Temple</p>
                 </div>
                 <div>
-                  <p style={{ fontSize: "13px", fontWeight: 500, color: "#18181b", marginBottom: "2px" }}>Penugonda Branch</p>
-                  <p style={{ fontSize: "12px", color: "#a1a1aa" }}>Near Kanyaka Parameswari Temple</p>
+                  <p style={{ fontSize: "13px", fontWeight: 500, color: "#ffffff", marginBottom: "4px" }}>Penugonda Branch</p>
+                  <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)" }}>Near Kanyaka Parameswari Temple</p>
                 </div>
               </div>
 
               <div style={{ display: "flex", gap: "12px", marginTop: "12px" }}>
-                <a href="https://wa.me/919949960200" target="_blank" rel="noopener noreferrer" style={{ flex: 1, textAlign: "center", padding: "10px", fontSize: "12px", fontWeight: 500, color: "#18181b", border: "1px solid #e4e4e7", borderRadius: "8px", textDecoration: "none" }}>
+                <a href="https://wa.me/919949960200" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ flex: 1, textAlign: "center", fontSize: "12px", padding: "10px" }}>
                   WhatsApp
                 </a>
-                <a href="tel:+919849127749" className="btn-dark" style={{ flex: 1, textAlign: "center", fontSize: "12px" }}>
+                <a href="tel:+919849127749" className="btn-primary" style={{ flex: 1, textAlign: "center", fontSize: "12px", padding: "10px" }}>
                   Call Now
                 </a>
               </div>

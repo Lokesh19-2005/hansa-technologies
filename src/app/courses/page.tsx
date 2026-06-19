@@ -32,13 +32,13 @@ export default function CoursesPage() {
   const filtered = active === "All" ? courses : courses.filter((c) => c.category === active);
 
   return (
-    <section style={{ backgroundColor: "#ffffff", padding: "60px 24px 80px" }}>
+    <section style={{ padding: "80px 24px" }}>
       <div style={{ maxWidth: "900px", margin: "0 auto" }}>
         <FadeIn>
-          <h1 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, color: "#18181b", marginBottom: "10px" }}>
+          <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, color: "#ffffff", marginBottom: "8px" }}>
             All Programs
           </h1>
-          <p style={{ fontSize: "15px", color: "#71717a", marginBottom: "32px" }}>
+          <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.35)", marginBottom: "36px" }}>
             Every program includes real projects, mentorship, and placement support.
           </p>
         </FadeIn>
@@ -57,26 +57,26 @@ export default function CoursesPage() {
           </div>
         </FadeIn>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "12px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "12px" }}>
           {filtered.map((course, i) => (
             <FadeIn key={course.name} delay={i * 0.02}>
-              <div style={{ backgroundColor: "#fafafa", borderRadius: "12px", padding: "20px", transition: "background-color 0.2s" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
-                  <span style={{ fontSize: "11px", color: "#a1a1aa", backgroundColor: "#ffffff", padding: "2px 8px", borderRadius: "4px" }}>{course.level}</span>
-                  <span style={{ fontSize: "11px", color: "#a1a1aa" }}>{course.duration}</span>
+              <div className="card">
+                <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "12px" }}>
+                  <span style={{ fontSize: "11px", color: "#4cd964", backgroundColor: "rgba(76,217,100,0.08)", padding: "3px 10px", borderRadius: "12px" }}>{course.level}</span>
+                  <span style={{ fontSize: "11px", color: "rgba(255,255,255,0.25)" }}>{course.duration}</span>
                 </div>
-                <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#18181b", marginBottom: "4px" }}>{course.name}</h3>
-                <p style={{ fontSize: "13px", color: "#71717a" }}>{course.desc}</p>
+                <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#ffffff", marginBottom: "6px" }}>{course.name}</h3>
+                <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)" }}>{course.desc}</p>
               </div>
             </FadeIn>
           ))}
         </div>
 
         <FadeIn delay={0.2}>
-          <div style={{ marginTop: "48px", backgroundColor: "#18181b", borderRadius: "12px", padding: "24px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "16px" }}>
+          <div className="card" style={{ marginTop: "40px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "16px", borderColor: "rgba(76,217,100,0.15)", background: "rgba(76,217,100,0.03)" }}>
             <div>
               <h3 style={{ fontSize: "15px", fontWeight: 600, color: "#ffffff", marginBottom: "4px" }}>Not sure which program to choose?</h3>
-              <p style={{ fontSize: "13px", color: "#a1a1aa" }}>Get a free consultation — we&apos;ll help you pick the right path.</p>
+              <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)" }}>Get a free consultation — we&apos;ll help you pick the right path.</p>
             </div>
             <Link href="/contact" className="btn-primary" style={{ flexShrink: 0 }}>Talk to Us</Link>
           </div>
