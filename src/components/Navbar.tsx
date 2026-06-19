@@ -2,67 +2,169 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-
-const links = [
-  { name: "Courses", href: "/courses" },
-  { name: "Placements", href: "/placements" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
-];
+import Image from "next/image";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navLinks = [
+    { href: "/courses/", label: "Programs" },
+    { href: "/placements/", label: "Placements" },
+    { href: "/about/", label: "About" },
+    { href: "/contact/", label: "Contact" },
+  ];
 
   return (
-    <header style={{ position: "sticky", top: 0, zIndex: 50, backgroundColor: "rgba(10,14,20,0.9)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-      <nav style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", height: "110px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+    <nav
+      className="nav-blur"
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 1000,
+        borderBottom: "1px solid rgba(255,255,255,0.06)",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "16px 24px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        {/* Logo */}
         <Link href="/" style={{ display: "flex", alignItems: "center" }}>
-          <img src="/logo.png" alt="Hansa Technologies" style={{ height: "100px", width: "auto" }} />
+          <Image
+            src="/logo.png"
+            alt="Hansa Technologies"
+            width={160}
+            height={80}
+            style={{ height: "50px", width: "auto" }}
+            priority
+          />
         </Link>
 
-        <div className="hidden md:flex" style={{ display: "flex", alignItems: "center", gap: "32px" }}>
-          {links.map((l) => (
-            <Link key={l.name} href={l.href} style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", textDecoration: "none", transition: "color 0.2s" }}>
-              {l.name}
+        {/* Desktop Nav Links */}
+        <div
+          className="hidden md:flex"
+          style={{ alignItems: "center", gap: "32px" }}
+        >
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              style={{
+                color: "#CBD5E1",
+                fontSize: "15px",
+                fontWeight: 400,
+                transition: "color 0.2s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#FFFFFF")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#CBD5E1")}
+            >
+              {link.label}
             </Link>
           ))}
         </div>
 
-        <div className="hidden md:flex" style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          <a href="tel:+919849127749" style={{ fontSize: "12px", color: "rgba(255,255,255,0.4)", textDecoration: "none" }}>+91 98491 27749</a>
-          <Link href="/contact" className="btn-dark" style={{ fontSize: "12px", padding: "8px 18px" }}>Get Started</Link>
+        {/* Desktop Right Side */}
+        <div
+          className="hidden md:flex"
+          style={{ alignItems: "center", gap: "20px" }}
+        >
+          <a
+            href="tel:+919848824481"
+            style={{
+              color: "#CBD5E1",
+              fontSize: "14px",
+              display: "flex",
+              alignItems: "center",
+              gap: "6px",
+            }}
+          >
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            +91 98488 24481
+          </a>
+          <Link href="/contact/" className="btn-primary" style={{ padding: "10px 20px", fontSize: "14px" }}>
+            Free Counseling
+          </Link>
         </div>
 
-        <button onClick={() => setOpen(!open)} style={{ padding: "8px", background: "none", border: "none", cursor: "pointer" }} className="md:hidden" aria-label="Menu">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.5">
-            {open ? <path d="M18 6L6 18M6 6l12 12" /> : <path d="M4 8h16M4 16h16" />}
-          </svg>
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          style={{
+            background: "none",
+            border: "none",
+            color: "#FFFFFF",
+            cursor: "pointer",
+            padding: "8px",
+          }}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? (
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
         </button>
-      </nav>
+      </div>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden"
-            style={{ borderTop: "1px solid rgba(255,255,255,0.05)", backgroundColor: "#0a0e14" }}
-          >
-            <div style={{ padding: "20px 24px", display: "flex", flexDirection: "column", gap: "16px" }}>
-              {links.map((l) => (
-                <Link key={l.name} href={l.href} onClick={() => setOpen(false)} style={{ fontSize: "15px", color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
-                  {l.name}
-                </Link>
-              ))}
-              <Link href="/contact" onClick={() => setOpen(false)} className="btn-dark" style={{ textAlign: "center", marginTop: "8px" }}>
-                Get Started
-              </Link>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+      {/* Mobile Menu */}
+      {mobileOpen && (
+        <div
+          className="md:hidden"
+          style={{
+            padding: "16px 24px 24px",
+            borderTop: "1px solid rgba(255,255,255,0.06)",
+            background: "rgba(8, 17, 31, 0.98)",
+          }}
+        >
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
+              style={{
+                display: "block",
+                padding: "12px 0",
+                color: "#CBD5E1",
+                fontSize: "16px",
+                borderBottom: "1px solid rgba(255,255,255,0.06)",
+              }}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div style={{ marginTop: "16px", display: "flex", flexDirection: "column", gap: "12px" }}>
+            <a
+              href="tel:+919848824481"
+              style={{ color: "#CBD5E1", fontSize: "14px" }}
+            >
+              📞 +91 98488 24481
+            </a>
+            <Link
+              href="/contact/"
+              className="btn-primary"
+              onClick={() => setMobileOpen(false)}
+              style={{ textAlign: "center", padding: "12px 20px" }}
+            >
+              Free Counseling
+            </Link>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 }

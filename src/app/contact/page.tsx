@@ -1,103 +1,219 @@
 "use client";
 
-import { FadeIn } from "@/components/AnimatedText";
+import { useState } from "react";
+import FadeIn from "@/components/AnimatedText";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({ name: "", phone: "", email: "", course: "", message: "" });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const whatsappMsg = `Hi, I'm ${formData.name}. I'm interested in ${formData.course || "your courses"}. ${formData.message}`;
+    window.open(`https://wa.me/919848824481?text=${encodeURIComponent(whatsappMsg)}`, "_blank");
+  };
+
   return (
-    <section style={{ padding: "100px 24px" }}>
-      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-        <FadeIn>
-          <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, color: "#ffffff", marginBottom: "8px" }}>
-            Get in touch
-          </h1>
-          <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.35)", marginBottom: "56px", maxWidth: "400px" }}>
-            Book a free career consultation. We&apos;ll help you choose the right program.
-          </p>
-        </FadeIn>
-
-        <div style={{ display: "grid", gridTemplateColumns: "3fr 2fr", gap: "56px" }}>
-          {/* Form */}
-          <FadeIn delay={0.1}>
-            <form style={{ display: "flex", flexDirection: "column", gap: "20px" }} onSubmit={(e) => e.preventDefault()}>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-                <div>
-                  <label style={{ fontSize: "11px", color: "rgba(255,255,255,0.3)", marginBottom: "8px", display: "block", textTransform: "uppercase", letterSpacing: "0.05em" }}>Name</label>
-                  <input type="text" placeholder="Your name" style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", fontSize: "14px", color: "#ffffff", outline: "none" }} />
-                </div>
-                <div>
-                  <label style={{ fontSize: "11px", color: "rgba(255,255,255,0.3)", marginBottom: "8px", display: "block", textTransform: "uppercase", letterSpacing: "0.05em" }}>Phone</label>
-                  <input type="tel" placeholder="+91" style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", fontSize: "14px", color: "#ffffff", outline: "none" }} />
-                </div>
-              </div>
-              <div>
-                <label style={{ fontSize: "11px", color: "rgba(255,255,255,0.3)", marginBottom: "8px", display: "block", textTransform: "uppercase", letterSpacing: "0.05em" }}>Email</label>
-                <input type="email" placeholder="you@email.com" style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", fontSize: "14px", color: "#ffffff", outline: "none" }} />
-              </div>
-              <div>
-                <label style={{ fontSize: "11px", color: "rgba(255,255,255,0.3)", marginBottom: "8px", display: "block", textTransform: "uppercase", letterSpacing: "0.05em" }}>Program</label>
-                <select style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", fontSize: "14px", color: "rgba(255,255,255,0.4)", outline: "none" }}>
-                  <option value="">Select a program</option>
-                  <option>Full Stack Python</option>
-                  <option>Data Science & ML</option>
-                  <option>AI Automation</option>
-                  <option>Java</option>
-                  <option>Web Development</option>
-                  <option>Digital Marketing</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div>
-                <label style={{ fontSize: "11px", color: "rgba(255,255,255,0.3)", marginBottom: "8px", display: "block", textTransform: "uppercase", letterSpacing: "0.05em" }}>Message</label>
-                <textarea rows={3} placeholder="Tell us about your goals..." style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", fontSize: "14px", color: "#ffffff", outline: "none", resize: "none" }} />
-              </div>
-              <button type="submit" className="btn-primary" style={{ width: "fit-content", marginTop: "4px" }}>Send Message</button>
-            </form>
-          </FadeIn>
-
-          {/* Info */}
-          <FadeIn delay={0.15}>
-            <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-              <div>
-                <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.25)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "6px" }}>Phone</p>
-                <a href="tel:+919849127749" style={{ fontSize: "14px", color: "#ffffff", textDecoration: "none" }}>+91 98491 27749</a>
-              </div>
-              <div>
-                <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.25)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "6px" }}>WhatsApp</p>
-                <a href="https://wa.me/919949960200" style={{ fontSize: "14px", color: "#ffffff", textDecoration: "none" }}>+91 99499 60200</a>
-              </div>
-              <div>
-                <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.25)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "6px" }}>Email</p>
-                <a href="mailto:hansatechnologies94@gmail.com" style={{ fontSize: "14px", color: "#ffffff", textDecoration: "none" }}>hansatechnologies94@gmail.com</a>
-              </div>
-              <div>
-                <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.25)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "6px" }}>Hours</p>
-                <p style={{ fontSize: "14px", color: "#ffffff" }}>Mon–Sat, 9:00 AM – 9:00 PM</p>
-                <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)" }}>Sunday closed</p>
-              </div>
-
-              <div style={{ marginTop: "16px", paddingTop: "24px", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-                <div style={{ marginBottom: "16px" }}>
-                  <p style={{ fontSize: "13px", fontWeight: 500, color: "#ffffff", marginBottom: "4px" }}>Palakollu Branch</p>
-                  <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)" }}>Near Desalamma Temple</p>
-                </div>
-                <div>
-                  <p style={{ fontSize: "13px", fontWeight: 500, color: "#ffffff", marginBottom: "4px" }}>Penugonda Branch</p>
-                  <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)" }}>Near Kanyaka Parameswari Temple</p>
-                </div>
-              </div>
-
-              <div style={{ display: "flex", gap: "12px", marginTop: "12px" }}>
-                <a href="https://wa.me/919949960200" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ flex: 1, textAlign: "center", fontSize: "12px", padding: "10px" }}>
-                  WhatsApp
-                </a>
-                <a href="tel:+919849127749" className="btn-primary" style={{ flex: 1, textAlign: "center", fontSize: "12px", padding: "10px" }}>
-                  Call Now
-                </a>
-              </div>
+    <div style={{ paddingTop: "80px" }}>
+      {/* HERO */}
+      <section className="section-padding">
+        <div className="container-max">
+          <FadeIn>
+            <div style={{ textAlign: "center", maxWidth: "720px", margin: "0 auto" }}>
+              <span style={{
+                display: "inline-block", padding: "8px 16px",
+                background: "rgba(37, 99, 235, 0.1)", border: "1px solid rgba(37, 99, 235, 0.3)",
+                borderRadius: "20px", color: "#60A5FA", fontSize: "13px", fontWeight: 500, marginBottom: "24px",
+              }}>
+                Get In Touch
+              </span>
+              <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 700, marginBottom: "20px" }}>
+                Start Your Journey Today
+              </h1>
+              <p style={{ fontSize: "16px", color: "#CBD5E1", lineHeight: "1.8" }}>
+                Book a free counseling session and let our experts guide you to the right career path.
+              </p>
             </div>
           </FadeIn>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* FORM + SIDEBAR */}
+      <section className="section-padding" style={{ background: "#0E1A2B", paddingTop: "40px" }}>
+        <div className="container-max">
+          <div className="grid grid-cols-1 lg:grid-cols-3" style={{ gap: "32px" }}>
+            {/* Form */}
+            <div style={{ gridColumn: "span 1" }} className="lg:col-span-2">
+              <FadeIn>
+                <div className="card" style={{ padding: "36px" }}>
+                  <h2 style={{ fontSize: "22px", fontWeight: 600, color: "#FFFFFF", marginBottom: "24px" }}>
+                    Free Career Counseling
+                  </h2>
+                  <form onSubmit={handleSubmit}>
+                    <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "16px", marginBottom: "16px" }}>
+                      <div>
+                        <label style={{ display: "block", fontSize: "13px", color: "#94A3B8", marginBottom: "6px" }}>Full Name *</label>
+                        <input
+                          type="text"
+                          required
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          style={{
+                            width: "100%", padding: "12px 16px", borderRadius: "8px",
+                            background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)",
+                            color: "#FFFFFF", fontSize: "14px", outline: "none",
+                            fontFamily: "var(--font-body)",
+                          }}
+                          placeholder="Your full name"
+                        />
+                      </div>
+                      <div>
+                        <label style={{ display: "block", fontSize: "13px", color: "#94A3B8", marginBottom: "6px" }}>Phone Number *</label>
+                        <input
+                          type="tel"
+                          required
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          style={{
+                            width: "100%", padding: "12px 16px", borderRadius: "8px",
+                            background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)",
+                            color: "#FFFFFF", fontSize: "14px", outline: "none",
+                            fontFamily: "var(--font-body)",
+                          }}
+                          placeholder="+91 XXXXX XXXXX"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "16px", marginBottom: "16px" }}>
+                      <div>
+                        <label style={{ display: "block", fontSize: "13px", color: "#94A3B8", marginBottom: "6px" }}>Email</label>
+                        <input
+                          type="email"
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          style={{
+                            width: "100%", padding: "12px 16px", borderRadius: "8px",
+                            background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)",
+                            color: "#FFFFFF", fontSize: "14px", outline: "none",
+                            fontFamily: "var(--font-body)",
+                          }}
+                          placeholder="your@email.com"
+                        />
+                      </div>
+                      <div>
+                        <label style={{ display: "block", fontSize: "13px", color: "#94A3B8", marginBottom: "6px" }}>Interested Course</label>
+                        <select
+                          value={formData.course}
+                          onChange={(e) => setFormData({ ...formData, course: e.target.value })}
+                          style={{
+                            width: "100%", padding: "12px 16px", borderRadius: "8px",
+                            background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)",
+                            color: "#CBD5E1", fontSize: "14px", outline: "none",
+                            fontFamily: "var(--font-body)",
+                          }}
+                        >
+                          <option value="">Select a course</option>
+                          <option value="Full Stack Development">Full Stack Development</option>
+                          <option value="Java Full Stack">Java Full Stack</option>
+                          <option value="Python Programming">Python Programming</option>
+                          <option value="AI & Machine Learning">AI & Machine Learning</option>
+                          <option value="Data Science">Data Science</option>
+                          <option value="Cloud Computing">Cloud Computing</option>
+                          <option value="Other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div style={{ marginBottom: "20px" }}>
+                      <label style={{ display: "block", fontSize: "13px", color: "#94A3B8", marginBottom: "6px" }}>Message</label>
+                      <textarea
+                        rows={4}
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        style={{
+                          width: "100%", padding: "12px 16px", borderRadius: "8px",
+                          background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)",
+                          color: "#FFFFFF", fontSize: "14px", outline: "none", resize: "vertical",
+                          fontFamily: "var(--font-body)",
+                        }}
+                        placeholder="Tell us about your goals..."
+                      />
+                    </div>
+                    <button type="submit" className="btn-primary" style={{ width: "100%", padding: "14px" }}>
+                      Send via WhatsApp
+                    </button>
+                  </form>
+                </div>
+              </FadeIn>
+            </div>
+
+            {/* Sidebar */}
+            <div>
+              <FadeIn delay={0.1}>
+                <div className="card" style={{ marginBottom: "20px" }}>
+                  <h3 style={{ fontSize: "17px", fontWeight: 600, color: "#FFFFFF", marginBottom: "20px" }}>Contact Info</h3>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                    <div style={{ display: "flex", alignItems: "flex-start", gap: "12px" }}>
+                      <span style={{ fontSize: "18px" }}>📞</span>
+                      <div>
+                        <p style={{ fontSize: "13px", color: "#94A3B8" }}>Phone</p>
+                        <a href="tel:+919848824481" style={{ fontSize: "14px", color: "#FFFFFF", fontWeight: 500 }}>+91 98488 24481</a>
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "flex-start", gap: "12px" }}>
+                      <span style={{ fontSize: "18px" }}>💬</span>
+                      <div>
+                        <p style={{ fontSize: "13px", color: "#94A3B8" }}>WhatsApp</p>
+                        <a href="https://wa.me/919848824481" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#FFFFFF", fontWeight: 500 }}>Chat with us</a>
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "flex-start", gap: "12px" }}>
+                      <span style={{ fontSize: "18px" }}>✉️</span>
+                      <div>
+                        <p style={{ fontSize: "13px", color: "#94A3B8" }}>Email</p>
+                        <p style={{ fontSize: "14px", color: "#FFFFFF", fontWeight: 500 }}>info@hansatech.in</p>
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "flex-start", gap: "12px" }}>
+                      <span style={{ fontSize: "18px" }}>⏰</span>
+                      <div>
+                        <p style={{ fontSize: "13px", color: "#94A3B8" }}>Hours</p>
+                        <p style={{ fontSize: "14px", color: "#FFFFFF", fontWeight: 500 }}>Mon-Sat: 9AM - 7PM</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+              <FadeIn delay={0.2}>
+                <div className="card" style={{ marginBottom: "20px" }}>
+                  <h3 style={{ fontSize: "17px", fontWeight: 600, color: "#FFFFFF", marginBottom: "12px" }}>📍 Palakollu Branch</h3>
+                  <p style={{ fontSize: "14px", color: "#CBD5E1", marginBottom: "8px" }}>Near Desalamma Temple, Palakollu</p>
+                  <a
+                    href="https://maps.google.com/?q=Hansa+Technologies+Palakollu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#2563EB", fontSize: "13px", fontWeight: 500 }}
+                  >
+                    Get Directions →
+                  </a>
+                </div>
+              </FadeIn>
+              <FadeIn delay={0.3}>
+                <div className="card">
+                  <h3 style={{ fontSize: "17px", fontWeight: 600, color: "#FFFFFF", marginBottom: "12px" }}>📍 Penugonda Branch</h3>
+                  <p style={{ fontSize: "14px", color: "#CBD5E1", marginBottom: "8px" }}>Near Kanyaka Parameswari Temple, Penugonda</p>
+                  <a
+                    href="https://maps.google.com/?q=Hansa+Technologies+Penugonda"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#2563EB", fontSize: "13px", fontWeight: 500 }}
+                  >
+                    Get Directions →
+                  </a>
+                </div>
+              </FadeIn>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

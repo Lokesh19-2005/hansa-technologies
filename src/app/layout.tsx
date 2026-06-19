@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-export const metadata: Metadata = {
-  title: "Hansa Technologies | AI-Based Software Training Since 1994",
-  description:
-    "Google 5-Star rated AI-Based Software Training Institute. 30+ years, 5000+ students, 1000+ placements. Python, Data Science, AI, Java & more.",
-};
 
 export default function RootLayout({
   children,
@@ -17,12 +12,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-          rel="stylesheet"
-        />
+        <title>Hansa Technologies | AI-Based Software Training Institute Since 1994</title>
+        <meta name="description" content="Hansa Technologies - Premier software training institute offering courses in Full Stack Development, AI, Data Science, and more. 30+ years of excellence in IT education." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
         <Navbar />
