@@ -68,7 +68,7 @@ export default function HomePage() {
             {/* Right - Hero Image */}
             <FadeIn delay={0.3}>
               <div style={{ height: "420px", width: "100%", position: "relative", overflow: "hidden", borderRadius: "16px" }}>
-                <img src="/images/hero-training.jpg" alt="Professional software training at Hansa Technologies" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
+                <img src="/images/hero-main.jpg" alt="Professional software training at Hansa Technologies" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
               </div>
             </FadeIn>
           </div>
@@ -113,7 +113,7 @@ export default function HomePage() {
             </div>
             <FadeIn delay={0.2}>
               <div style={{ height: "380px", width: "100%", borderRadius: "16px", overflow: "hidden" }}>
-                <img src="/images/classroom.jpg" alt="Hansa Technologies classroom" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
+                <img src="/images/about-classroom.jpg" alt="Hansa Technologies classroom" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
               </div>
             </FadeIn>
           </div>
@@ -190,7 +190,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div style={{ height: "280px", borderRadius: "16px", overflow: "hidden" }}>
-                <img src="/images/coding.jpg" alt="Software development training" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
+                <img src="/images/software-dev.jpg" alt="Software development training" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
               </div>
             </div>
           </FadeIn>
@@ -199,7 +199,7 @@ export default function HomePage() {
           <FadeIn>
             <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "40px", alignItems: "center", marginBottom: "64px" }}>
               <div style={{ height: "280px", borderRadius: "16px", overflow: "hidden" }} className="hidden lg:block">
-                <img src="/images/business-analytics.jpg" alt="Professional courses" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
+                <img src="/images/professional-courses.jpg" alt="Professional courses" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
               </div>
               <div>
                 <h3 style={{ fontSize: "24px", fontWeight: 700, color: "#FFFFFF", marginBottom: "16px" }}>Professional Courses</h3>
@@ -230,7 +230,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div style={{ height: "280px", borderRadius: "16px", overflow: "hidden" }}>
-                <img src="/images/technical-training.jpg" alt="Technical training" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
+                <img src="/images/technical-design.jpg" alt="Technical training" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
               </div>
             </div>
           </FadeIn>
@@ -239,7 +239,7 @@ export default function HomePage() {
           <FadeIn>
             <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "40px", alignItems: "center" }}>
               <div style={{ height: "280px", borderRadius: "16px", overflow: "hidden" }} className="hidden lg:block">
-                <img src="/images/placement.jpg" alt="Career development" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
+                <img src="/images/career-placement.jpg" alt="Career development" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
               </div>
               <div>
                 <h3 style={{ fontSize: "24px", fontWeight: 700, color: "#FFFFFF", marginBottom: "16px" }}>Career Development</h3>
