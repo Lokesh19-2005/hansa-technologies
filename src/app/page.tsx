@@ -22,7 +22,7 @@ export default function Home() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <FadeIn>
             <div style={{ maxWidth: "600px" }}>
-              <img src="/logo.png" alt="Hansa Technologies" style={{ height: "48px", marginBottom: "32px" }} />
+              <img src="/logo.png" alt="Hansa Technologies" style={{ height: "100px", marginBottom: "32px" }} />
 
               <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, lineHeight: 1.15, letterSpacing: "-0.02em", marginBottom: "20px" }}>
                 Learn software skills that get you hired.
