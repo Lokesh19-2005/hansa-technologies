@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 16px;
-  padding: 24px;
+  padding: 28px;
   transition: all 0.3s ease;
 }
 .card:hover {
@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 16px;
-  padding: 24px;
+  padding: 28px;
   transition: all 0.3s ease;
 }
 .card-muted:hover {
@@ -171,15 +171,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.05em;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .btn-primary, .btn-secondary, .btn-dark {
-    padding: 10px 20px;
-    font-size: 13px;
-    width: 100%;
-    justify-content: center;
-  }
-  .card, .card-muted {
-    padding: 20px;
-  }
+/* Subtle glow accent */
+.glow-accent {
+  box-shadow: 0 0 60px rgba(76, 217, 100, 0.06);
 }

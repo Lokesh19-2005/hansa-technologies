@@ -32,19 +32,19 @@ export default function CoursesPage() {
   const filtered = active === "All" ? courses : courses.filter((c) => c.category === active);
 
   return (
-    <section className="px-5 sm:px-6 py-16 sm:py-20">
-      <div className="max-w-[900px] mx-auto">
+    <section style={{ padding: "80px 24px" }}>
+      <div style={{ maxWidth: "900px", margin: "0 auto" }}>
         <FadeIn>
-          <h1 className="text-[2rem] sm:text-[2.8rem] font-bold text-white mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+          <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, color: "#ffffff", marginBottom: "8px" }}>
             All Programs
           </h1>
-          <p className="text-[14px] sm:text-[15px] mb-8 sm:mb-10" style={{ color: "rgba(255,255,255,0.35)" }}>
+          <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.35)", marginBottom: "36px" }}>
             Every program includes real projects, mentorship, and placement support.
           </p>
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="flex flex-wrap gap-2 mb-8 sm:mb-10">
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "40px" }}>
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -57,28 +57,28 @@ export default function CoursesPage() {
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "12px" }}>
           {filtered.map((course, i) => (
             <FadeIn key={course.name} delay={i * 0.02}>
               <div className="card">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-[11px] px-2.5 py-0.5 rounded-full" style={{ color: "#4cd964", backgroundColor: "rgba(76,217,100,0.08)" }}>{course.level}</span>
-                  <span className="text-[11px]" style={{ color: "rgba(255,255,255,0.25)" }}>{course.duration}</span>
+                <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "12px" }}>
+                  <span style={{ fontSize: "11px", color: "#4cd964", backgroundColor: "rgba(76,217,100,0.08)", padding: "3px 10px", borderRadius: "12px" }}>{course.level}</span>
+                  <span style={{ fontSize: "11px", color: "rgba(255,255,255,0.25)" }}>{course.duration}</span>
                 </div>
-                <h3 className="text-[14px] font-semibold text-white mb-1">{course.name}</h3>
-                <p className="text-[13px]" style={{ color: "rgba(255,255,255,0.35)" }}>{course.desc}</p>
+                <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#ffffff", marginBottom: "6px" }}>{course.name}</h3>
+                <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)" }}>{course.desc}</p>
               </div>
             </FadeIn>
           ))}
         </div>
 
         <FadeIn delay={0.2}>
-          <div className="card mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4" style={{ borderColor: "rgba(76,217,100,0.15)", background: "rgba(76,217,100,0.03)" }}>
+          <div className="card" style={{ marginTop: "40px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "16px", borderColor: "rgba(76,217,100,0.15)", background: "rgba(76,217,100,0.03)" }}>
             <div>
-              <h3 className="text-[14px] sm:text-[15px] font-semibold text-white mb-1">Not sure which program to choose?</h3>
-              <p className="text-[13px]" style={{ color: "rgba(255,255,255,0.35)" }}>Get a free consultation — we&apos;ll help you pick the right path.</p>
+              <h3 style={{ fontSize: "15px", fontWeight: 600, color: "#ffffff", marginBottom: "4px" }}>Not sure which program to choose?</h3>
+              <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)" }}>Get a free consultation — we&apos;ll help you pick the right path.</p>
             </div>
-            <Link href="/contact" className="btn-primary shrink-0">Talk to Us</Link>
+            <Link href="/contact" className="btn-primary" style={{ flexShrink: 0 }}>Talk to Us</Link>
           </div>
         </FadeIn>
       </div>

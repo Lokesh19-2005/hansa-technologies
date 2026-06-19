@@ -16,9 +16,9 @@ export default function Navbar() {
 
   return (
     <header style={{ position: "sticky", top: 0, zIndex: 50, backgroundColor: "rgba(10,14,20,0.9)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-      <nav style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", height: "90px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      <nav style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", height: "110px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <Link href="/" style={{ display: "flex", alignItems: "center" }}>
-          <img src="/logo.png" alt="Hansa Technologies" style={{ height: "80px", width: "auto" }} />
+          <img src="/logo.png" alt="Hansa Technologies" style={{ height: "100px", width: "auto" }} />
         </Link>
 
         <div className="hidden md:flex" style={{ display: "flex", alignItems: "center", gap: "32px" }}>
