@@ -7,43 +7,45 @@ export default function HomePage() {
   return (
     <div style={{ paddingTop: "80px" }}>
       {/* HERO SECTION */}
-      <section className="section-padding">
+      <section className="section-padding" style={{ background: "#08111F" }}>
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "48px", alignItems: "center" }}>
-            {/* Left */}
             <div>
               <FadeIn>
-                <span
-                  style={{
-                    display: "inline-block",
-                    padding: "8px 16px",
-                    background: "rgba(37, 99, 235, 0.1)",
-                    border: "1px solid rgba(37, 99, 235, 0.3)",
-                    borderRadius: "20px",
-                    color: "#60A5FA",
-                    fontSize: "13px",
-                    fontWeight: 500,
-                    marginBottom: "24px",
-                  }}
-                >
-                  AI-Based Software Training Institute Since 1994
+                <span style={{
+                  display: "inline-block",
+                  padding: "8px 16px",
+                  background: "rgba(37, 99, 235, 0.1)",
+                  border: "1px solid rgba(37, 99, 235, 0.3)",
+                  borderRadius: "20px",
+                  color: "#60A5FA",
+                  fontSize: "13px",
+                  fontWeight: 500,
+                  marginBottom: "24px",
+                }}>
+                  Google 5-Star Rated · AI-Based Training Since 1994
                 </span>
               </FadeIn>
               <FadeIn delay={0.1}>
-                <h1 style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 700, marginBottom: "20px", lineHeight: "1.1" }}>
+                <h1 style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 700, marginBottom: "12px", lineHeight: "1.1" }}>
                   Learn Software Skills That{" "}
-                  <span style={{ color: "#2563EB" }}>Build Careers.</span>
+                  <span style={{ color: "#2563EB" }}>Get You Hired</span>
                 </h1>
+              </FadeIn>
+              <FadeIn delay={0.15}>
+                <p style={{ fontSize: "18px", color: "#60A5FA", fontWeight: 500, marginBottom: "16px" }}>
+                  Learn • Build • Get Placed
+                </p>
               </FadeIn>
               <FadeIn delay={0.2}>
                 <p style={{ fontSize: "16px", color: "#CBD5E1", lineHeight: "1.8", marginBottom: "32px", maxWidth: "520px" }}>
-                  From fundamentals to advanced AI — master the technologies that top companies demand. 
+                  From fundamentals to advanced AI — master the technologies that top companies demand.
                   Join 5000+ students who transformed their careers with Hansa Technologies.
                 </p>
               </FadeIn>
               <FadeIn delay={0.3}>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", marginBottom: "40px" }}>
-                  <Link href="/courses/" className="btn-primary">Explore Programs</Link>
+                  <Link href="/courses/" className="btn-primary">Explore Courses</Link>
                   <Link href="/contact/" className="btn-secondary">Free Career Counseling</Link>
                 </div>
               </FadeIn>
@@ -53,7 +55,7 @@ export default function HomePage() {
                     { value: "30+", label: "Years" },
                     { value: "5000+", label: "Students" },
                     { value: "1000+", label: "Placed" },
-                    { value: "5★", label: "Google" },
+                    { value: "5★", label: "Google Rating" },
                   ].map((stat) => (
                     <div key={stat.label} style={{ textAlign: "center" }}>
                       <p style={{ fontSize: "22px", fontWeight: 700, color: "#FFFFFF", fontFamily: "var(--font-heading)" }}>{stat.value}</p>
@@ -63,87 +65,59 @@ export default function HomePage() {
                 </div>
               </FadeIn>
             </div>
-            {/* Right - Image Placeholder */}
+            {/* Right - Hero Image */}
             <FadeIn delay={0.3}>
-              <div
-                className="image-placeholder"
-                style={{
-                  height: "400px",
-                  width: "100%",
-                  position: "relative",
-                  overflow: "hidden",
-                }}
-              >
-                <div style={{ textAlign: "center", padding: "20px" }}>
-                  <div style={{ fontSize: "48px", marginBottom: "12px", opacity: 0.4 }}>🎓</div>
-                  <p style={{ color: "rgba(255,255,255,0.35)", fontSize: "14px" }}>Professional Training Environment</p>
-                </div>
+              <div style={{ height: "420px", width: "100%", position: "relative", overflow: "hidden", borderRadius: "16px" }}>
+                <img src="/images/hero-training.jpg" alt="Professional software training at Hansa Technologies" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
               </div>
             </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* PROGRAMS SECTION */}
+      {/* ABOUT SECTION */}
       <section className="section-padding" style={{ background: "#0E1A2B" }}>
         <div className="container-max">
-          <FadeIn>
-            <div style={{ textAlign: "center", marginBottom: "56px" }}>
-              <h2 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 700, marginBottom: "16px" }}>
-                Our Training Programs
-              </h2>
-              <p style={{ color: "#CBD5E1", fontSize: "16px", maxWidth: "560px", margin: "0 auto" }}>
-                Industry-aligned courses designed to make you job-ready from day one
-              </p>
-            </div>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "24px" }}>
-            {[
-              {
-                title: "Software Development",
-                desc: "Full Stack, Java, Python, MERN, .NET — build production-ready applications with modern frameworks.",
-                icon: "💻",
-              },
-              {
-                title: "AI & Data Science",
-                desc: "Machine Learning, Deep Learning, NLP, Computer Vision — harness the power of artificial intelligence.",
-                icon: "🤖",
-              },
-              {
-                title: "Professional Programs",
-                desc: "Cloud Computing, DevOps, Cyber Security, Digital Marketing — expand your professional toolkit.",
-                icon: "🚀",
-              },
-            ].map((program, i) => (
-              <FadeIn key={program.title} delay={i * 0.1}>
-                <div className="card" style={{ height: "100%" }}>
-                  <div
-                    className="image-placeholder"
-                    style={{ height: "180px", width: "100%", marginBottom: "20px" }}
-                  >
-                    <span style={{ fontSize: "40px" }}>{program.icon}</span>
-                  </div>
-                  <h3 style={{ fontSize: "20px", fontWeight: 600, marginBottom: "12px", color: "#FFFFFF" }}>
-                    {program.title}
-                  </h3>
-                  <p style={{ fontSize: "14px", color: "#CBD5E1", lineHeight: "1.7", marginBottom: "16px" }}>
-                    {program.desc}
-                  </p>
-                  <Link
-                    href="/courses/"
-                    style={{ color: "#2563EB", fontSize: "14px", fontWeight: 500, display: "inline-flex", alignItems: "center", gap: "4px" }}
-                  >
-                    View Programs <span>→</span>
-                  </Link>
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "48px", alignItems: "center" }}>
+            <div>
+              <FadeIn>
+                <span style={{ display: "inline-block", padding: "6px 14px", background: "rgba(34,197,94,0.1)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "20px", color: "#4ADE80", fontSize: "13px", fontWeight: 500, marginBottom: "20px" }}>
+                  Established 1994 · 30+ Years of Excellence
+                </span>
               </FadeIn>
-            ))}
+              <FadeIn delay={0.1}>
+                <h2 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 700, marginBottom: "16px" }}>
+                  About Hansa Technologies
+                </h2>
+              </FadeIn>
+              <FadeIn delay={0.2}>
+                <p style={{ fontSize: "16px", color: "#CBD5E1", lineHeight: "1.8", marginBottom: "16px" }}>
+                  Hansa Technologies is a premier AI-Based Software Training Institute with over 30 years of experience
+                  in transforming students into industry-ready professionals. Founded in 1994, we have trained 5000+ students
+                  and placed 1000+ in top IT companies.
+                </p>
+              </FadeIn>
+              <FadeIn delay={0.3}>
+                <p style={{ fontSize: "16px", color: "#CBD5E1", lineHeight: "1.8", marginBottom: "24px" }}>
+                  Our curriculum is continuously updated with the latest AI tools and technologies. We offer hands-on,
+                  project-based learning with dedicated mentorship and placement support from day one.
+                </p>
+              </FadeIn>
+              <FadeIn delay={0.4}>
+                <Link href="/about/" className="btn-primary" style={{ display: "inline-flex" }}>Learn More About Us</Link>
+              </FadeIn>
+            </div>
+            <FadeIn delay={0.2}>
+              <div style={{ height: "380px", width: "100%", borderRadius: "16px", overflow: "hidden" }}>
+                <img src="/images/classroom.jpg" alt="Hansa Technologies classroom" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
       {/* WHY CHOOSE HANSA */}
-      <section className="section-padding">
+      <section className="section-padding" style={{ background: "#08111F" }}>
         <div className="container-max">
           <FadeIn>
             <div style={{ textAlign: "center", marginBottom: "56px" }}>
@@ -155,20 +129,32 @@ export default function HomePage() {
               </p>
             </div>
           </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: "24px" }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: "20px" }}>
             {[
-              { title: "30+ Years Experience", desc: "Trusted by thousands of students since 1994 with a proven track record of success." },
-              { title: "AI-Powered Curriculum", desc: "Courses updated with the latest AI tools and technologies used by top companies." },
-              { title: "Placement Support", desc: "Dedicated placement cell with 200+ hiring partners ensuring career success." },
-              { title: "Real-World Projects", desc: "Build portfolio-worthy projects with industry datasets and real business problems." },
-              { title: "1-on-1 Mentorship", desc: "Personal guidance from industry experts who understand your learning pace." },
-              { title: "Certified Programs", desc: "Industry-recognized certifications that add value to your professional profile." },
+              { title: "30+ Years Experience", desc: "Trusted by thousands since 1994 with a proven track record." },
+              { title: "AI-Powered Curriculum", desc: "Courses updated with the latest AI tools and technologies." },
+              { title: "100% Placement Support", desc: "Dedicated placement cell with 200+ hiring partners." },
+              { title: "Real-World Projects", desc: "Build portfolio-worthy projects with industry datasets." },
+              { title: "1-on-1 Mentorship", desc: "Personal guidance from industry experts at your pace." },
+              { title: "Certified Programs", desc: "Industry-recognized certifications for your profile." },
+              { title: "Flexible Learning Modes", desc: "Online and offline options to suit your schedule." },
+              { title: "Affordable Fees", desc: "Quality training at accessible pricing with EMI options." },
+              { title: "Interview Preparation", desc: "Mock interviews and resume building workshops." },
+              { title: "Internship Opportunities", desc: "Gain real experience with live industry projects." },
+              { title: "Updated Technologies", desc: "Always learning the latest frameworks and tools." },
+              { title: "Small Batch Sizes", desc: "Personalized attention with limited students per batch." },
+              { title: "Weekend Batches", desc: "Special batches for working professionals." },
+              { title: "Lifetime Access", desc: "Revisit course materials and community support forever." },
             ].map((feature, i) => (
-              <FadeIn key={feature.title} delay={i * 0.08}>
-                <div style={{ padding: "24px", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.06)", background: "rgba(18, 32, 51, 0.5)" }}>
-                  <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#2563EB", marginBottom: "16px" }} />
-                  <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#FFFFFF", marginBottom: "8px" }}>{feature.title}</h4>
-                  <p style={{ fontSize: "14px", color: "#CBD5E1", lineHeight: "1.7" }}>{feature.desc}</p>
+              <FadeIn key={feature.title} delay={i * 0.05}>
+                <div style={{ padding: "20px", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.06)", background: "rgba(18, 32, 51, 0.5)" }}>
+                  <div style={{ display: "flex", alignItems: "flex-start", gap: "12px" }}>
+                    <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#2563EB", marginTop: "8px", flexShrink: 0 }} />
+                    <div>
+                      <h4 style={{ fontSize: "15px", fontWeight: 600, color: "#FFFFFF", marginBottom: "6px" }}>{feature.title}</h4>
+                      <p style={{ fontSize: "13px", color: "#CBD5E1", lineHeight: "1.6" }}>{feature.desc}</p>
+                    </div>
+                  </div>
                 </div>
               </FadeIn>
             ))}
@@ -176,82 +162,160 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* LEARNING JOURNEY */}
+      {/* OUR SERVICES */}
       <section className="section-padding" style={{ background: "#0E1A2B" }}>
         <div className="container-max">
           <FadeIn>
             <div style={{ textAlign: "center", marginBottom: "56px" }}>
               <h2 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 700, marginBottom: "16px" }}>
-                Your Learning Journey
+                Our Services
               </h2>
               <p style={{ color: "#CBD5E1", fontSize: "16px", maxWidth: "560px", margin: "0 auto" }}>
-                A structured path from enrollment to placement
+                Comprehensive training programs designed for every career stage
               </p>
             </div>
           </FadeIn>
-          {/* Desktop Timeline */}
-          <div className="hidden md:block">
-            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", position: "relative" }}>
-              {/* Connecting Line */}
-              <div style={{ position: "absolute", top: "20px", left: "40px", right: "40px", height: "2px", background: "linear-gradient(to right, #2563EB, #3B82F6, #2563EB)" }} />
-              {[
-                { step: "01", title: "Enroll", desc: "Choose your program" },
-                { step: "02", title: "Learn", desc: "Expert-led training" },
-                { step: "03", title: "Build", desc: "Real projects" },
-                { step: "04", title: "Intern", desc: "Industry exposure" },
-                { step: "05", title: "Interview", desc: "Mock interviews" },
-                { step: "06", title: "Get Placed", desc: "Career launch" },
-              ].map((item, i) => (
-                <FadeIn key={item.step} delay={i * 0.1}>
-                  <div style={{ textAlign: "center", position: "relative", zIndex: 1, flex: "1" }}>
-                    <div style={{
-                      width: "40px", height: "40px", borderRadius: "50%",
-                      background: "#2563EB", display: "flex", alignItems: "center", justifyContent: "center",
-                      margin: "0 auto 12px", fontSize: "12px", fontWeight: 700, color: "#FFFFFF",
-                      border: "3px solid #08111F",
-                    }}>
-                      {item.step}
+
+          {/* Software Training */}
+          <FadeIn>
+            <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "40px", alignItems: "center", marginBottom: "64px" }}>
+              <div>
+                <h3 style={{ fontSize: "24px", fontWeight: 700, color: "#FFFFFF", marginBottom: "16px" }}>Software Training</h3>
+                <p style={{ color: "#CBD5E1", fontSize: "14px", marginBottom: "16px" }}>Industry-standard programming and development courses</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                  {["Full Stack Development (MERN/MEAN)", "Python Programming & Django", "Java & Spring Boot", "Data Science & Machine Learning", "Artificial Intelligence & Deep Learning", "Cloud Computing (AWS/Azure)", "DevOps & CI/CD"].map((course) => (
+                    <div key={course} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                      <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#2563EB" }} />
+                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course}</span>
                     </div>
-                    <h4 style={{ fontSize: "14px", fontWeight: 600, color: "#FFFFFF", marginBottom: "4px" }}>{item.title}</h4>
-                    <p style={{ fontSize: "12px", color: "#94A3B8" }}>{item.desc}</p>
-                  </div>
-                </FadeIn>
-              ))}
+                  ))}
+                </div>
+              </div>
+              <div style={{ height: "280px", borderRadius: "16px", overflow: "hidden" }}>
+                <img src="/images/python-dev.jpg" alt="Software development training" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
+              </div>
             </div>
-          </div>
-          {/* Mobile Timeline */}
-          <div className="md:hidden">
-            <div style={{ position: "relative", paddingLeft: "32px" }}>
-              <div style={{ position: "absolute", left: "15px", top: "0", bottom: "0", width: "2px", background: "linear-gradient(to bottom, #2563EB, #3B82F6)" }} />
-              {[
-                { step: "01", title: "Enroll", desc: "Choose your program" },
-                { step: "02", title: "Learn", desc: "Expert-led training" },
-                { step: "03", title: "Build", desc: "Real projects" },
-                { step: "04", title: "Intern", desc: "Industry exposure" },
-                { step: "05", title: "Interview", desc: "Mock interviews" },
-                { step: "06", title: "Get Placed", desc: "Career launch" },
-              ].map((item, i) => (
-                <FadeIn key={item.step} delay={i * 0.08}>
-                  <div style={{ marginBottom: "28px", position: "relative" }}>
-                    <div style={{
-                      position: "absolute", left: "-25px", width: "22px", height: "22px", borderRadius: "50%",
-                      background: "#2563EB", display: "flex", alignItems: "center", justifyContent: "center",
-                      fontSize: "9px", fontWeight: 700, color: "#FFFFFF",
-                    }}>
-                      {item.step}
+          </FadeIn>
+
+          {/* Professional Courses */}
+          <FadeIn>
+            <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "40px", alignItems: "center", marginBottom: "64px" }}>
+              <div style={{ height: "280px", borderRadius: "16px", overflow: "hidden" }} className="hidden lg:block">
+                <img src="/images/business-analytics.jpg" alt="Professional courses" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
+              </div>
+              <div>
+                <h3 style={{ fontSize: "24px", fontWeight: 700, color: "#FFFFFF", marginBottom: "16px" }}>Professional Courses</h3>
+                <p style={{ color: "#CBD5E1", fontSize: "14px", marginBottom: "16px" }}>Business and analytics programs for career growth</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                  {["Digital Marketing & SEO", "Business Analytics", "Cyber Security", "Database Management (SQL/NoSQL)", "Software Testing & QA", "Salesforce Administration", "Power BI & Tableau"].map((course) => (
+                    <div key={course} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                      <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#22C55E" }} />
+                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course}</span>
                     </div>
-                    <h4 style={{ fontSize: "15px", fontWeight: 600, color: "#FFFFFF", marginBottom: "2px" }}>{item.title}</h4>
-                    <p style={{ fontSize: "13px", color: "#94A3B8" }}>{item.desc}</p>
-                  </div>
-                </FadeIn>
-              ))}
+                  ))}
+                </div>
+              </div>
             </div>
+          </FadeIn>
+
+          {/* Design & Technical */}
+          <FadeIn>
+            <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "40px", alignItems: "center", marginBottom: "64px" }}>
+              <div>
+                <h3 style={{ fontSize: "24px", fontWeight: 700, color: "#FFFFFF", marginBottom: "16px" }}>Design & Technical</h3>
+                <p style={{ color: "#CBD5E1", fontSize: "14px", marginBottom: "16px" }}>Creative and hardware-focused programs</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                  {["UI/UX Design & Figma", "Graphic Design & Adobe Suite", "AutoCAD & 3D Modeling", "Hardware & Networking"].map((course) => (
+                    <div key={course} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                      <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#A855F7" }} />
+                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div style={{ height: "280px", borderRadius: "16px", overflow: "hidden" }}>
+                <img src="/images/technical-training.jpg" alt="Technical training" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* Career Development */}
+          <FadeIn>
+            <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "40px", alignItems: "center" }}>
+              <div style={{ height: "280px", borderRadius: "16px", overflow: "hidden" }} className="hidden lg:block">
+                <img src="/images/placement.jpg" alt="Career development" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
+              </div>
+              <div>
+                <h3 style={{ fontSize: "24px", fontWeight: 700, color: "#FFFFFF", marginBottom: "16px" }}>Career Development</h3>
+                <p style={{ color: "#CBD5E1", fontSize: "14px", marginBottom: "16px" }}>Complete career support from training to placement</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                  {["Resume Building & Portfolio", "Mock Interviews & HR Rounds", "Soft Skills & Communication", "Internship Programs", "Placement Assistance", "Career Counseling"].map((course) => (
+                    <div key={course} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                      <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#F59E0B" }} />
+                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* TRAINING MODES */}
+      <section className="section-padding" style={{ background: "#08111F" }}>
+        <div className="container-max">
+          <FadeIn>
+            <div style={{ textAlign: "center", marginBottom: "48px" }}>
+              <h2 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 700, marginBottom: "16px" }}>
+                Training Modes
+              </h2>
+              <p style={{ color: "#CBD5E1", fontSize: "16px" }}>Choose the learning format that works best for you</p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "24px", maxWidth: "800px", margin: "0 auto" }}>
+            <FadeIn delay={0.1}>
+              <div className="card" style={{ textAlign: "center", padding: "40px 28px" }}>
+                <div style={{ fontSize: "48px", marginBottom: "16px" }}>🏫</div>
+                <h3 style={{ fontSize: "22px", fontWeight: 700, color: "#FFFFFF", marginBottom: "12px" }}>Offline Training</h3>
+                <p style={{ color: "#CBD5E1", fontSize: "14px", lineHeight: "1.7", marginBottom: "16px" }}>
+                  Classroom-based training at our Palakollu and Penugonda branches with hands-on lab sessions,
+                  face-to-face mentoring, and peer collaboration.
+                </p>
+                <div style={{ display: "flex", flexDirection: "column", gap: "8px", textAlign: "left" }}>
+                  {["Interactive classrooms", "Lab practice sessions", "Peer learning groups", "Direct mentor access"].map((item) => (
+                    <div key={item} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                      <span style={{ color: "#22C55E", fontSize: "14px" }}>✓</span>
+                      <span style={{ color: "#CBD5E1", fontSize: "13px" }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <div className="card" style={{ textAlign: "center", padding: "40px 28px" }}>
+                <div style={{ fontSize: "48px", marginBottom: "16px" }}>💻</div>
+                <h3 style={{ fontSize: "22px", fontWeight: 700, color: "#FFFFFF", marginBottom: "12px" }}>Online Training</h3>
+                <p style={{ color: "#CBD5E1", fontSize: "14px", lineHeight: "1.7", marginBottom: "16px" }}>
+                  Live instructor-led sessions via Zoom/Google Meet. Learn from anywhere with recorded sessions,
+                  assignments, and real-time doubt clearing.
+                </p>
+                <div style={{ display: "flex", flexDirection: "column", gap: "8px", textAlign: "left" }}>
+                  {["Live instructor sessions", "Recorded for revision", "Flexible scheduling", "Screen sharing support"].map((item) => (
+                    <div key={item} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                      <span style={{ color: "#22C55E", fontSize: "14px" }}>✓</span>
+                      <span style={{ color: "#CBD5E1", fontSize: "13px" }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* PLACEMENTS SECTION */}
-      <section className="section-padding">
+      {/* PLACEMENTS */}
+      <section className="section-padding" style={{ background: "#0E1A2B" }}>
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "48px", alignItems: "center" }}>
             <div>
@@ -261,37 +325,34 @@ export default function HomePage() {
                 </h2>
               </FadeIn>
               <FadeIn delay={0.1}>
-                <p style={{ fontSize: "16px", color: "#CBD5E1", lineHeight: "1.8", marginBottom: "32px" }}>
-                  Our dedicated placement cell works tirelessly to connect trained students with top 
-                  companies. From resume building to interview preparation, we support you at every step.
+                <p style={{ fontSize: "16px", color: "#CBD5E1", lineHeight: "1.8", marginBottom: "24px" }}>
+                  Our dedicated placement cell works tirelessly to connect trained students with top companies.
+                  From resume building to interview preparation, we support you at every step of your career journey.
                 </p>
               </FadeIn>
               <FadeIn delay={0.2}>
-                <div className="grid grid-cols-3" style={{ gap: "20px" }}>
+                <div className="grid grid-cols-3" style={{ gap: "16px", marginBottom: "24px" }}>
                   {[
                     { value: "1000+", label: "Students Placed" },
                     { value: "200+", label: "Hiring Partners" },
                     { value: "95%", label: "Placement Rate" },
                   ].map((stat) => (
-                    <div key={stat.label} style={{ textAlign: "center", padding: "16px", background: "#122033", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.06)" }}>
-                      <p style={{ fontSize: "24px", fontWeight: 700, color: "#2563EB", fontFamily: "var(--font-heading)" }}>{stat.value}</p>
-                      <p style={{ fontSize: "12px", color: "#94A3B8", marginTop: "4px" }}>{stat.label}</p>
+                    <div key={stat.label} style={{ textAlign: "center", padding: "16px 8px", background: "#122033", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.06)" }}>
+                      <p style={{ fontSize: "22px", fontWeight: 700, color: "#2563EB", fontFamily: "var(--font-heading)" }}>{stat.value}</p>
+                      <p style={{ fontSize: "11px", color: "#94A3B8", marginTop: "4px" }}>{stat.label}</p>
                     </div>
                   ))}
                 </div>
               </FadeIn>
               <FadeIn delay={0.3}>
-                <Link href="/placements/" className="btn-primary" style={{ marginTop: "28px", display: "inline-flex" }}>
+                <Link href="/placements/" className="btn-primary" style={{ display: "inline-flex" }}>
                   View Placements
                 </Link>
               </FadeIn>
             </div>
             <FadeIn delay={0.2}>
-              <div className="image-placeholder" style={{ height: "320px", width: "100%" }}>
-                <div style={{ textAlign: "center" }}>
-                  <div style={{ fontSize: "48px", marginBottom: "12px", opacity: 0.4 }}>📊</div>
-                  <p style={{ color: "rgba(255,255,255,0.35)", fontSize: "14px" }}>Placement Achievements</p>
-                </div>
+              <div style={{ height: "350px", width: "100%", borderRadius: "16px", overflow: "hidden" }}>
+                <img src="/images/interview.jpg" alt="Placement interviews" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
               </div>
             </FadeIn>
           </div>
@@ -299,7 +360,7 @@ export default function HomePage() {
       </section>
 
       {/* SUCCESS STORIES */}
-      <section className="section-padding" style={{ background: "#0E1A2B" }}>
+      <section className="section-padding" style={{ background: "#08111F" }}>
         <div className="container-max">
           <FadeIn>
             <div style={{ textAlign: "center", marginBottom: "56px" }}>
@@ -313,9 +374,9 @@ export default function HomePage() {
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "24px" }}>
             {[
-              { name: "Rajesh Kumar", role: "Software Engineer at TCS", quote: "Hansa Technologies gave me the foundation I needed. The practical training and placement support helped me land my dream job.", initials: "RK", color: "#2563EB" },
-              { name: "Priya Sharma", role: "Data Analyst at Infosys", quote: "The AI and Data Science course was comprehensive. The mentors were always available and the projects were industry-relevant.", initials: "PS", color: "#7C3AED" },
-              { name: "Venkat Reddy", role: "Full Stack Developer", quote: "From zero coding knowledge to a full stack developer — Hansa Technologies made it possible with their structured approach.", initials: "VR", color: "#059669" },
+              { name: "Rajesh Kumar", role: "Software Engineer at TCS", quote: "Hansa Technologies gave me the foundation I needed. The practical training and placement support helped me land my dream job within 3 months of completing the course.", initials: "RK", color: "#2563EB" },
+              { name: "Priya Sharma", role: "Data Analyst at Infosys", quote: "The AI and Data Science course was comprehensive. The mentors were always available and the projects were industry-relevant. I got placed before even finishing the course.", initials: "PS", color: "#7C3AED" },
+              { name: "Venkat Reddy", role: "Full Stack Developer at Wipro", quote: "From zero coding knowledge to a full stack developer — Hansa Technologies made it possible with their structured approach and constant support.", initials: "VR", color: "#059669" },
             ].map((testimonial, i) => (
               <FadeIn key={testimonial.name} delay={i * 0.1}>
                 <div className="card" style={{ height: "100%" }}>
@@ -342,8 +403,110 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* CONTACT SECTION */}
+      <section className="section-padding" style={{ background: "#0E1A2B" }}>
+        <div className="container-max">
+          <FadeIn>
+            <div style={{ textAlign: "center", marginBottom: "56px" }}>
+              <h2 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 700, marginBottom: "16px" }}>
+                Get In Touch
+              </h2>
+              <p style={{ color: "#CBD5E1", fontSize: "16px", maxWidth: "560px", margin: "0 auto" }}>
+                Ready to start? Reach out for free career counseling
+              </p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "48px" }}>
+            {/* Contact Form */}
+            <FadeIn>
+              <div className="card">
+                <h3 style={{ fontSize: "20px", fontWeight: 600, color: "#FFFFFF", marginBottom: "24px" }}>Send Us a Message</h3>
+                <form style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                  <input type="text" placeholder="Your Name" style={{ width: "100%", padding: "12px 16px", background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#FFFFFF", fontSize: "14px", outline: "none" }} />
+                  <input type="email" placeholder="Email Address" style={{ width: "100%", padding: "12px 16px", background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#FFFFFF", fontSize: "14px", outline: "none" }} />
+                  <input type="tel" placeholder="Phone Number" style={{ width: "100%", padding: "12px 16px", background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#FFFFFF", fontSize: "14px", outline: "none" }} />
+                  <select style={{ width: "100%", padding: "12px 16px", background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#94A3B8", fontSize: "14px", outline: "none" }}>
+                    <option value="">Select a Course</option>
+                    <option value="fullstack">Full Stack Development</option>
+                    <option value="python">Python Programming</option>
+                    <option value="datascience">Data Science</option>
+                    <option value="ai">AI & Machine Learning</option>
+                    <option value="java">Java Development</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <textarea placeholder="Your Message" rows={4} style={{ width: "100%", padding: "12px 16px", background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#FFFFFF", fontSize: "14px", outline: "none", resize: "vertical" }} />
+                  <button type="submit" className="btn-primary" style={{ width: "100%" }}>Send Message</button>
+                </form>
+              </div>
+            </FadeIn>
+
+            {/* Contact Details */}
+            <FadeIn delay={0.2}>
+              <div>
+                <div style={{ marginBottom: "32px" }}>
+                  <h3 style={{ fontSize: "20px", fontWeight: 600, color: "#FFFFFF", marginBottom: "20px" }}>Contact Details</h3>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                      <span style={{ fontSize: "18px" }}>📞</span>
+                      <div>
+                        <p style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 500 }}>Phone</p>
+                        <a href="tel:+919849127749" style={{ color: "#2563EB", fontSize: "14px" }}>+91 98491 27749</a>
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                      <span style={{ fontSize: "18px" }}>💬</span>
+                      <div>
+                        <p style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 500 }}>WhatsApp</p>
+                        <a href="https://wa.me/919949960200" style={{ color: "#25D366", fontSize: "14px" }}>+91 99499 60200</a>
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                      <span style={{ fontSize: "18px" }}>✉️</span>
+                      <div>
+                        <p style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 500 }}>Email</p>
+                        <p style={{ color: "#CBD5E1", fontSize: "14px" }}>info@hansatechnologies.com</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Branches */}
+                <div style={{ marginBottom: "32px" }}>
+                  <h3 style={{ fontSize: "18px", fontWeight: 600, color: "#FFFFFF", marginBottom: "16px" }}>Our Branches</h3>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                    <div style={{ padding: "16px", background: "#122033", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.06)" }}>
+                      <p style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 600 }}>📍 Palakollu Branch</p>
+                      <p style={{ color: "#CBD5E1", fontSize: "13px", marginTop: "4px" }}>Near Desalamma Temple, Palakollu</p>
+                    </div>
+                    <div style={{ padding: "16px", background: "#122033", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.06)" }}>
+                      <p style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 600 }}>📍 Penugonda Branch</p>
+                      <p style={{ color: "#CBD5E1", fontSize: "13px", marginTop: "4px" }}>Near Kanyaka Parameswari Temple, Penugonda</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Business Hours */}
+                <div>
+                  <h3 style={{ fontSize: "18px", fontWeight: 600, color: "#FFFFFF", marginBottom: "12px" }}>Business Hours</h3>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>Monday - Saturday</span>
+                      <span style={{ color: "#FFFFFF", fontSize: "14px" }}>9:00 AM - 7:00 PM</span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>Sunday</span>
+                      <span style={{ color: "#94A3B8", fontSize: "14px" }}>By Appointment</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* CTA SECTION */}
-      <section className="section-padding">
+      <section className="section-padding" style={{ background: "#08111F" }}>
         <div className="container-max">
           <FadeIn>
             <div style={{
@@ -358,54 +521,16 @@ export default function HomePage() {
               </h2>
               <p style={{ color: "#CBD5E1", fontSize: "16px", maxWidth: "480px", margin: "0 auto 28px" }}>
                 Join thousands of students who have transformed their careers with industry-ready skills.
+                Your first consultation is free.
               </p>
               <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "14px" }}>
                 <Link href="/courses/" className="btn-primary">Explore Programs</Link>
-                <Link href="/contact/" className="btn-secondary">Talk to Us</Link>
+                <a href="https://wa.me/919949960200" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                  WhatsApp Us
+                </a>
               </div>
             </div>
           </FadeIn>
-        </div>
-      </section>
-
-      {/* BRANCHES SECTION */}
-      <section className="section-padding" style={{ background: "#0E1A2B" }}>
-        <div className="container-max">
-          <FadeIn>
-            <div style={{ textAlign: "center", marginBottom: "40px" }}>
-              <h2 style={{ fontSize: "clamp(28px, 4vw, 36px)", fontWeight: 700, marginBottom: "12px" }}>
-                Our Branches
-              </h2>
-              <p style={{ color: "#CBD5E1", fontSize: "16px" }}>Visit us at our convenient locations</p>
-            </div>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "24px", maxWidth: "800px", margin: "0 auto" }}>
-            {[
-              { name: "Palakollu", landmark: "Near Desalamma Temple", phone: "+91 98488 24481" },
-              { name: "Penugonda", landmark: "Near Kanyaka Parameswari Temple", phone: "+91 98488 24481" },
-            ].map((branch, i) => (
-              <FadeIn key={branch.name} delay={i * 0.1}>
-                <div className="card" style={{ textAlign: "center" }}>
-                  <div style={{ fontSize: "32px", marginBottom: "12px" }}>📍</div>
-                  <h3 style={{ fontSize: "20px", fontWeight: 600, color: "#FFFFFF", marginBottom: "8px" }}>{branch.name}</h3>
-                  <p style={{ fontSize: "14px", color: "#CBD5E1", marginBottom: "8px" }}>{branch.landmark}</p>
-                  <a href={`tel:${branch.phone.replace(/\s/g, "")}`} style={{ color: "#2563EB", fontSize: "14px", fontWeight: 500 }}>
-                    {branch.phone}
-                  </a>
-                  <div style={{ marginTop: "16px" }}>
-                    <a
-                      href={`https://maps.google.com/?q=Hansa+Technologies+${branch.name}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "#94A3B8", fontSize: "13px", display: "inline-flex", alignItems: "center", gap: "4px" }}
-                    >
-                      Get Directions <span>↗</span>
-                    </a>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
         </div>
       </section>
     </div>

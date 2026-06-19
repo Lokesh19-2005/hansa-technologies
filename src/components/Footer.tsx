@@ -127,14 +127,20 @@ export default function Footer() {
             <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#FFFFFF", marginBottom: "20px" }}>Contact Us</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               <div>
+                <p style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 500, marginBottom: "4px" }}>Phone</p>
+                <a href="tel:+919849127749" style={{ color: "#2563EB", fontSize: "13px" }}>+91 98491 27749</a>
+              </div>
+              <div>
+                <p style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 500, marginBottom: "4px" }}>WhatsApp</p>
+                <a href="https://wa.me/919949960200" style={{ color: "#25D366", fontSize: "13px" }}>+91 99499 60200</a>
+              </div>
+              <div>
                 <p style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 500, marginBottom: "4px" }}>Palakollu Branch</p>
                 <p style={{ color: "#CBD5E1", fontSize: "13px" }}>Near Desalamma Temple</p>
-                <a href="tel:+919848824481" style={{ color: "#2563EB", fontSize: "13px" }}>+91 98488 24481</a>
               </div>
               <div>
                 <p style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 500, marginBottom: "4px" }}>Penugonda Branch</p>
                 <p style={{ color: "#CBD5E1", fontSize: "13px" }}>Near Kanyaka Parameswari Temple</p>
-                <a href="tel:+919848824481" style={{ color: "#2563EB", fontSize: "13px" }}>+91 98488 24481</a>
               </div>
             </div>
           </div>

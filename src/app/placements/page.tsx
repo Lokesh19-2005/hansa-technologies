@@ -1,72 +1,79 @@
 "use client";
 
+import Link from "next/link";
 import FadeIn from "@/components/AnimatedText";
 
 export default function PlacementsPage() {
   return (
     <div style={{ paddingTop: "80px" }}>
-      {/* HERO */}
-      <section className="section-padding">
+      {/* Hero */}
+      <section className="section-padding" style={{ background: "#08111F" }}>
         <div className="container-max">
-          <FadeIn>
-            <div style={{ textAlign: "center", maxWidth: "720px", margin: "0 auto" }}>
-              <span style={{
-                display: "inline-block", padding: "8px 16px",
-                background: "rgba(37, 99, 235, 0.1)", border: "1px solid rgba(37, 99, 235, 0.3)",
-                borderRadius: "20px", color: "#60A5FA", fontSize: "13px", fontWeight: 500, marginBottom: "24px",
-              }}>
-                Placements
-              </span>
-              <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 700, marginBottom: "20px" }}>
-                Your Career Starts Here
-              </h1>
-              <p style={{ fontSize: "16px", color: "#CBD5E1", lineHeight: "1.8" }}>
-                Our placement cell works closely with 200+ hiring partners to ensure every trained student 
-                gets the opportunity they deserve.
-              </p>
-            </div>
-          </FadeIn>
-          {/* Stats */}
-          <FadeIn delay={0.2}>
-            <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: "20px", maxWidth: "800px", margin: "40px auto 0" }}>
-              {[
-                { value: "1000+", label: "Students Placed" },
-                { value: "200+", label: "Hiring Partners" },
-                { value: "95%", label: "Placement Rate" },
-                { value: "₹4.5L", label: "Avg Package" },
-              ].map((stat) => (
-                <div key={stat.label} style={{ textAlign: "center", padding: "24px 16px", background: "#122033", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.06)" }}>
-                  <p style={{ fontSize: "28px", fontWeight: 700, color: "#2563EB", fontFamily: "var(--font-heading)" }}>{stat.value}</p>
-                  <p style={{ fontSize: "13px", color: "#94A3B8", marginTop: "4px" }}>{stat.label}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "48px", alignItems: "center" }}>
+            <div>
+              <FadeIn>
+                <span style={{ display: "inline-block", padding: "8px 16px", background: "rgba(34,197,94,0.1)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "20px", color: "#4ADE80", fontSize: "13px", fontWeight: 500, marginBottom: "24px" }}>
+                  95% Placement Rate
+                </span>
+              </FadeIn>
+              <FadeIn delay={0.1}>
+                <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 700, marginBottom: "20px", lineHeight: "1.1" }}>
+                  Placement <span style={{ color: "#2563EB" }}>Excellence</span>
+                </h1>
+              </FadeIn>
+              <FadeIn delay={0.2}>
+                <p style={{ fontSize: "16px", color: "#CBD5E1", lineHeight: "1.8", marginBottom: "32px" }}>
+                  Our dedicated placement cell connects trained students with top companies.
+                  From resume building to interview preparation, we support you at every step
+                  of your career journey.
+                </p>
+              </FadeIn>
+              <FadeIn delay={0.3}>
+                <div className="grid grid-cols-3" style={{ gap: "16px" }}>
+                  {[
+                    { value: "1000+", label: "Students Placed" },
+                    { value: "200+", label: "Hiring Partners" },
+                    { value: "95%", label: "Placement Rate" },
+                  ].map((stat) => (
+                    <div key={stat.label} style={{ textAlign: "center", padding: "16px 8px", background: "#122033", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.06)" }}>
+                      <p style={{ fontSize: "22px", fontWeight: 700, color: "#2563EB", fontFamily: "var(--font-heading)" }}>{stat.value}</p>
+                      <p style={{ fontSize: "11px", color: "#94A3B8", marginTop: "4px" }}>{stat.label}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </FadeIn>
             </div>
-          </FadeIn>
+            <FadeIn delay={0.2}>
+              <div style={{ height: "380px", borderRadius: "16px", overflow: "hidden" }}>
+                <img src="/images/interview.jpg" alt="Placement interviews" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
-      {/* PLACEMENT SERVICES */}
+      {/* Placement Services */}
       <section className="section-padding" style={{ background: "#0E1A2B" }}>
         <div className="container-max">
           <FadeIn>
             <div style={{ textAlign: "center", marginBottom: "56px" }}>
-              <h2 style={{ fontSize: "clamp(28px, 4vw, 36px)", fontWeight: 700, marginBottom: "12px" }}>Placement Services</h2>
-              <p style={{ color: "#CBD5E1", fontSize: "16px" }}>Comprehensive support at every stage of your job search</p>
+              <h2 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 700, marginBottom: "16px" }}>Placement Services</h2>
+              <p style={{ color: "#CBD5E1", fontSize: "16px" }}>Comprehensive career support from day one to placement</p>
             </div>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: "24px" }}>
             {[
-              { icon: "📄", title: "Resume Building", desc: "Professional resume crafting with ATS optimization and industry-specific formatting." },
-              { icon: "🎤", title: "Mock Interviews", desc: "Practice with HR and technical interview simulations conducted by industry experts." },
+              { icon: "📄", title: "Resume Building", desc: "Professional resume crafted by industry experts highlighting your skills and projects." },
+              { icon: "🎤", title: "Mock Interviews", desc: "Practice with real interview questions. Get feedback from HR professionals." },
               { icon: "💼", title: "Job Referrals", desc: "Direct referrals to our 200+ hiring partner companies across India." },
-              { icon: "🎯", title: "Aptitude Training", desc: "Comprehensive aptitude and reasoning preparation for campus drives." },
-              { icon: "💬", title: "Soft Skills", desc: "Communication, presentation, and workplace etiquette training sessions." },
-              { icon: "🔗", title: "LinkedIn Optimization", desc: "Profile optimization to attract recruiters and build professional network." },
+              { icon: "🎯", title: "Aptitude Training", desc: "Preparation for technical and aptitude rounds in placement drives." },
+              { icon: "🤝", title: "Soft Skills", desc: "Communication, presentation, and workplace etiquette training." },
+              { icon: "📊", title: "Portfolio Development", desc: "Build an impressive portfolio with real-world projects to showcase." },
             ].map((service, i) => (
               <FadeIn key={service.title} delay={i * 0.08}>
                 <div className="card" style={{ height: "100%" }}>
-                  <div style={{ fontSize: "28px", marginBottom: "16px" }}>{service.icon}</div>
-                  <h4 style={{ fontSize: "17px", fontWeight: 600, color: "#FFFFFF", marginBottom: "8px" }}>{service.title}</h4>
+                  <div style={{ fontSize: "32px", marginBottom: "12px" }}>{service.icon}</div>
+                  <h3 style={{ fontSize: "18px", fontWeight: 600, color: "#FFFFFF", marginBottom: "8px" }}>{service.title}</h3>
                   <p style={{ fontSize: "14px", color: "#CBD5E1", lineHeight: "1.7" }}>{service.desc}</p>
                 </div>
               </FadeIn>
@@ -75,46 +82,88 @@ export default function PlacementsPage() {
         </div>
       </section>
 
-      {/* CAREER TRANSFORMATIONS */}
-      <section className="section-padding">
+      {/* Career Transformations */}
+      <section className="section-padding" style={{ background: "#08111F" }}>
         <div className="container-max">
           <FadeIn>
             <div style={{ textAlign: "center", marginBottom: "56px" }}>
-              <h2 style={{ fontSize: "clamp(28px, 4vw, 36px)", fontWeight: 700, marginBottom: "12px" }}>Career Transformations</h2>
-              <p style={{ color: "#CBD5E1", fontSize: "16px" }}>Real stories of career growth through our programs</p>
+              <h2 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 700, marginBottom: "16px" }}>Career Transformations</h2>
+              <p style={{ color: "#CBD5E1", fontSize: "16px" }}>Real success stories from our placed students</p>
             </div>
           </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "24px", maxWidth: "800px", margin: "0 auto" }}>
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "24px" }}>
             {[
-              { name: "Sai Krishna", before: "BSc Graduate", after: "Software Engineer at Wipro", program: "Java Full Stack", initials: "SK", color: "#2563EB" },
-              { name: "Lakshmi Devi", before: "B.Com Graduate", after: "Data Analyst at Accenture", program: "Data Science", initials: "LD", color: "#7C3AED" },
-              { name: "Ramesh Babu", before: "Fresher", after: "Python Developer at HCL", program: "Python Programming", initials: "RB", color: "#059669" },
-              { name: "Suresh Reddy", before: "Diploma Holder", after: "Cloud Engineer at Cognizant", program: "AWS Cloud Computing", initials: "SR", color: "#D97706" },
+              { name: "Srinivas R.", from: "BSc Graduate", to: "Software Engineer at TCS", course: "Full Stack Development" },
+              { name: "Lakshmi P.", from: "BCA Student", to: "Data Analyst at Infosys", course: "Data Science" },
+              { name: "Mahesh K.", from: "Mechanical Engineer", to: "Python Developer at Wipro", course: "Python & Django" },
+              { name: "Divya S.", from: "Commerce Graduate", to: "Digital Marketing Manager", course: "Digital Marketing" },
+              { name: "Ravi T.", from: "Diploma Holder", to: "Cloud Engineer at AWS Partner", course: "Cloud Computing" },
+              { name: "Anjali M.", from: "Electronics Engineer", to: "AI Engineer at Startup", course: "AI & Machine Learning" },
             ].map((story, i) => (
-              <FadeIn key={story.name} delay={i * 0.1}>
-                <div className="card">
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
-                    <div style={{
-                      width: "44px", height: "44px", borderRadius: "50%", background: story.color,
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      fontSize: "14px", fontWeight: 600, color: "#FFFFFF",
-                    }}>
-                      {story.initials}
-                    </div>
-                    <div>
-                      <p style={{ fontSize: "15px", fontWeight: 600, color: "#FFFFFF" }}>{story.name}</p>
-                      <p style={{ fontSize: "12px", color: "#94A3B8" }}>{story.program}</p>
-                    </div>
+              <FadeIn key={story.name} delay={i * 0.08}>
+                <div className="card" style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                  <div style={{ width: "48px", height: "48px", borderRadius: "50%", background: "#2563EB", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", fontWeight: 600, color: "#FFF", flexShrink: 0 }}>
+                    {story.name.charAt(0)}
                   </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                    <span style={{ fontSize: "13px", color: "#94A3B8", padding: "4px 10px", background: "rgba(255,255,255,0.05)", borderRadius: "6px" }}>{story.before}</span>
-                    <span style={{ color: "#2563EB" }}>→</span>
-                    <span style={{ fontSize: "13px", color: "#22C55E", fontWeight: 500 }}>{story.after}</span>
+                  <div>
+                    <p style={{ fontSize: "15px", fontWeight: 600, color: "#FFFFFF" }}>{story.name}</p>
+                    <p style={{ fontSize: "13px", color: "#94A3B8" }}>{story.from} → <span style={{ color: "#4ADE80" }}>{story.to}</span></p>
+                    <p style={{ fontSize: "12px", color: "#60A5FA", marginTop: "2px" }}>Course: {story.course}</p>
                   </div>
                 </div>
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Placement Process */}
+      <section className="section-padding" style={{ background: "#0E1A2B" }}>
+        <div className="container-max">
+          <FadeIn>
+            <div style={{ textAlign: "center", marginBottom: "48px" }}>
+              <h2 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 700, marginBottom: "16px" }}>Placement Process</h2>
+              <p style={{ color: "#CBD5E1", fontSize: "16px" }}>Our structured approach to getting you placed</p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: "20px" }}>
+            {[
+              { step: "01", title: "Skill Assessment", desc: "Evaluate your current skills and career goals" },
+              { step: "02", title: "Training & Projects", desc: "Complete course with real-world projects" },
+              { step: "03", title: "Interview Prep", desc: "Resume, mock interviews, and soft skills" },
+              { step: "04", title: "Placement Drives", desc: "Connect with hiring partners for interviews" },
+            ].map((item, i) => (
+              <FadeIn key={item.step} delay={i * 0.1}>
+                <div style={{ textAlign: "center", padding: "32px 20px", background: "#122033", borderRadius: "16px", border: "1px solid rgba(255,255,255,0.06)" }}>
+                  <div style={{ width: "48px", height: "48px", borderRadius: "50%", background: "#2563EB", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px", fontSize: "16px", fontWeight: 700, color: "#FFF" }}>
+                    {item.step}
+                  </div>
+                  <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#FFFFFF", marginBottom: "8px" }}>{item.title}</h4>
+                  <p style={{ fontSize: "13px", color: "#CBD5E1", lineHeight: "1.6" }}>{item.desc}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-padding" style={{ background: "#08111F" }}>
+        <div className="container-max">
+          <FadeIn>
+            <div style={{ textAlign: "center", padding: "56px 32px", background: "linear-gradient(135deg, rgba(37,99,235,0.1) 0%, rgba(14,26,43,0.8) 100%)", borderRadius: "24px", border: "1px solid rgba(37,99,235,0.2)" }}>
+              <h2 style={{ fontSize: "clamp(24px, 4vw, 34px)", fontWeight: 700, marginBottom: "16px", color: "#FFFFFF" }}>
+                Ready to Launch Your Career?
+              </h2>
+              <p style={{ color: "#CBD5E1", fontSize: "16px", maxWidth: "480px", margin: "0 auto 28px" }}>
+                Join our placement-focused training and get hired by top companies.
+              </p>
+              <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "14px" }}>
+                <Link href="/courses/" className="btn-primary">Choose Your Course</Link>
+                <Link href="/contact/" className="btn-secondary">Talk to Placement Team</Link>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </div>
