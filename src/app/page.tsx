@@ -185,10 +185,18 @@ export default function HomePage() {
                 </div>
                 <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#FFFFFF", marginBottom: "16px" }}>Software Training</h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                  {["Full Stack Python Development", "Data Analyst", "AI Automation Development", "Data Science & Machine Learning", "Java Programming", "C Programming", "Web Development"].map((course) => (
-                    <div key={course} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                      <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#2563EB", flexShrink: 0 }} />
-                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course}</span>
+                  {[
+                    { name: "Full Stack Python Development", icon: "🐍" },
+                    { name: "Data Analyst", icon: "📊" },
+                    { name: "AI Automation Development", icon: "🤖" },
+                    { name: "Data Science & Machine Learning", icon: "🧠" },
+                    { name: "Java Programming", icon: "☕" },
+                    { name: "C Programming", icon: "⚙️" },
+                    { name: "Web Development", icon: "🌐" },
+                  ].map((course) => (
+                    <div key={course.name} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "8px 12px", borderRadius: "8px", background: "rgba(37,99,235,0.04)", border: "1px solid rgba(37,99,235,0.08)" }}>
+                      <span style={{ fontSize: "16px", width: "24px", textAlign: "center" }}>{course.icon}</span>
+                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course.name}</span>
                     </div>
                   ))}
                 </div>
@@ -204,10 +212,18 @@ export default function HomePage() {
                 </div>
                 <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#FFFFFF", marginBottom: "16px" }}>Professional Courses</h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                  {["Tally Prime", "SAP (FICO, MM, SD)", "Power BI", "Advanced Excel", "SQL", "Oracle", "MySQL"].map((course) => (
-                    <div key={course} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                      <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#22C55E", flexShrink: 0 }} />
-                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course}</span>
+                  {[
+                    { name: "Tally Prime", icon: "📒" },
+                    { name: "SAP (FICO, MM, SD)", icon: "🏢" },
+                    { name: "Power BI", icon: "📈" },
+                    { name: "Advanced Excel", icon: "📑" },
+                    { name: "SQL", icon: "🗃️" },
+                    { name: "Oracle", icon: "🔶" },
+                    { name: "MySQL", icon: "💾" },
+                  ].map((course) => (
+                    <div key={course.name} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "8px 12px", borderRadius: "8px", background: "rgba(34,197,94,0.04)", border: "1px solid rgba(34,197,94,0.08)" }}>
+                      <span style={{ fontSize: "16px", width: "24px", textAlign: "center" }}>{course.icon}</span>
+                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course.name}</span>
                     </div>
                   ))}
                 </div>
@@ -223,10 +239,15 @@ export default function HomePage() {
                 </div>
                 <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#FFFFFF", marginBottom: "16px" }}>Design & Technical</h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                  {["AutoCAD", "MS Office", "Digital Marketing", "Ethical Hacking"].map((course) => (
-                    <div key={course} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                      <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#A855F7", flexShrink: 0 }} />
-                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course}</span>
+                  {[
+                    { name: "AutoCAD", icon: "📐" },
+                    { name: "MS Office", icon: "📋" },
+                    { name: "Digital Marketing", icon: "📱" },
+                    { name: "Ethical Hacking", icon: "🔒" },
+                  ].map((course) => (
+                    <div key={course.name} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "8px 12px", borderRadius: "8px", background: "rgba(168,85,247,0.04)", border: "1px solid rgba(168,85,247,0.08)" }}>
+                      <span style={{ fontSize: "16px", width: "24px", textAlign: "center" }}>{course.icon}</span>
+                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course.name}</span>
                     </div>
                   ))}
                 </div>
@@ -242,10 +263,17 @@ export default function HomePage() {
                 </div>
                 <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#FFFFFF", marginBottom: "16px" }}>Career Development</h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                  {["Internships", "Academic Projects (B.Tech, MCA, BCA, Degree)", "Campus Recruitment Training (CRT)", "Soft Skills Training", "Industrial Training", "Placement Assistance"].map((course) => (
-                    <div key={course} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                      <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#F59E0B", flexShrink: 0 }} />
-                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course}</span>
+                  {[
+                    { name: "Internships", icon: "🎯" },
+                    { name: "Academic Projects (B.Tech, MCA, BCA, Degree)", icon: "🎓" },
+                    { name: "Campus Recruitment Training (CRT)", icon: "🏆" },
+                    { name: "Soft Skills Training", icon: "🗣️" },
+                    { name: "Industrial Training", icon: "🏭" },
+                    { name: "Placement Assistance", icon: "💼" },
+                  ].map((course) => (
+                    <div key={course.name} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "8px 12px", borderRadius: "8px", background: "rgba(245,158,11,0.04)", border: "1px solid rgba(245,158,11,0.08)" }}>
+                      <span style={{ fontSize: "16px", width: "24px", textAlign: "center" }}>{course.icon}</span>
+                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course.name}</span>
                     </div>
                   ))}
                 </div>
