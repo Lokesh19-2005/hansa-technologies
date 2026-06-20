@@ -8,6 +8,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
+    { href: "/", label: "Home" },
     { href: "/courses/", label: "Programs" },
     { href: "/placements/", label: "Placements" },
     { href: "/about/", label: "About" },
@@ -46,7 +47,7 @@ export default function Navbar() {
             alt="Hansa Technologies"
             width={200}
             height={100}
-            style={{ height: "100px", width: "auto" }}
+            style={{ height: "80px", width: "auto" }}
             priority
           />
         </Link>

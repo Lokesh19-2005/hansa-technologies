@@ -5,53 +5,36 @@ import FadeIn from "@/components/AnimatedText";
 
 const courses = [
   {
-    category: "Software Development",
+    category: "Software Training",
     color: "#2563EB",
-    items: [
-      { title: "Full Stack Development (MERN)", duration: "6 Months", level: "Beginner to Advanced" },
-      { title: "Python Programming & Django", duration: "4 Months", level: "Beginner to Intermediate" },
-      { title: "Java & Spring Boot", duration: "5 Months", level: "Beginner to Advanced" },
-      { title: "MEAN Stack Development", duration: "5 Months", level: "Intermediate" },
-      { title: ".NET Development (C#)", duration: "4 Months", level: "Beginner to Intermediate" },
-      { title: "React.js & Next.js", duration: "3 Months", level: "Intermediate" },
-      { title: "Node.js Backend Development", duration: "3 Months", level: "Intermediate" },
-    ],
+    icon: (
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>
+    ),
+    items: ["Full Stack Python Development", "Data Analyst", "AI Automation Development", "Data Science & Machine Learning", "Java Programming", "C Programming", "Web Development"],
   },
   {
-    category: "AI & Data Science",
-    color: "#7C3AED",
-    items: [
-      { title: "Data Science & Machine Learning", duration: "6 Months", level: "Intermediate to Advanced" },
-      { title: "Artificial Intelligence & Deep Learning", duration: "6 Months", level: "Advanced" },
-      { title: "Natural Language Processing", duration: "3 Months", level: "Advanced" },
-      { title: "Computer Vision", duration: "3 Months", level: "Advanced" },
-      { title: "Data Analytics with Python", duration: "4 Months", level: "Beginner to Intermediate" },
-      { title: "Power BI & Tableau", duration: "2 Months", level: "Beginner" },
-      { title: "R Programming for Statistics", duration: "3 Months", level: "Intermediate" },
-    ],
-  },
-  {
-    category: "Professional Programs",
-    color: "#059669",
-    items: [
-      { title: "Cloud Computing (AWS/Azure)", duration: "4 Months", level: "Intermediate" },
-      { title: "DevOps & CI/CD", duration: "4 Months", level: "Intermediate to Advanced" },
-      { title: "Cyber Security", duration: "5 Months", level: "Intermediate" },
-      { title: "Digital Marketing & SEO", duration: "3 Months", level: "Beginner" },
-      { title: "Salesforce Administration", duration: "3 Months", level: "Beginner to Intermediate" },
-      { title: "Software Testing & QA", duration: "3 Months", level: "Beginner" },
-      { title: "Database Management (SQL/NoSQL)", duration: "2 Months", level: "Beginner" },
-    ],
+    category: "Professional Courses",
+    color: "#22C55E",
+    icon: (
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5" /></svg>
+    ),
+    items: ["Tally Prime", "SAP (FICO, MM, SD)", "Power BI", "Advanced Excel", "SQL", "Oracle", "MySQL"],
   },
   {
     category: "Design & Technical",
-    color: "#D946EF",
-    items: [
-      { title: "UI/UX Design & Figma", duration: "3 Months", level: "Beginner" },
-      { title: "Graphic Design & Adobe Suite", duration: "3 Months", level: "Beginner" },
-      { title: "AutoCAD & 3D Modeling", duration: "4 Months", level: "Beginner to Intermediate" },
-      { title: "Hardware & Networking", duration: "3 Months", level: "Beginner" },
-    ],
+    color: "#A855F7",
+    icon: (
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" /></svg>
+    ),
+    items: ["AutoCAD", "MS Office", "Digital Marketing", "Ethical Hacking"],
+  },
+  {
+    category: "Career Development",
+    color: "#F59E0B",
+    icon: (
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" /></svg>
+    ),
+    items: ["Internships", "Academic Projects (B.Tech, MCA, BCA, Degree)", "Campus Recruitment Training (CRT)", "Soft Skills Training", "Industrial Training", "Placement Assistance"],
   },
 ];
 
@@ -59,15 +42,15 @@ export default function CoursesPage() {
   return (
     <div style={{ paddingTop: "80px" }}>
       {/* Hero */}
-      <section className="section-padding" style={{ background: "#08111F" }}>
-        <div className="container-max" style={{ textAlign: "center" }}>
+      <section style={{ padding: "80px 24px", background: "#08111F" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
           <FadeIn>
             <span style={{ display: "inline-block", padding: "8px 16px", background: "rgba(37,99,235,0.1)", border: "1px solid rgba(37,99,235,0.3)", borderRadius: "20px", color: "#60A5FA", fontSize: "13px", fontWeight: 500, marginBottom: "24px" }}>
               25+ Industry-Ready Courses
             </span>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 700, marginBottom: "16px", lineHeight: "1.1" }}>
+            <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 700, marginBottom: "16px", lineHeight: 1.1 }}>
               Our Training <span style={{ color: "#2563EB" }}>Programs</span>
             </h1>
           </FadeIn>
@@ -79,74 +62,39 @@ export default function CoursesPage() {
         </div>
       </section>
 
-      {/* Course Images Banner */}
-      <section style={{ background: "#0E1A2B", padding: "0 24px 40px" }}>
-        <div className="container-max">
-          <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "16px" }}>
-            <FadeIn>
-              <div style={{ height: "180px", borderRadius: "12px", overflow: "hidden" }}>
-                <img src="/images/python-dev.jpg" alt="Software development" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} />
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.1}>
-              <div style={{ height: "180px", borderRadius: "12px", overflow: "hidden" }}>
-                <img src="/images/data-science.jpg" alt="Data Science training" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} />
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <div style={{ height: "180px", borderRadius: "12px", overflow: "hidden" }}>
-                <img src="/images/ai-learning.jpg" alt="AI and Machine Learning" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} />
-              </div>
-            </FadeIn>
+      {/* All Programs */}
+      <section style={{ padding: "80px 24px", background: "#0E1A2B" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "24px" }}>
+            {courses.map((cat, catIdx) => (
+              <FadeIn key={cat.category} delay={catIdx * 0.08}>
+                <div style={{ background: "#122033", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "20px", padding: "32px", height: "100%", position: "relative", overflow: "hidden" }}>
+                  <div style={{ position: "absolute", top: 0, right: 0, width: "140px", height: "140px", background: `radial-gradient(circle, ${cat.color}10 0%, transparent 70%)`, borderRadius: "50%" }} />
+                  <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: `${cat.color}15`, border: `1px solid ${cat.color}30`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "20px", color: cat.color }}>
+                    {cat.icon}
+                  </div>
+                  <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#FFFFFF", marginBottom: "20px" }}>{cat.category}</h3>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                    {cat.items.map((item) => (
+                      <div key={item} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "10px 14px", background: "rgba(255,255,255,0.02)", borderRadius: "10px", border: "1px solid rgba(255,255,255,0.04)" }}>
+                        <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: cat.color, flexShrink: 0 }} />
+                        <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{item}</span>
+                        <span style={{ marginLeft: "auto", fontSize: "11px", color: "#64748B", background: "rgba(255,255,255,0.04)", padding: "2px 8px", borderRadius: "8px" }}>Placement</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Course Categories */}
-      {courses.map((category, catIdx) => (
-        <section key={category.category} className="section-padding" style={{ background: catIdx % 2 === 0 ? "#0E1A2B" : "#08111F" }}>
-          <div className="container-max">
-            <FadeIn>
-              <div style={{ marginBottom: "32px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" }}>
-                  <div style={{ width: "12px", height: "12px", borderRadius: "50%", background: category.color }} />
-                  <h2 style={{ fontSize: "clamp(24px, 3vw, 32px)", fontWeight: 700 }}>{category.category}</h2>
-                </div>
-                <p style={{ color: "#94A3B8", fontSize: "14px", paddingLeft: "24px" }}>{category.items.length} courses available</p>
-              </div>
-            </FadeIn>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: "20px" }}>
-              {category.items.map((course, i) => (
-                <FadeIn key={course.title} delay={i * 0.05}>
-                  <div className="card" style={{ height: "100%" }}>
-                    <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "12px" }}>
-                      <h4 style={{ fontSize: "16px", fontWeight: 600, color: "#FFFFFF", flex: 1 }}>{course.title}</h4>
-                    </div>
-                    <div style={{ display: "flex", gap: "16px", marginBottom: "12px" }}>
-                      <span style={{ fontSize: "13px", color: "#94A3B8" }}>⏱ {course.duration}</span>
-                      <span style={{ fontSize: "13px", color: "#94A3B8" }}>📊 {course.level}</span>
-                    </div>
-                    <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-                      <span style={{ padding: "4px 10px", background: `${category.color}20`, color: category.color, fontSize: "11px", borderRadius: "12px", fontWeight: 500 }}>
-                        Certification
-                      </span>
-                      <span style={{ padding: "4px 10px", background: "rgba(34,197,94,0.1)", color: "#4ADE80", fontSize: "11px", borderRadius: "12px", fontWeight: 500 }}>
-                        Placement Support
-                      </span>
-                    </div>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-        </section>
-      ))}
-
       {/* CTA */}
-      <section className="section-padding" style={{ background: "#08111F" }}>
-        <div className="container-max">
+      <section style={{ padding: "80px 24px", background: "#08111F" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <FadeIn>
-            <div style={{ textAlign: "center", padding: "56px 32px", background: "linear-gradient(135deg, rgba(37,99,235,0.1) 0%, rgba(14,26,43,0.8) 100%)", borderRadius: "24px", border: "1px solid rgba(37,99,235,0.2)" }}>
+            <div style={{ textAlign: "center", padding: "56px 32px", background: "linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(14,26,43,0.8) 100%)", borderRadius: "24px", border: "1px solid rgba(37,99,235,0.15)" }}>
               <h2 style={{ fontSize: "clamp(24px, 4vw, 34px)", fontWeight: 700, marginBottom: "16px", color: "#FFFFFF" }}>
                 Not Sure Which Course is Right for You?
               </h2>

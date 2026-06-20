@@ -8,47 +8,38 @@ export default function PlacementsPage() {
     <div style={{ paddingTop: "80px" }}>
       {/* Hero */}
       <section className="section-padding" style={{ background: "#08111F" }}>
-        <div className="container-max">
-          <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "48px", alignItems: "center" }}>
-            <div>
-              <FadeIn>
-                <span style={{ display: "inline-block", padding: "8px 16px", background: "rgba(34,197,94,0.1)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "20px", color: "#4ADE80", fontSize: "13px", fontWeight: 500, marginBottom: "24px" }}>
-                  95% Placement Rate
-                </span>
-              </FadeIn>
-              <FadeIn delay={0.1}>
-                <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 700, marginBottom: "20px", lineHeight: "1.1" }}>
-                  Placement <span style={{ color: "#2563EB" }}>Excellence</span>
-                </h1>
-              </FadeIn>
-              <FadeIn delay={0.2}>
-                <p style={{ fontSize: "16px", color: "#CBD5E1", lineHeight: "1.8", marginBottom: "32px" }}>
-                  Our dedicated placement cell connects trained students with top companies.
-                  From resume building to interview preparation, we support you at every step
-                  of your career journey.
-                </p>
-              </FadeIn>
-              <FadeIn delay={0.3}>
-                <div className="grid grid-cols-3" style={{ gap: "16px" }}>
-                  {[
-                    { value: "1000+", label: "Students Placed" },
-                    { value: "200+", label: "Hiring Partners" },
-                    { value: "95%", label: "Placement Rate" },
-                  ].map((stat) => (
-                    <div key={stat.label} style={{ textAlign: "center", padding: "16px 8px", background: "#122033", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.06)" }}>
-                      <p style={{ fontSize: "22px", fontWeight: 700, color: "#2563EB", fontFamily: "var(--font-heading)" }}>{stat.value}</p>
-                      <p style={{ fontSize: "11px", color: "#94A3B8", marginTop: "4px" }}>{stat.label}</p>
-                    </div>
-                  ))}
+        <div className="container-max" style={{ textAlign: "center" }}>
+          <FadeIn>
+            <span style={{ display: "inline-block", padding: "8px 16px", background: "rgba(34,197,94,0.1)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: "20px", color: "#4ADE80", fontSize: "13px", fontWeight: 500, marginBottom: "24px" }}>
+              95% Placement Rate
+            </span>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 700, marginBottom: "20px", lineHeight: "1.1" }}>
+              Placement <span style={{ color: "#2563EB" }}>Excellence</span>
+            </h1>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <p style={{ fontSize: "16px", color: "#CBD5E1", lineHeight: "1.8", marginBottom: "40px", maxWidth: "600px", margin: "0 auto 40px" }}>
+              Our dedicated placement cell connects trained students with top companies.
+              From resume building to interview preparation, we support you at every step
+              of your career journey.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.3}>
+            <div className="grid grid-cols-3" style={{ gap: "20px", maxWidth: "600px", margin: "0 auto" }}>
+              {[
+                { value: "1000+", label: "Students Placed" },
+                { value: "200+", label: "Hiring Partners" },
+                { value: "95%", label: "Placement Rate" },
+              ].map((stat) => (
+                <div key={stat.label} style={{ textAlign: "center", padding: "20px 12px", background: "#122033", borderRadius: "16px", border: "1px solid rgba(255,255,255,0.06)" }}>
+                  <p style={{ fontSize: "26px", fontWeight: 700, color: "#2563EB", fontFamily: "var(--font-heading)" }}>{stat.value}</p>
+                  <p style={{ fontSize: "12px", color: "#94A3B8", marginTop: "4px" }}>{stat.label}</p>
                 </div>
-              </FadeIn>
+              ))}
             </div>
-            <FadeIn delay={0.2}>
-              <div style={{ height: "380px", borderRadius: "16px", overflow: "hidden" }}>
-                <img src="/images/interview.jpg" alt="Placement interviews" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
-              </div>
-            </FadeIn>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
