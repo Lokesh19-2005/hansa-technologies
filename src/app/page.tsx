@@ -3,6 +3,12 @@
 import Link from "next/link";
 import FadeIn from "@/components/AnimatedText";
 
+const phone = "919949960200";
+function waLink(course: string) {
+  const msg = encodeURIComponent(`Hello HANSA Technologies,\nI am interested in the "${course}" program.\nPlease share details about the course duration, fees, and batch timings.\nThank you.`);
+  return `https://wa.me/${phone}?text=${msg}`;
+}
+
 export default function HomePage() {
   return (
     <div style={{ paddingTop: "80px" }}>
@@ -194,10 +200,11 @@ export default function HomePage() {
                     { name: "C Programming", icon: "⚙️" },
                     { name: "Web Development", icon: "🌐" },
                   ].map((course) => (
-                    <div key={course.name} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "8px 12px", borderRadius: "8px", background: "rgba(37,99,235,0.04)", border: "1px solid rgba(37,99,235,0.08)" }}>
+                    <a key={course.name} href={waLink(course.name)} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "12px", padding: "8px 12px", borderRadius: "8px", background: "rgba(37,99,235,0.04)", border: "1px solid rgba(37,99,235,0.08)", textDecoration: "none", transition: "all 0.2s" }}>
                       <span style={{ fontSize: "16px", width: "24px", textAlign: "center" }}>{course.icon}</span>
-                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course.name}</span>
-                    </div>
+                      <span style={{ color: "#CBD5E1", fontSize: "14px", flex: 1 }}>{course.name}</span>
+                      <span style={{ fontSize: "10px", color: "#25D366" }}>↗</span>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -221,10 +228,11 @@ export default function HomePage() {
                     { name: "Oracle", icon: "🔶" },
                     { name: "MySQL", icon: "💾" },
                   ].map((course) => (
-                    <div key={course.name} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "8px 12px", borderRadius: "8px", background: "rgba(34,197,94,0.04)", border: "1px solid rgba(34,197,94,0.08)" }}>
+                    <a key={course.name} href={waLink(course.name)} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "12px", padding: "8px 12px", borderRadius: "8px", background: "rgba(34,197,94,0.04)", border: "1px solid rgba(34,197,94,0.08)", textDecoration: "none", transition: "all 0.2s" }}>
                       <span style={{ fontSize: "16px", width: "24px", textAlign: "center" }}>{course.icon}</span>
-                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course.name}</span>
-                    </div>
+                      <span style={{ color: "#CBD5E1", fontSize: "14px", flex: 1 }}>{course.name}</span>
+                      <span style={{ fontSize: "10px", color: "#25D366" }}>↗</span>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -245,10 +253,11 @@ export default function HomePage() {
                     { name: "Digital Marketing", icon: "📱" },
                     { name: "Ethical Hacking", icon: "🔒" },
                   ].map((course) => (
-                    <div key={course.name} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "8px 12px", borderRadius: "8px", background: "rgba(168,85,247,0.04)", border: "1px solid rgba(168,85,247,0.08)" }}>
+                    <a key={course.name} href={waLink(course.name)} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "12px", padding: "8px 12px", borderRadius: "8px", background: "rgba(168,85,247,0.04)", border: "1px solid rgba(168,85,247,0.08)", textDecoration: "none", transition: "all 0.2s" }}>
                       <span style={{ fontSize: "16px", width: "24px", textAlign: "center" }}>{course.icon}</span>
-                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course.name}</span>
-                    </div>
+                      <span style={{ color: "#CBD5E1", fontSize: "14px", flex: 1 }}>{course.name}</span>
+                      <span style={{ fontSize: "10px", color: "#25D366" }}>↗</span>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -271,10 +280,11 @@ export default function HomePage() {
                     { name: "Industrial Training", icon: "🏭" },
                     { name: "Placement Assistance", icon: "💼" },
                   ].map((course) => (
-                    <div key={course.name} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "8px 12px", borderRadius: "8px", background: "rgba(245,158,11,0.04)", border: "1px solid rgba(245,158,11,0.08)" }}>
+                    <a key={course.name} href={waLink(course.name)} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "12px", padding: "8px 12px", borderRadius: "8px", background: "rgba(245,158,11,0.04)", border: "1px solid rgba(245,158,11,0.08)", textDecoration: "none", transition: "all 0.2s" }}>
                       <span style={{ fontSize: "16px", width: "24px", textAlign: "center" }}>{course.icon}</span>
-                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>{course.name}</span>
-                    </div>
+                      <span style={{ color: "#CBD5E1", fontSize: "14px", flex: 1 }}>{course.name}</span>
+                      <span style={{ fontSize: "10px", color: "#25D366" }}>↗</span>
+                    </a>
                   ))}
                 </div>
               </div>
