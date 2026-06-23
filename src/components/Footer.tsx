@@ -4,64 +4,57 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer style={{ background: "linear-gradient(180deg, #030712 0%, #020617 100%)", color: "#e2e8f0", padding: "80px 20px 40px", position: "relative", overflow: "hidden" }}>
-      <div style={{ position: "absolute", bottom: "-100px", left: "50%", transform: "translateX(-50%)", width: "600px", height: "200px", background: "radial-gradient(ellipse, rgba(56, 189, 248, 0.03) 0%, transparent 70%)", pointerEvents: "none" }} />
-
-      <div style={{ maxWidth: "1200px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-        <div className="glow-line" style={{ marginBottom: "56px" }} />
-
+    <footer style={{ background: "#1a1a2e", color: "#e2e8f0", padding: "80px 20px 40px" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <div style={{ display: "grid", gridTemplateColumns: "2.5fr repeat(3, 1fr)", gap: "40px", marginBottom: "56px" }} className="footer-grid">
           <div>
-            <img src="/logo.png" alt="Hansa Technologies" style={{ height: "80px", width: "auto", marginBottom: "16px", opacity: 0.9 }} />
-            <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.8, maxWidth: "320px", marginBottom: "20px" }}>
-              Google 5-Star Rated AI-Based Software Training Institute. Transforming beginners into industry-ready professionals since 1994.
+            <img src="/logo.png" alt="Hansa Technologies" style={{ height: "80px", width: "auto", marginBottom: "16px" }} />
+            <p style={{ fontSize: "14px", color: "#94a3b8", lineHeight: 1.8, maxWidth: "320px", marginBottom: "20px" }}>
+              Google 5-Star Rated AI-Based Software Training Institute. Transforming beginners into professionals since 1994.
             </p>
-            <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-              <a href="https://wa.me/919949960200" target="_blank" rel="noopener noreferrer" title="WhatsApp"
-                style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(56, 189, 248, 0.06)", border: "1px solid rgba(56, 189, 248, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none", fontSize: "14px" }}>💬</a>
-              <a href="https://www.instagram.com/hansa_tech_official" target="_blank" rel="noopener noreferrer" title="Instagram"
-                style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(56, 189, 248, 0.06)", border: "1px solid rgba(56, 189, 248, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none", fontSize: "14px" }}>📷</a>
-              <a href="tel:+919849127749" title="Call"
-                style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(56, 189, 248, 0.06)", border: "1px solid rgba(56, 189, 248, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none", fontSize: "14px" }}>📞</a>
+            <div style={{ display: "flex", gap: "10px" }}>
+              <a href="https://wa.me/919949960200" target="_blank" rel="noopener noreferrer" title="WhatsApp" style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(79, 70, 229, 0.1)", border: "1px solid rgba(79, 70, 229, 0.15)", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none", fontSize: "14px" }}>💬</a>
+              <a href="https://www.instagram.com/hansa_tech_official" target="_blank" rel="noopener noreferrer" title="Instagram" style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(79, 70, 229, 0.1)", border: "1px solid rgba(79, 70, 229, 0.15)", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none", fontSize: "14px" }}>📷</a>
+              <a href="tel:+919849127749" title="Call" style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(79, 70, 229, 0.1)", border: "1px solid rgba(79, 70, 229, 0.15)", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none", fontSize: "14px" }}>📞</a>
             </div>
           </div>
 
           <div>
-            <h4 style={{ fontSize: "12px", fontWeight: 600, color: "#38bdf8", marginBottom: "20px", textTransform: "uppercase", letterSpacing: "0.1em" }}>Company</h4>
+            <h4 style={{ fontSize: "12px", fontWeight: 600, color: "#a5b4fc", marginBottom: "20px", textTransform: "uppercase", letterSpacing: "0.1em" }}>Company</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-              <Link href="/about" style={{ fontSize: "14px", color: "#475569", textDecoration: "none" }}>About Us</Link>
-              <Link href="/about" style={{ fontSize: "14px", color: "#475569", textDecoration: "none" }}>Our Journey</Link>
-              <Link href="/contact" style={{ fontSize: "14px", color: "#475569", textDecoration: "none" }}>Contact</Link>
+              <Link href="/about" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>About Us</Link>
+              <Link href="/about" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>Our Journey</Link>
+              <Link href="/contact" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>Contact</Link>
             </div>
           </div>
 
           <div>
-            <h4 style={{ fontSize: "12px", fontWeight: 600, color: "#38bdf8", marginBottom: "20px", textTransform: "uppercase", letterSpacing: "0.1em" }}>Programs</h4>
+            <h4 style={{ fontSize: "12px", fontWeight: 600, color: "#a5b4fc", marginBottom: "20px", textTransform: "uppercase", letterSpacing: "0.1em" }}>Programs</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-              <Link href="/courses" style={{ fontSize: "14px", color: "#475569", textDecoration: "none" }}>Python</Link>
-              <Link href="/courses" style={{ fontSize: "14px", color: "#475569", textDecoration: "none" }}>Data Science</Link>
-              <Link href="/courses" style={{ fontSize: "14px", color: "#475569", textDecoration: "none" }}>AI & ML</Link>
-              <Link href="/courses" style={{ fontSize: "14px", color: "#475569", textDecoration: "none" }}>All Courses</Link>
+              <Link href="/courses" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>Python</Link>
+              <Link href="/courses" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>Data Science</Link>
+              <Link href="/courses" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>AI & ML</Link>
+              <Link href="/courses" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>All Courses</Link>
             </div>
           </div>
 
           <div>
-            <h4 style={{ fontSize: "12px", fontWeight: 600, color: "#38bdf8", marginBottom: "20px", textTransform: "uppercase", letterSpacing: "0.1em" }}>Career</h4>
+            <h4 style={{ fontSize: "12px", fontWeight: 600, color: "#a5b4fc", marginBottom: "20px", textTransform: "uppercase", letterSpacing: "0.1em" }}>Career</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-              <Link href="/placements" style={{ fontSize: "14px", color: "#475569", textDecoration: "none" }}>Placements</Link>
-              <Link href="/placements" style={{ fontSize: "14px", color: "#475569", textDecoration: "none" }}>Internships</Link>
-              <Link href="/placements" style={{ fontSize: "14px", color: "#475569", textDecoration: "none" }}>CRT Training</Link>
+              <Link href="/placements" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>Placements</Link>
+              <Link href="/placements" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>Internships</Link>
+              <Link href="/placements" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>CRT Training</Link>
             </div>
           </div>
         </div>
 
-        <div className="glow-line" />
-        <div style={{ paddingTop: "24px", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "12px" }}>
-          <span style={{ fontSize: "13px", color: "#334155" }}>© 2024 Hansa Technologies · hansatechsolutions.com</span>
-          <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
-            <span style={{ fontSize: "12px", color: "#475569" }}>📍 Palakollu</span>
-            <span style={{ fontSize: "12px", color: "#1e293b" }}>·</span>
-            <span style={{ fontSize: "12px", color: "#475569" }}>📍 Penugonda</span>
+        <div style={{ height: "1px", background: "rgba(148, 163, 184, 0.1)", marginBottom: "24px" }} />
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "12px" }}>
+          <span style={{ fontSize: "13px", color: "#64748b" }}>© 2024 Hansa Technologies · hansatechsolutions.com</span>
+          <div style={{ display: "flex", gap: "16px" }}>
+            <span style={{ fontSize: "12px", color: "#94a3b8" }}>📍 Palakollu</span>
+            <span style={{ fontSize: "12px", color: "#475569" }}>·</span>
+            <span style={{ fontSize: "12px", color: "#94a3b8" }}>📍 Penugonda</span>
           </div>
         </div>
       </div>

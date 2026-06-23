@@ -1,11 +1,9 @@
 "use client";
-
 import { useState } from "react";
 import { FadeIn, ScaleIn } from "@/components/AnimatedText";
 import Link from "next/link";
 
 const categories = ["All", "Software", "Professional", "Design & Technical", "Career Development"];
-
 const courses = [
   { name: "Full Stack Python Development", category: "Software", duration: "6 Months", level: "Beginner → Advanced", desc: "Python, Django, Flask, REST APIs, databases, deployment.", icon: "🐍" },
   { name: "Data Science & Machine Learning", category: "Software", duration: "6 Months", level: "Intermediate → Advanced", desc: "Statistical modeling, deep learning, NLP, analytics.", icon: "📊" },
@@ -35,38 +33,36 @@ export default function CoursesPage() {
   const filtered = active === "All" ? courses : courses.filter((c) => c.category === active);
 
   return (
-    <section style={{ background: "#030712", padding: "80px 20px 100px" }}>
+    <section style={{ background: "#f8fafc", padding: "80px 20px 100px" }}>
       <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
         <FadeIn>
           <div style={{ textAlign: "center" }}>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "7px 16px", background: "rgba(56, 189, 248, 0.06)", border: "1px solid rgba(56, 189, 248, 0.12)", borderRadius: "20px", marginBottom: "20px" }}>
-              <span style={{ fontSize: "12px", color: "#38bdf8", fontWeight: 500 }}>{courses.length} Programs Available</span>
+            <div style={{ display: "inline-flex", alignItems: "center", padding: "7px 16px", background: "#eef2ff", border: "1px solid #e0e7ff", borderRadius: "20px", marginBottom: "20px" }}>
+              <span style={{ fontSize: "12px", color: "#4f46e5", fontWeight: 600 }}>{courses.length} Programs Available</span>
             </div>
-            <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "#ffffff", marginBottom: "12px" }}>All Programs</h1>
+            <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "#1a1a2e", marginBottom: "12px" }}>All Programs</h1>
             <p style={{ fontSize: "16px", color: "#64748b", maxWidth: "520px", margin: "0 auto 40px" }}>Every program includes real projects, mentorship, and placement support. Online & Offline available.</p>
           </div>
         </FadeIn>
 
         <FadeIn delay={0.1}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "48px", justifyContent: "center" }}>
-            {categories.map((cat) => (
-              <button key={cat} onClick={() => setActive(cat)} className={active === cat ? "filter-btn filter-btn-active" : "filter-btn filter-btn-inactive"}>{cat}</button>
-            ))}
+            {categories.map((cat) => (<button key={cat} onClick={() => setActive(cat)} className={active === cat ? "filter-btn filter-btn-active" : "filter-btn filter-btn-inactive"}>{cat}</button>))}
           </div>
         </FadeIn>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "14px" }}>
           {filtered.map((course, i) => (
             <ScaleIn key={course.name} delay={i * 0.03}>
-              <div style={{ background: "rgba(15, 23, 42, 0.5)", borderRadius: "14px", padding: "24px", border: "1px solid rgba(148, 163, 184, 0.05)", transition: "all 0.3s", height: "100%" }}
-                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(56, 189, 248, 0.15)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(148, 163, 184, 0.05)"; e.currentTarget.style.transform = "translateY(0)"; }}>
+              <div style={{ background: "#ffffff", borderRadius: "14px", padding: "24px", border: "1px solid #f1f5f9", transition: "all 0.3s", height: "100%" }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#e0e7ff"; e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(79,70,229,0.06)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#f1f5f9"; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "12px" }}>
                   <span style={{ fontSize: "20px" }}>{course.icon}</span>
-                  <span style={{ fontSize: "11px", color: "#38bdf8", backgroundColor: "rgba(56, 189, 248, 0.08)", padding: "3px 10px", borderRadius: "10px", fontWeight: 500 }}>{course.level}</span>
-                  <span style={{ fontSize: "11px", color: "#475569" }}>{course.duration}</span>
+                  <span style={{ fontSize: "11px", color: "#4f46e5", backgroundColor: "#eef2ff", padding: "3px 10px", borderRadius: "10px", fontWeight: 500 }}>{course.level}</span>
+                  <span style={{ fontSize: "11px", color: "#94a3b8" }}>{course.duration}</span>
                 </div>
-                <h3 style={{ fontSize: "14px", fontWeight: 700, color: "#e2e8f0", marginBottom: "5px" }}>{course.name}</h3>
+                <h3 style={{ fontSize: "14px", fontWeight: 700, color: "#1a1a2e", marginBottom: "5px" }}>{course.name}</h3>
                 <p style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.6 }}>{course.desc}</p>
               </div>
             </ScaleIn>
@@ -74,11 +70,8 @@ export default function CoursesPage() {
         </div>
 
         <FadeIn delay={0.2}>
-          <div style={{ marginTop: "56px", background: "radial-gradient(ellipse at 50% 50%, rgba(56, 189, 248, 0.04) 0%, transparent 60%), rgba(15, 23, 42, 0.6)", borderRadius: "16px", padding: "36px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "20px", border: "1px solid rgba(56, 189, 248, 0.08)" }}>
-            <div>
-              <h3 style={{ fontSize: "17px", fontWeight: 700, color: "#ffffff", marginBottom: "6px" }}>Not sure which program to choose?</h3>
-              <p style={{ fontSize: "14px", color: "#64748b" }}>Get a free consultation — we&apos;ll help you pick the right path.</p>
-            </div>
+          <div style={{ marginTop: "56px", background: "linear-gradient(135deg, #1a1a2e, #2d2b55)", borderRadius: "16px", padding: "36px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "20px" }}>
+            <div><h3 style={{ fontSize: "17px", fontWeight: 700, color: "#ffffff", marginBottom: "6px" }}>Not sure which program to choose?</h3><p style={{ fontSize: "14px", color: "#cbd5e1" }}>Get a free consultation — we&apos;ll help you pick the right path.</p></div>
             <Link href="/contact" className="btn-primary" style={{ flexShrink: 0 }}>Talk to Us</Link>
           </div>
         </FadeIn>
