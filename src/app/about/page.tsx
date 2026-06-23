@@ -1,181 +1,135 @@
 "use client";
 
-import Link from "next/link";
-import FadeIn from "@/components/AnimatedText";
+import { FadeIn, ScaleIn } from "@/components/AnimatedText";
 
 export default function AboutPage() {
   return (
-    <div style={{ paddingTop: "80px" }}>
-      {/* Hero */}
-      <section className="section-padding" style={{ background: "#08111F" }}>
-        <div className="container-max">
-          <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "48px", alignItems: "center" }}>
-            <div>
-              <FadeIn>
-                <span style={{ display: "inline-block", padding: "8px 16px", background: "rgba(37,99,235,0.1)", border: "1px solid rgba(37,99,235,0.3)", borderRadius: "20px", color: "#60A5FA", fontSize: "13px", fontWeight: 500, marginBottom: "24px" }}>
-                  Established 1994
-                </span>
-              </FadeIn>
-              <FadeIn delay={0.1}>
-                <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 700, marginBottom: "20px", lineHeight: "1.1" }}>
-                  About <span style={{ color: "#2563EB" }}>Hansa Technologies</span>
-                </h1>
-              </FadeIn>
-              <FadeIn delay={0.2}>
-                <p style={{ fontSize: "16px", color: "#CBD5E1", lineHeight: "1.8", marginBottom: "16px" }}>
-                  Hansa Technologies is a premier AI-Based Software Training Institute
-                  with over 30 years of experience in transforming students into
-                  industry-ready professionals.
-                </p>
-              </FadeIn>
-              <FadeIn delay={0.3}>
-                <p style={{ fontSize: "16px", color: "#CBD5E1", lineHeight: "1.8" }}>
-                  Founded in 1994, we have trained 5000+ students and placed
-                  1000+ in top IT companies across India. Our Google 5-star rating
-                  reflects our commitment to quality education.
-                </p>
-              </FadeIn>
-            </div>
-            <FadeIn delay={0.2}>
-              <div style={{ height: "380px", borderRadius: "16px", overflow: "hidden" }}>
-                <img src="/images/classroom.jpg" alt="Hansa Technologies classroom" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }} />
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="section-padding" style={{ background: "#0E1A2B" }}>
-        <div className="container-max">
-          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "32px" }}>
-            <FadeIn>
-              <div className="card" style={{ height: "100%" }}>
-                <div style={{ fontSize: "36px", marginBottom: "16px" }}>🎯</div>
-                <h3 style={{ fontSize: "22px", fontWeight: 700, color: "#FFFFFF", marginBottom: "12px" }}>Our Mission</h3>
-                <p style={{ fontSize: "15px", color: "#CBD5E1", lineHeight: "1.8" }}>
-                  To empower students with industry-ready skills through AI-based training methodologies,
-                  practical project experience, and comprehensive placement support, making quality
-                  technology education accessible to all.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.1}>
-              <div className="card" style={{ height: "100%" }}>
-                <div style={{ fontSize: "36px", marginBottom: "16px" }}>🔭</div>
-                <h3 style={{ fontSize: "22px", fontWeight: 700, color: "#FFFFFF", marginBottom: "12px" }}>Our Vision</h3>
-                <p style={{ fontSize: "15px", color: "#CBD5E1", lineHeight: "1.8" }}>
-                  To become the most trusted technology training institute in India, recognized for
-                  producing industry-ready professionals who drive innovation and digital transformation
-                  across organizations.
-                </p>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="section-padding" style={{ background: "#08111F" }}>
-        <div className="container-max">
+    <>
+      <section
+        style={{
+          background: "linear-gradient(135deg, #fafbff 0%, #eef2ff 100%)",
+          padding: "100px 24px 80px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: "-100px",
+            right: "-50px",
+            width: "400px",
+            height: "400px",
+            background: "radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%)",
+            borderRadius: "50%",
+            pointerEvents: "none",
+          }}
+        />
+        <div style={{ maxWidth: "800px", margin: "0 auto", position: "relative", zIndex: 1 }}>
           <FadeIn>
-            <div style={{ textAlign: "center", marginBottom: "56px" }}>
-              <h2 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 700, marginBottom: "16px" }}>Our Journey</h2>
-              <p style={{ color: "#CBD5E1", fontSize: "16px" }}>Three decades of transforming lives through technology education</p>
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "6px 16px",
+                background: "rgba(99, 102, 241, 0.08)",
+                border: "1px solid rgba(99, 102, 241, 0.15)",
+                borderRadius: "20px",
+                marginBottom: "24px",
+              }}
+            >
+              <span style={{ fontSize: "12px", color: "#6366f1", fontWeight: 600 }}>Est. 1994 · 30+ Years</span>
             </div>
+            <h1 style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 700, lineHeight: 1.1, color: "#1e1b4b", marginBottom: "20px" }}>
+              Shaping careers
+              <br />
+              <span style={{ color: "#6366f1" }}>since 1994.</span>
+            </h1>
+            <p style={{ fontSize: "16px", color: "#64748b", lineHeight: 1.8, maxWidth: "560px" }}>
+              Hansa Technologies is a Google 5-Star rated AI-based software training institute. For over 30 years, we&apos;ve transformed beginners into industry-ready professionals through practical training, real projects, and dedicated placement support.
+            </p>
           </FadeIn>
-          <div style={{ maxWidth: "700px", margin: "0 auto", position: "relative", paddingLeft: "40px" }}>
-            <div style={{ position: "absolute", left: "16px", top: 0, bottom: 0, width: "2px", background: "linear-gradient(to bottom, #2563EB, #3B82F6, #2563EB)" }} />
-            {[
-              { year: "1994", title: "Foundation", desc: "Hansa Technologies established in Palakollu with a vision to provide quality computer education." },
-              { year: "2000", title: "Growth Phase", desc: "Expanded to multiple classrooms. Introduced advanced programming courses." },
-              { year: "2008", title: "Placement Cell", desc: "Launched dedicated placement support. First batch of 100+ placements achieved." },
-              { year: "2015", title: "Penugonda Branch", desc: "Opened second branch to serve more students in the region." },
-              { year: "2020", title: "Online Training", desc: "Launched online training programs. Adapted to digital-first learning." },
-              { year: "2023", title: "AI Integration", desc: "Integrated AI-powered curriculum. 5000+ students milestone reached." },
-              { year: "2024", title: "30 Years", desc: "Celebrating 30 years of excellence. 1000+ placements milestone achieved." },
-            ].map((item, i) => (
-              <FadeIn key={item.year} delay={i * 0.08}>
-                <div style={{ marginBottom: "32px", position: "relative" }}>
-                  <div style={{ position: "absolute", left: "-32px", width: "24px", height: "24px", borderRadius: "50%", background: "#2563EB", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "8px", fontWeight: 700, color: "#FFF", border: "3px solid #08111F" }} />
-                  <span style={{ color: "#2563EB", fontSize: "13px", fontWeight: 600 }}>{item.year}</span>
-                  <h4 style={{ fontSize: "17px", fontWeight: 600, color: "#FFFFFF", marginTop: "4px", marginBottom: "4px" }}>{item.title}</h4>
-                  <p style={{ fontSize: "14px", color: "#CBD5E1", lineHeight: "1.6" }}>{item.desc}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="section-padding" style={{ background: "#0E1A2B" }}>
-        <div className="container-max">
-          <FadeIn>
-            <div style={{ textAlign: "center", marginBottom: "56px" }}>
-              <h2 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 700, marginBottom: "16px" }}>Our Values</h2>
-              <p style={{ color: "#CBD5E1", fontSize: "16px" }}>The principles that guide everything we do</p>
-            </div>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: "24px" }}>
-            {[
-              { icon: "🎓", title: "Excellence", desc: "Committed to the highest standards in education and training." },
-              { icon: "🤝", title: "Integrity", desc: "Transparent practices and honest guidance for every student." },
-              { icon: "💡", title: "Innovation", desc: "Constantly evolving curriculum with latest technologies." },
-              { icon: "❤️", title: "Student First", desc: "Every decision is made with student success in mind." },
-            ].map((value, i) => (
-              <FadeIn key={value.title} delay={i * 0.1}>
-                <div className="card" style={{ textAlign: "center" }}>
-                  <div style={{ fontSize: "36px", marginBottom: "12px" }}>{value.icon}</div>
-                  <h4 style={{ fontSize: "17px", fontWeight: 600, color: "#FFFFFF", marginBottom: "8px" }}>{value.title}</h4>
-                  <p style={{ fontSize: "14px", color: "#CBD5E1", lineHeight: "1.6" }}>{value.desc}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="section-padding" style={{ background: "#08111F" }}>
-        <div className="container-max">
-          <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: "24px" }}>
-            {[
-              { value: "30+", label: "Years of Excellence" },
-              { value: "5000+", label: "Students Trained" },
-              { value: "1000+", label: "Placements" },
-              { value: "200+", label: "Hiring Partners" },
-            ].map((stat, i) => (
-              <FadeIn key={stat.label} delay={i * 0.1}>
-                <div style={{ textAlign: "center", padding: "32px 16px", background: "#122033", borderRadius: "16px", border: "1px solid rgba(255,255,255,0.06)" }}>
-                  <p style={{ fontSize: "32px", fontWeight: 700, color: "#2563EB", fontFamily: "var(--font-heading)" }}>{stat.value}</p>
-                  <p style={{ fontSize: "14px", color: "#CBD5E1", marginTop: "8px" }}>{stat.label}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section-padding" style={{ background: "#0E1A2B" }}>
-        <div className="container-max">
-          <FadeIn>
-            <div style={{ textAlign: "center", padding: "56px 32px", background: "linear-gradient(135deg, rgba(37,99,235,0.1) 0%, rgba(14,26,43,0.8) 100%)", borderRadius: "24px", border: "1px solid rgba(37,99,235,0.2)" }}>
-              <h2 style={{ fontSize: "clamp(24px, 4vw, 34px)", fontWeight: 700, marginBottom: "16px", color: "#FFFFFF" }}>
-                Join the Hansa Technologies Family
-              </h2>
-              <p style={{ color: "#CBD5E1", fontSize: "16px", maxWidth: "480px", margin: "0 auto 28px" }}>
-                Be part of our 30-year legacy of transforming careers through technology education.
+      <section style={{ backgroundColor: "#ffffff", padding: "80px 24px" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "32px" }}>
+          <ScaleIn>
+            <div style={{ background: "linear-gradient(135deg, #eef2ff, #e0e7ff)", borderRadius: "20px", padding: "32px", border: "1px solid rgba(99, 102, 241, 0.1)" }}>
+              <div style={{ fontSize: "28px", marginBottom: "16px" }}>🎯</div>
+              <h3 style={{ fontSize: "16px", fontWeight: 700, color: "#1e1b4b", marginBottom: "12px" }}>Our Mission</h3>
+              <p style={{ fontSize: "14px", color: "#64748b", lineHeight: 1.7 }}>
+                Empower individuals with industry-relevant skills through practical, AI-enhanced training that builds confident, job-ready professionals.
               </p>
-              <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "14px" }}>
-                <Link href="/courses/" className="btn-primary">Explore Programs</Link>
-                <Link href="/contact/" className="btn-secondary">Contact Us</Link>
-              </div>
             </div>
-          </FadeIn>
+          </ScaleIn>
+          <ScaleIn delay={0.1}>
+            <div style={{ background: "linear-gradient(135deg, #f0fdf4, #dcfce7)", borderRadius: "20px", padding: "32px", border: "1px solid rgba(34, 197, 94, 0.1)" }}>
+              <div style={{ fontSize: "28px", marginBottom: "16px" }}>🔭</div>
+              <h3 style={{ fontSize: "16px", fontWeight: 700, color: "#1e1b4b", marginBottom: "12px" }}>Our Vision</h3>
+              <p style={{ fontSize: "14px", color: "#64748b", lineHeight: 1.7 }}>
+                Be the most trusted software training institute in India — known for producing professionals who drive innovation at top companies.
+              </p>
+            </div>
+          </ScaleIn>
         </div>
       </section>
-    </div>
+
+      <section className="bg-section-alt" style={{ padding: "80px 24px" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <FadeIn>
+            <h2 style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)", fontWeight: 700, color: "#1e1b4b", marginBottom: "48px", textAlign: "center" }}>Our Journey</h2>
+          </FadeIn>
+          <div style={{ position: "relative" }}>
+            <div style={{ position: "absolute", left: "20px", top: "0", bottom: "0", width: "2px", background: "linear-gradient(180deg, #c7d2fe, #e0e7ff)", borderRadius: "1px" }} />
+            {[
+              { year: "1994", event: "Founded in Palakollu with a vision for quality software education." },
+              { year: "2005", event: "Crossed 1,000 trained students with strong placement results." },
+              { year: "2010", event: "Fully digital classrooms and modern computer labs launched." },
+              { year: "2015", event: "Second branch opened in Penugonda to serve more students." },
+              { year: "2018", event: "Introduced AI-based learning and Data Science programs." },
+              { year: "2024", event: "30 years complete. 5,000+ alumni. Google 5-star rated." },
+            ].map((item, i) => (
+              <FadeIn key={item.year} delay={i * 0.06}>
+                <div style={{ display: "flex", gap: "24px", padding: "20px 0", paddingLeft: "48px", position: "relative" }}>
+                  <div style={{ position: "absolute", left: "13px", top: "26px", width: "16px", height: "16px", borderRadius: "50%", background: "linear-gradient(135deg, #6366f1, #8b5cf6)", boxShadow: "0 0 0 4px rgba(99, 102, 241, 0.15)" }} />
+                  <span style={{ fontSize: "14px", fontWeight: 700, color: "#6366f1", width: "50px", flexShrink: 0 }}>{item.year}</span>
+                  <span style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6 }}>{item.event}</span>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ backgroundColor: "#ffffff", padding: "80px 24px" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <FadeIn>
+            <h2 style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)", fontWeight: 700, color: "#1e1b4b", marginBottom: "48px", textAlign: "center" }}>What We Stand For</h2>
+          </FadeIn>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "20px" }}>
+            {[
+              { t: "Excellence", d: "Highest standards in curriculum, teaching, and outcomes.", icon: "💎" },
+              { t: "Innovation", d: "Evolving with AI, industry trends, and modern methodology.", icon: "🚀" },
+              { t: "Student First", d: "Every decision centered around career growth and results.", icon: "🎓" },
+              { t: "Integrity", d: "Honest guidance and genuine commitment to every student.", icon: "🤝" },
+            ].map((v, i) => (
+              <ScaleIn key={v.t} delay={i * 0.07}>
+                <div
+                  style={{ backgroundColor: "#ffffff", borderRadius: "16px", padding: "24px", border: "1px solid #e2e8f0", textAlign: "center", transition: "all 0.3s" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(99, 102, 241, 0.3)"; e.currentTarget.style.boxShadow = "0 8px 30px rgba(99, 102, 241, 0.08)"; e.currentTarget.style.transform = "translateY(-4px)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#e2e8f0"; e.currentTarget.style.boxShadow = "none"; e.currentTarget.style.transform = "translateY(0)"; }}
+                >
+                  <div style={{ fontSize: "32px", marginBottom: "12px" }}>{v.icon}</div>
+                  <h4 style={{ fontSize: "15px", fontWeight: 700, color: "#1e1b4b", marginBottom: "8px" }}>{v.t}</h4>
+                  <p style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.6 }}>{v.d}</p>
+                </div>
+              </ScaleIn>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

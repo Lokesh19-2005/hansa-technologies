@@ -1,192 +1,112 @@
 "use client";
 
-import FadeIn from "@/components/AnimatedText";
+import { FadeIn, SlideIn } from "@/components/AnimatedText";
 
 export default function ContactPage() {
   return (
-    <div style={{ paddingTop: "80px" }}>
-      {/* Hero */}
-      <section className="section-padding" style={{ background: "#08111F" }}>
-        <div className="container-max" style={{ textAlign: "center" }}>
-          <FadeIn>
-            <span style={{ display: "inline-block", padding: "8px 16px", background: "rgba(37,99,235,0.1)", border: "1px solid rgba(37,99,235,0.3)", borderRadius: "20px", color: "#60A5FA", fontSize: "13px", fontWeight: 500, marginBottom: "24px" }}>
-              We are here to help
-            </span>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 700, marginBottom: "16px", lineHeight: "1.1" }}>
-              Contact <span style={{ color: "#2563EB" }}>Us</span>
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <p style={{ fontSize: "16px", color: "#CBD5E1", maxWidth: "560px", margin: "0 auto" }}>
-              Get in touch for free career counseling, course details, or any queries
+    <section style={{ backgroundColor: "#fafbff", padding: "80px 24px 100px" }}>
+      <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+        <FadeIn>
+          <div style={{ textAlign: "center", marginBottom: "56px" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "6px 16px", background: "rgba(99, 102, 241, 0.08)", border: "1px solid rgba(99, 102, 241, 0.15)", borderRadius: "20px", marginBottom: "20px" }}>
+              <span style={{ fontSize: "12px", color: "#6366f1", fontWeight: 600 }}>Free Career Consultation</span>
+            </div>
+            <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "#1e1b4b", marginBottom: "12px" }}>Get in touch</h1>
+            <p style={{ fontSize: "16px", color: "#64748b", maxWidth: "440px", margin: "0 auto" }}>
+              Book a free career consultation. We&apos;ll help you choose the right program.
             </p>
-          </FadeIn>
-        </div>
-      </section>
+          </div>
+        </FadeIn>
 
-      {/* Contact Form + Details */}
-      <section className="section-padding" style={{ background: "#0E1A2B" }}>
-        <div className="container-max">
-          <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "48px" }}>
-            {/* Form */}
-            <FadeIn>
-              <div className="card">
-                <h3 style={{ fontSize: "22px", fontWeight: 600, color: "#FFFFFF", marginBottom: "8px" }}>Send Us a Message</h3>
-                <p style={{ color: "#94A3B8", fontSize: "14px", marginBottom: "24px" }}>Fill out the form and we will get back within 24 hours</p>
-                <form style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                  <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "16px" }}>
-                    <input type="text" placeholder="First Name" style={{ width: "100%", padding: "12px 16px", background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#FFFFFF", fontSize: "14px", outline: "none" }} />
-                    <input type="text" placeholder="Last Name" style={{ width: "100%", padding: "12px 16px", background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#FFFFFF", fontSize: "14px", outline: "none" }} />
+        <div style={{ display: "grid", gridTemplateColumns: "3fr 2fr", gap: "48px" }} className="grid-mobile-1">
+          <SlideIn direction="left" delay={0.1}>
+            <div style={{ backgroundColor: "#ffffff", borderRadius: "24px", padding: "36px", border: "1px solid rgba(99, 102, 241, 0.06)", boxShadow: "0 4px 20px rgba(99, 102, 241, 0.04)" }}>
+              <form style={{ display: "flex", flexDirection: "column", gap: "20px" }} onSubmit={(e) => e.preventDefault()}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+                  <div>
+                    <label style={{ fontSize: "13px", color: "#475569", marginBottom: "8px", display: "block", fontWeight: 500 }}>Name</label>
+                    <input type="text" placeholder="Your name" style={{ width: "100%", padding: "12px 16px", borderRadius: "12px", backgroundColor: "#f8fafc", border: "1px solid #e2e8f0", fontSize: "14px", color: "#1e1b4b", outline: "none" }} />
                   </div>
-                  <input type="email" placeholder="Email Address" style={{ width: "100%", padding: "12px 16px", background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#FFFFFF", fontSize: "14px", outline: "none" }} />
-                  <input type="tel" placeholder="Phone Number" style={{ width: "100%", padding: "12px 16px", background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#FFFFFF", fontSize: "14px", outline: "none" }} />
-                  <select style={{ width: "100%", padding: "12px 16px", background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#94A3B8", fontSize: "14px", outline: "none" }}>
-                    <option value="">Interested Course</option>
-                    <option value="fullstack">Full Stack Development</option>
-                    <option value="python">Python Programming</option>
-                    <option value="datascience">Data Science & ML</option>
-                    <option value="ai">AI & Deep Learning</option>
-                    <option value="java">Java Development</option>
-                    <option value="cloud">Cloud Computing</option>
-                    <option value="digital">Digital Marketing</option>
-                    <option value="other">Other</option>
+                  <div>
+                    <label style={{ fontSize: "13px", color: "#475569", marginBottom: "8px", display: "block", fontWeight: 500 }}>Phone</label>
+                    <input type="tel" placeholder="+91" style={{ width: "100%", padding: "12px 16px", borderRadius: "12px", backgroundColor: "#f8fafc", border: "1px solid #e2e8f0", fontSize: "14px", color: "#1e1b4b", outline: "none" }} />
+                  </div>
+                </div>
+                <div>
+                  <label style={{ fontSize: "13px", color: "#475569", marginBottom: "8px", display: "block", fontWeight: 500 }}>Email</label>
+                  <input type="email" placeholder="you@email.com" style={{ width: "100%", padding: "12px 16px", borderRadius: "12px", backgroundColor: "#f8fafc", border: "1px solid #e2e8f0", fontSize: "14px", color: "#1e1b4b", outline: "none" }} />
+                </div>
+                <div>
+                  <label style={{ fontSize: "13px", color: "#475569", marginBottom: "8px", display: "block", fontWeight: 500 }}>Interested Program</label>
+                  <select style={{ width: "100%", padding: "12px 16px", borderRadius: "12px", backgroundColor: "#f8fafc", border: "1px solid #e2e8f0", fontSize: "14px", color: "#64748b", outline: "none", cursor: "pointer" }}>
+                    <option value="">Select a program</option>
+                    <option>Full Stack Python</option>
+                    <option>Data Science & ML</option>
+                    <option>AI Automation</option>
+                    <option>Java</option>
+                    <option>Web Development</option>
+                    <option>Digital Marketing</option>
+                    <option>Other</option>
                   </select>
-                  <textarea placeholder="Your Message (optional)" rows={4} style={{ width: "100%", padding: "12px 16px", background: "#0E1A2B", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "#FFFFFF", fontSize: "14px", outline: "none", resize: "vertical" }} />
-                  <button type="submit" className="btn-primary" style={{ width: "100%" }}>Submit Enquiry</button>
-                </form>
-              </div>
-            </FadeIn>
-
-            {/* Contact Info */}
-            <FadeIn delay={0.2}>
-              <div>
-                {/* Quick Contact */}
-                <div style={{ marginBottom: "32px" }}>
-                  <h3 style={{ fontSize: "20px", fontWeight: 600, color: "#FFFFFF", marginBottom: "20px" }}>Quick Contact</h3>
-                  <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-                    <a href="tel:+919849127749" style={{ display: "flex", alignItems: "center", gap: "14px", padding: "16px", background: "#122033", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.06)" }}>
-                      <div style={{ width: "44px", height: "44px", borderRadius: "10px", background: "rgba(37,99,235,0.1)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "20px" }}>📞</div>
-                      <div>
-                        <p style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 500 }}>Call Us</p>
-                        <p style={{ color: "#2563EB", fontSize: "14px" }}>+91 98491 27749</p>
-                      </div>
-                    </a>
-                    <a href="https://wa.me/919949960200" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "14px", padding: "16px", background: "#122033", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.06)" }}>
-                      <div style={{ width: "44px", height: "44px", borderRadius: "10px", background: "rgba(37,211,102,0.1)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "20px" }}>💬</div>
-                      <div>
-                        <p style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 500 }}>WhatsApp</p>
-                        <p style={{ color: "#25D366", fontSize: "14px" }}>+91 99499 60200</p>
-                      </div>
-                    </a>
-                    <div style={{ display: "flex", alignItems: "center", gap: "14px", padding: "16px", background: "#122033", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.06)" }}>
-                      <div style={{ width: "44px", height: "44px", borderRadius: "10px", background: "rgba(37,99,235,0.1)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "20px" }}>✉️</div>
-                      <div>
-                        <p style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 500 }}>Email</p>
-                        <p style={{ color: "#CBD5E1", fontSize: "14px" }}>info@hansatechnologies.com</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
+                <div>
+                  <label style={{ fontSize: "13px", color: "#475569", marginBottom: "8px", display: "block", fontWeight: 500 }}>Message</label>
+                  <textarea rows={4} placeholder="Tell us about your goals..." style={{ width: "100%", padding: "12px 16px", borderRadius: "12px", backgroundColor: "#f8fafc", border: "1px solid #e2e8f0", fontSize: "14px", color: "#1e1b4b", outline: "none", resize: "none" }} />
+                </div>
+                <button type="submit" className="btn-primary" style={{ width: "100%", padding: "14px 24px", fontSize: "15px" }}>Send Message</button>
+              </form>
+            </div>
+          </SlideIn>
 
-                {/* Business Hours */}
-                <div style={{ marginBottom: "32px" }}>
-                  <h3 style={{ fontSize: "18px", fontWeight: 600, color: "#FFFFFF", marginBottom: "16px" }}>Business Hours</h3>
-                  <div style={{ padding: "20px", background: "#122033", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.06)" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
-                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>Monday - Friday</span>
-                      <span style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 500 }}>9:00 AM - 7:00 PM</span>
-                    </div>
-                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
-                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>Saturday</span>
-                      <span style={{ color: "#FFFFFF", fontSize: "14px", fontWeight: 500 }}>9:00 AM - 5:00 PM</span>
-                    </div>
-                    <div style={{ display: "flex", justifyContent: "space-between" }}>
-                      <span style={{ color: "#CBD5E1", fontSize: "14px" }}>Sunday</span>
-                      <span style={{ color: "#94A3B8", fontSize: "14px" }}>By Appointment Only</span>
-                    </div>
+          <SlideIn direction="right" delay={0.2}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+              {[
+                { label: "Phone", value: "+91 98491 27749", href: "tel:+919849127749", icon: "📞" },
+                { label: "WhatsApp", value: "+91 99499 60200", href: "https://wa.me/919949960200", icon: "💬" },
+                { label: "Email", value: "hansatechnologies94@gmail.com", href: "mailto:hansatechnologies94@gmail.com", icon: "✉️" },
+              ].map((item) => (
+                <a key={item.label} href={item.href} target={item.href.startsWith("https") ? "_blank" : undefined} rel={item.href.startsWith("https") ? "noopener noreferrer" : undefined}
+                  style={{ display: "flex", alignItems: "center", gap: "14px", padding: "16px 20px", backgroundColor: "#ffffff", borderRadius: "14px", border: "1px solid rgba(99, 102, 241, 0.06)", textDecoration: "none", transition: "all 0.2s" }}>
+                  <span style={{ fontSize: "20px" }}>{item.icon}</span>
+                  <div>
+                    <p style={{ fontSize: "11px", color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "2px", fontWeight: 600 }}>{item.label}</p>
+                    <p style={{ fontSize: "14px", color: "#1e1b4b", fontWeight: 500 }}>{item.value}</p>
+                  </div>
+                </a>
+              ))}
+
+              <div style={{ padding: "20px", backgroundColor: "#ffffff", borderRadius: "14px", border: "1px solid rgba(99, 102, 241, 0.06)" }}>
+                <p style={{ fontSize: "11px", color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "6px", fontWeight: 600 }}>Hours</p>
+                <p style={{ fontSize: "14px", color: "#1e1b4b", fontWeight: 500 }}>Mon–Sat, 9:00 AM – 9:00 PM</p>
+                <p style={{ fontSize: "12px", color: "#94a3b8", marginTop: "2px" }}>Sunday closed</p>
+              </div>
+
+              <div style={{ padding: "20px", background: "linear-gradient(135deg, #eef2ff, #e0e7ff)", borderRadius: "14px", border: "1px solid rgba(99, 102, 241, 0.1)" }}>
+                <p style={{ fontSize: "11px", color: "#6366f1", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "12px", fontWeight: 600 }}>Our Branches</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                  <div>
+                    <p style={{ fontSize: "14px", fontWeight: 600, color: "#1e1b4b", marginBottom: "2px" }}>📍 Palakollu Branch</p>
+                    <p style={{ fontSize: "12px", color: "#64748b" }}>Near Desalamma Temple</p>
+                  </div>
+                  <div>
+                    <p style={{ fontSize: "14px", fontWeight: 600, color: "#1e1b4b", marginBottom: "2px" }}>📍 Penugonda Branch</p>
+                    <p style={{ fontSize: "12px", color: "#64748b" }}>Near Kanyaka Parameswari Temple</p>
                   </div>
                 </div>
               </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
 
-      {/* Branch Cards */}
-      <section className="section-padding" style={{ background: "#08111F" }}>
-        <div className="container-max">
-          <FadeIn>
-            <div style={{ textAlign: "center", marginBottom: "48px" }}>
-              <h2 style={{ fontSize: "clamp(28px, 4vw, 36px)", fontWeight: 700, marginBottom: "12px" }}>Our Branches</h2>
-              <p style={{ color: "#CBD5E1", fontSize: "16px" }}>Visit us at our convenient locations</p>
-            </div>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "24px", maxWidth: "800px", margin: "0 auto" }}>
-            <FadeIn>
-              <div className="card" style={{ textAlign: "center" }}>
-                <div style={{ fontSize: "36px", marginBottom: "12px" }}>📍</div>
-                <h3 style={{ fontSize: "20px", fontWeight: 600, color: "#FFFFFF", marginBottom: "8px" }}>Palakollu Branch</h3>
-                <p style={{ fontSize: "14px", color: "#CBD5E1", marginBottom: "4px" }}>Near Desalamma Temple</p>
-                <p style={{ fontSize: "14px", color: "#CBD5E1", marginBottom: "12px" }}>Palakollu, West Godavari, AP</p>
-                <a href="tel:+919849127749" style={{ color: "#2563EB", fontSize: "14px", fontWeight: 500, display: "block", marginBottom: "12px" }}>
-                  +91 98491 27749
+              <div style={{ display: "flex", gap: "12px" }}>
+                <a href="https://wa.me/919949960200" target="_blank" rel="noopener noreferrer" style={{ flex: 1, textAlign: "center", padding: "12px", fontSize: "13px", fontWeight: 600, color: "#6366f1", border: "1px solid rgba(99, 102, 241, 0.2)", borderRadius: "12px", textDecoration: "none", backgroundColor: "rgba(99, 102, 241, 0.04)" }}>
+                  💬 WhatsApp
                 </a>
-                <a
-                  href="https://maps.google.com/?q=Hansa+Technologies+Palakollu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#94A3B8", fontSize: "13px", display: "inline-flex", alignItems: "center", gap: "4px" }}
-                >
-                  Get Directions <span>↗</span>
-                </a>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.1}>
-              <div className="card" style={{ textAlign: "center" }}>
-                <div style={{ fontSize: "36px", marginBottom: "12px" }}>📍</div>
-                <h3 style={{ fontSize: "20px", fontWeight: 600, color: "#FFFFFF", marginBottom: "8px" }}>Penugonda Branch</h3>
-                <p style={{ fontSize: "14px", color: "#CBD5E1", marginBottom: "4px" }}>Near Kanyaka Parameswari Temple</p>
-                <p style={{ fontSize: "14px", color: "#CBD5E1", marginBottom: "12px" }}>Penugonda, West Godavari, AP</p>
-                <a href="tel:+919849127749" style={{ color: "#2563EB", fontSize: "14px", fontWeight: 500, display: "block", marginBottom: "12px" }}>
-                  +91 98491 27749
-                </a>
-                <a
-                  href="https://maps.google.com/?q=Hansa+Technologies+Penugonda"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#94A3B8", fontSize: "13px", display: "inline-flex", alignItems: "center", gap: "4px" }}
-                >
-                  Get Directions <span>↗</span>
-                </a>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Placeholder */}
-      <section style={{ background: "#0E1A2B", padding: "0 24px 60px" }}>
-        <div className="container-max">
-          <FadeIn>
-            <div className="image-placeholder" style={{ height: "300px", width: "100%", borderRadius: "16px" }}>
-              <div style={{ textAlign: "center" }}>
-                <div style={{ fontSize: "48px", marginBottom: "12px", opacity: 0.4 }}>🗺️</div>
-                <p style={{ color: "rgba(255,255,255,0.35)", fontSize: "14px" }}>Interactive Map Coming Soon</p>
-                <a
-                  href="https://maps.google.com/?q=Hansa+Technologies+Palakollu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#2563EB", fontSize: "14px", marginTop: "8px", display: "inline-block" }}
-                >
-                  Open in Google Maps →
+                <a href="tel:+919849127749" className="btn-primary" style={{ flex: 1, textAlign: "center", fontSize: "13px", borderRadius: "12px" }}>
+                  📞 Call Now
                 </a>
               </div>
             </div>
-          </FadeIn>
+          </SlideIn>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
