@@ -24,9 +24,9 @@ export default function ScrollToTop() {
         zIndex: 999,
         width: "44px",
         height: "44px",
-        borderRadius: "12px",
-        background: "#122033",
-        border: "1px solid rgba(255,255,255,0.1)",
+        borderRadius: "50%",
+        background: "rgba(10, 22, 40, 0.9)",
+        border: "1px solid rgba(0, 212, 255, 0.2)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -34,10 +34,10 @@ export default function ScrollToTop() {
         transition: "all 0.3s",
         boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
       }}
-      onMouseEnter={(e) => { e.currentTarget.style.background = "#2563EB"; e.currentTarget.style.borderColor = "#2563EB"; }}
-      onMouseLeave={(e) => { e.currentTarget.style.background = "#122033"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"; }}
+      onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(0, 212, 255, 0.15)"; e.currentTarget.style.borderColor = "rgba(0, 212, 255, 0.5)"; }}
+      onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(10, 22, 40, 0.9)"; e.currentTarget.style.borderColor = "rgba(0, 212, 255, 0.2)"; }}
     >
-      <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#FFFFFF" strokeWidth="2">
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#00d4ff" strokeWidth="2">
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
       </svg>
     </button>

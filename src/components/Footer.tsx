@@ -4,18 +4,16 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer style={{ background: "linear-gradient(180deg, #050d1a 0%, #020810 100%)", color: "#e2e8f0", padding: "80px 24px 40px", position: "relative", overflow: "hidden" }}>
-      {/* Glow orb */}
+    <footer style={{ background: "linear-gradient(180deg, #050d1a 0%, #020810 100%)", color: "#e2e8f0", padding: "80px 20px 40px", position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", bottom: "-150px", left: "50%", transform: "translateX(-50%)", width: "600px", height: "300px", background: "radial-gradient(ellipse, rgba(0, 212, 255, 0.04) 0%, transparent 70%)", pointerEvents: "none" }} />
 
       <div style={{ maxWidth: "1200px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-        {/* Top glow line */}
         <div className="glow-line" style={{ marginBottom: "60px" }} />
 
-        <div style={{ display: "grid", gridTemplateColumns: "2fr repeat(3, 1fr)", gap: "48px", marginBottom: "60px" }} className="grid-mobile-1">
+        <div style={{ display: "grid", gridTemplateColumns: "2fr repeat(3, 1fr)", gap: "40px", marginBottom: "60px" }} className="footer-grid">
           <div>
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
-              <img src="/logo.png" alt="Hansa" style={{ height: "28px", width: "auto", opacity: 0.9 }} />
+            <div style={{ marginBottom: "16px" }}>
+              <img src="/logo.png" alt="Hansa" style={{ height: "80px", width: "auto", opacity: 0.9 }} />
             </div>
             <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.8, maxWidth: "300px", marginBottom: "24px" }}>
               AI-Based Software Training Institute shaping careers since 1994. Google 5-Star rated with 5,000+ successful alumni.
@@ -24,6 +22,7 @@ export default function Footer() {
               {[
                 { href: "https://wa.me/919949960200", icon: "💬", label: "WhatsApp" },
                 { href: "https://www.instagram.com/hansa_tech_official", icon: "📷", label: "Instagram" },
+                { href: "https://www.linkedin.com/company/hansa-technologies-palakollu", icon: "💼", label: "LinkedIn" },
                 { href: "tel:+919849127749", icon: "📞", label: "Call" },
               ].map((s) => (
                 <a key={s.label} href={s.href} target={s.href.startsWith("https") ? "_blank" : undefined} rel={s.href.startsWith("https") ? "noopener noreferrer" : undefined}
@@ -39,9 +38,9 @@ export default function Footer() {
           <div>
             <h4 style={{ fontSize: "12px", fontWeight: 600, color: "#00d4ff", marginBottom: "20px", textTransform: "uppercase", letterSpacing: "0.1em" }}>Company</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-              <Link href="/about" style={{ fontSize: "14px", color: "#475569", textDecoration: "none", transition: "color 0.2s" }}>About Us</Link>
-              <Link href="/about" style={{ fontSize: "14px", color: "#475569", textDecoration: "none", transition: "color 0.2s" }}>Our Journey</Link>
-              <Link href="/contact" style={{ fontSize: "14px", color: "#475569", textDecoration: "none", transition: "color 0.2s" }}>Contact</Link>
+              <Link href="/about" style={{ fontSize: "14px", color: "#475569", textDecoration: "none" }}>About Us</Link>
+              <Link href="/about" style={{ fontSize: "14px", color: "#475569", textDecoration: "none" }}>Our Journey</Link>
+              <Link href="/contact" style={{ fontSize: "14px", color: "#475569", textDecoration: "none" }}>Contact</Link>
             </div>
           </div>
 
@@ -75,6 +74,15 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      <style jsx global>{`
+        @media (max-width: 768px) {
+          .footer-grid {
+            grid-template-columns: 1fr !important;
+            gap: 32px !important;
+          }
+        }
+      `}</style>
     </footer>
   );
 }

@@ -23,7 +23,7 @@ export default function ContactPage() {
           <SlideIn direction="left" delay={0.1}>
             <div style={{ background: "rgba(10, 22, 40, 0.8)", borderRadius: "20px", padding: "36px", border: "1px solid rgba(0, 212, 255, 0.08)", backdropFilter: "blur(12px)" }}>
               <form style={{ display: "flex", flexDirection: "column", gap: "20px" }} onSubmit={(e) => e.preventDefault()}>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+                <div className="form-row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
                   <div>
                     <label style={{ fontSize: "12px", color: "#475569", marginBottom: "8px", display: "block", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.05em" }}>Name</label>
                     <input type="text" placeholder="Your name" style={{ width: "100%", padding: "12px 16px", borderRadius: "10px", backgroundColor: "rgba(5, 13, 26, 0.8)", border: "1px solid rgba(148, 163, 184, 0.1)", fontSize: "14px", color: "#e2e8f0", outline: "none", transition: "border-color 0.2s" }} />

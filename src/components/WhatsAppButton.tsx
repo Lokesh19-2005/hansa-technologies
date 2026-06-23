@@ -2,7 +2,9 @@
 
 export default function WhatsAppButton() {
   const phone = "919949960200";
-  const message = encodeURIComponent("Hello HANSA Technologies,\nI would like to know more about your training programs, internships, and placement assistance.\nPlease contact me.");
+  const message = encodeURIComponent(
+    "Hello HANSA Technologies! 👋\n\nI'm interested in learning more about your training programs.\n\nCould you please share details about:\n• Available courses & duration\n• Fee structure\n• Placement assistance\n• Demo class schedule\n\nThank you!"
+  );
   const url = `https://wa.me/${phone}?text=${message}`;
 
   return (
