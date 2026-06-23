@@ -25,7 +25,7 @@ export default function Navbar() {
     <header style={{ position: "sticky", top: 0, zIndex: 50, backgroundColor: scrolled ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0.85)", backdropFilter: "blur(16px)", borderBottom: scrolled ? "1px solid #f1f5f9" : "1px solid transparent", transition: "all 0.3s ease", boxShadow: scrolled ? "0 1px 12px rgba(0,0,0,0.04)" : "none" }}>
       <nav style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px", height: "72px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-          <img src="/logo.png" alt="Hansa Technologies" style={{ height: "60px", width: "auto", objectFit: "contain" }} />
+          <img src="/logo-original.jpeg" alt="Hansa Technologies" style={{ height: "60px", width: "auto", objectFit: "contain" }} />
         </Link>
 
         <div className="desktop-nav" style={{ display: "flex", alignItems: "center", gap: "36px" }}>
