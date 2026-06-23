@@ -69,7 +69,6 @@ export default function CoursesPage() {
                     <span style={{ fontSize: "24px" }}>{course.icon}</span>
                     <span style={{ fontSize: "11px", color: "#4f46e5", backgroundColor: "#eef2ff", padding: "4px 10px", borderRadius: "6px", fontWeight: 600 }}>{course.level}</span>
                   </div>
-                  <span style={{ fontSize: "12px", color: "#94a3b8", fontWeight: 500 }}>{course.duration}</span>
                 </div>
 
                 {/* Name */}

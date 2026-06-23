@@ -141,7 +141,6 @@ export default function Home() {
                   <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "14px" }}>
                     <span style={{ fontSize: "22px" }}>{course.icon}</span>
                     <span style={{ fontSize: "11px", color: "#4f46e5", backgroundColor: "#eef2ff", padding: "3px 10px", borderRadius: "10px", fontWeight: 500 }}>{course.level}</span>
-                    <span style={{ fontSize: "11px", color: "#94a3b8" }}>{course.duration}</span>
                   </div>
                   <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#1a1a2e", marginBottom: "6px" }}>{course.name}</h3>
                   <p style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.6 }}>{course.desc}</p>
