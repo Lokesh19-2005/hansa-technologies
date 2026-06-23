@@ -23,41 +23,55 @@ const whyUs = [
 export default function Home() {
   return (
     <>
-      {/* Hero - Dark */}
-      <section style={{ background: "linear-gradient(135deg, #1a1a2e 0%, #2d2b55 100%)", padding: "110px 20px 90px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+      {/* Hero */}
+      <section style={{ background: "linear-gradient(135deg, #1a1a2e 0%, #2d2b55 100%)", padding: "100px 20px 80px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "center" }} className="grid-mobile-1">
           <FadeIn>
-            <div style={{ maxWidth: "720px" }}>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "7px 16px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "20px", marginBottom: "32px" }}>
+            <div>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "7px 16px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "20px", marginBottom: "28px" }}>
                 <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#a5b4fc", boxShadow: "0 0 8px #a5b4fc" }} />
                 <span style={{ fontSize: "12px", color: "#c7d2fe", fontWeight: 500, letterSpacing: "0.04em" }}>GOOGLE 5-STAR RATED · AI-BASED TRAINING · SINCE 1994</span>
               </div>
 
-              <h1 style={{ fontSize: "clamp(2.2rem, 5.5vw, 4rem)", fontWeight: 700, lineHeight: 1.08, letterSpacing: "-0.03em", marginBottom: "24px", color: "#ffffff" }}>
+              <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 700, lineHeight: 1.1, letterSpacing: "-0.03em", marginBottom: "20px", color: "#ffffff" }}>
                 Learn • Build •{" "}
                 <span style={{ background: "linear-gradient(135deg, #a5b4fc, #c4b5fd)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Get Placed</span>
               </h1>
 
-              <p style={{ fontSize: "17px", color: "#cbd5e1", lineHeight: 1.8, marginBottom: "36px", maxWidth: "540px" }}>
-                Master in-demand skills in Python, AI, Data Science & more. Practical training, real projects, internships, and dedicated placement support.
+              <p style={{ fontSize: "16px", color: "#cbd5e1", lineHeight: 1.8, marginBottom: "32px", maxWidth: "480px" }}>
+                Master in-demand skills in Python, AI, Data Science & more. Practical training, real projects, and dedicated placement support.
               </p>
 
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", marginBottom: "44px" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", marginBottom: "36px" }}>
                 <Link href="/courses" className="btn-primary">Explore Programs</Link>
-                <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", padding: "13px 28px", fontSize: "14px", fontWeight: 500, color: "#e2e8f0", background: "transparent", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "10px", textDecoration: "none", transition: "all 0.3s" }}>Book Free Consultation</Link>
+                <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", padding: "13px 28px", fontSize: "14px", fontWeight: 500, color: "#e2e8f0", background: "transparent", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "10px", textDecoration: "none" }}>Book Free Consultation</Link>
               </div>
 
               <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                 {categories.map((cat) => (
-                  <Link key={cat} href="/courses" style={{ display: "inline-flex", padding: "6px 14px", fontSize: "12px", fontWeight: 500, color: "#c7d2fe", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "20px", textDecoration: "none" }}>{cat}</Link>
+                  <Link key={cat} href="/courses" style={{ display: "inline-flex", padding: "5px 12px", fontSize: "11px", fontWeight: 500, color: "#c7d2fe", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "16px", textDecoration: "none" }}>{cat}</Link>
                 ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <div style={{ position: "relative" }}>
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=450&fit=crop&q=80"
+                alt="Students learning together"
+                style={{ width: "100%", height: "400px", objectFit: "cover", borderRadius: "20px", border: "1px solid rgba(255,255,255,0.1)" }}
+              />
+              <div style={{ position: "absolute", bottom: "16px", left: "16px", background: "rgba(26,26,46,0.85)", backdropFilter: "blur(8px)", borderRadius: "12px", padding: "12px 16px", border: "1px solid rgba(255,255,255,0.1)" }}>
+                <p style={{ fontSize: "13px", fontWeight: 600, color: "#ffffff" }}>5,000+ Students Trained</p>
+                <p style={{ fontSize: "11px", color: "#a5b4fc" }}>Since 1994 · Two Branches</p>
               </div>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Stats - Light */}
+      {/* Stats */}
       <section style={{ borderBottom: "1px solid #f1f5f9", padding: "28px 20px", background: "#ffffff" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "40px" }}>
           {[{ v: "30+", l: "Years" }, { v: "5,000+", l: "Students" }, { v: "1,000+", l: "Placements" }, { v: "5★", l: "Google Rating" }].map((s) => (
@@ -91,8 +105,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Find your path */}
+      {/* Training Modes with Images */}
       <section style={{ padding: "100px 20px", background: "#ffffff" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <FadeIn>
+            <div style={{ textAlign: "center", marginBottom: "56px" }}>
+              <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 700, color: "#1a1a2e", marginBottom: "12px" }}>Training Modes</h2>
+              <p style={{ fontSize: "15px", color: "#64748b" }}>Learn the way that suits you best.</p>
+            </div>
+          </FadeIn>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px" }}>
+            <ScaleIn>
+              <div style={{ borderRadius: "20px", overflow: "hidden", border: "1px solid #f1f5f9", background: "#ffffff" }}>
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=280&fit=crop&q=80" alt="Offline classroom training" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
+                <div style={{ padding: "24px" }}>
+                  <h3 style={{ fontSize: "17px", fontWeight: 700, color: "#1a1a2e", marginBottom: "8px" }}>🏫 Offline Training</h3>
+                  <p style={{ fontSize: "14px", color: "#64748b", lineHeight: 1.7 }}>Practical classroom training with direct faculty interaction in AC digital classrooms with fully equipped labs.</p>
+                </div>
+              </div>
+            </ScaleIn>
+            <ScaleIn delay={0.1}>
+              <div style={{ borderRadius: "20px", overflow: "hidden", border: "1px solid #f1f5f9", background: "#ffffff" }}>
+                <img src="https://images.unsplash.com/photo-1587440871875-191322ee64b0?w=600&h=280&fit=crop&q=80" alt="Online training from home" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
+                <div style={{ padding: "24px" }}>
+                  <h3 style={{ fontSize: "17px", fontWeight: 700, color: "#1a1a2e", marginBottom: "8px" }}>💻 Online Training</h3>
+                  <p style={{ fontSize: "14px", color: "#64748b", lineHeight: 1.7 }}>Live instructor-led sessions accessible from anywhere. Same quality, flexible schedule for all learners.</p>
+                </div>
+              </div>
+            </ScaleIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Find your path */}
+      <section style={{ padding: "100px 20px", background: "#f8fafc" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <FadeIn>
             <div style={{ textAlign: "center", marginBottom: "56px" }}>
@@ -108,7 +154,7 @@ export default function Home() {
             ].map((p, i) => (
               <FadeIn key={p.title} delay={i * 0.1}>
                 <Link href="/courses" style={{ display: "block", height: "100%", textDecoration: "none" }}>
-                  <div style={{ background: p.bg, borderRadius: "16px", padding: "32px", height: "100%", border: "1px solid transparent", transition: "all 0.35s" }}
+                  <div style={{ background: p.bg, borderRadius: "16px", padding: "32px", height: "100%", transition: "all 0.35s" }}
                     onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.06)"; }}
                     onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}>
                     <h3 style={{ fontSize: "17px", fontWeight: 700, color: "#1a1a2e", marginBottom: "10px" }}>{p.title}</h3>
@@ -123,7 +169,7 @@ export default function Home() {
       </section>
 
       {/* Popular Programs */}
-      <section style={{ padding: "100px 20px", background: "#f8fafc" }}>
+      <section style={{ padding: "100px 20px", background: "#ffffff" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <FadeIn>
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "48px", gap: "16px" }}>
@@ -146,6 +192,34 @@ export default function Home() {
                   <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#1a1a2e", marginBottom: "6px" }}>{course.name}</h3>
                   <p style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.6 }}>{course.desc}</p>
                 </Link>
+              </ScaleIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Image Gallery */}
+      <section style={{ padding: "80px 20px", background: "#f8fafc" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <FadeIn>
+            <div style={{ textAlign: "center", marginBottom: "48px" }}>
+              <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 700, color: "#1a1a2e", marginBottom: "12px" }}>Life at Hansa Technologies</h2>
+              <p style={{ fontSize: "15px", color: "#64748b" }}>Modern labs, supportive faculty, and a community that grows together.</p>
+            </div>
+          </FadeIn>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "16px" }}>
+            {[
+              { src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=300&fit=crop&q=80", alt: "Team collaboration" },
+              { src: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop&q=80", alt: "Coding on laptop" },
+              { src: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=300&fit=crop&q=80", alt: "Presentation and learning" },
+              { src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&q=80", alt: "Group discussion" },
+            ].map((img, i) => (
+              <ScaleIn key={img.alt} delay={i * 0.08}>
+                <div style={{ borderRadius: "16px", overflow: "hidden", border: "1px solid #f1f5f9" }}>
+                  <img src={img.src} alt={img.alt} style={{ width: "100%", height: "220px", objectFit: "cover", transition: "transform 0.4s" }}
+                    onMouseEnter={(e) => { e.currentTarget.style.transform = "scale(1.05)"; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.transform = "scale(1)"; }} />
+                </div>
               </ScaleIn>
             ))}
           </div>
@@ -182,18 +256,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Training Modes */}
-      <section style={{ padding: "80px 20px", background: "#f8fafc" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <FadeIn><div style={{ textAlign: "center", marginBottom: "48px" }}><h2 style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)", fontWeight: 700, color: "#1a1a2e", marginBottom: "12px" }}>Training Modes</h2><p style={{ fontSize: "15px", color: "#64748b" }}>Learn the way that suits you best.</p></div></FadeIn>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "16px" }}>
-            <ScaleIn><div style={{ background: "#ffffff", borderRadius: "16px", padding: "32px", border: "1px solid #f1f5f9", textAlign: "center" }}><div style={{ fontSize: "32px", marginBottom: "14px" }}>🏫</div><h3 style={{ fontSize: "16px", fontWeight: 700, color: "#1a1a2e", marginBottom: "8px" }}>Offline Training</h3><p style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.7 }}>Practical classroom training with direct faculty interaction in AC digital classrooms.</p></div></ScaleIn>
-            <ScaleIn delay={0.1}><div style={{ background: "#ffffff", borderRadius: "16px", padding: "32px", border: "1px solid #f1f5f9", textAlign: "center" }}><div style={{ fontSize: "32px", marginBottom: "14px" }}>💻</div><h3 style={{ fontSize: "16px", fontWeight: 700, color: "#1a1a2e", marginBottom: "8px" }}>Online Training</h3><p style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.7 }}>Live instructor-led sessions accessible from anywhere. Same quality, flexible schedule.</p></div></ScaleIn>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA - Dark */}
+      {/* CTA */}
       <section style={{ padding: "100px 20px", textAlign: "center", background: "linear-gradient(135deg, #1a1a2e, #2d2b55)" }}>
         <div style={{ maxWidth: "600px", margin: "0 auto" }}>
           <FadeIn>
