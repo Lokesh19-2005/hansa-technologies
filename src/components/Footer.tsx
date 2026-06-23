@@ -44,6 +44,7 @@ export default function Footer() {
               <Link href="/placements" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>Placements</Link>
               <Link href="/placements" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>Internships</Link>
               <Link href="/placements" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>CRT Training</Link>
+              <a href="https://www.instagram.com/hansa_tech_official" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#94a3b8", textDecoration: "none" }}>📷 Instagram</a>
             </div>
           </div>
         </div>
