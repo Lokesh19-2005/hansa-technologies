@@ -32,15 +32,15 @@ export default function CoursesPage() {
   const filtered = active === "All" ? courses : courses.filter((c) => c.category === active);
 
   return (
-    <section style={{ backgroundColor: "#fafbff", padding: "80px 24px 100px" }}>
+    <section style={{ background: "#050d1a", padding: "80px 24px 100px" }}>
       <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
         <FadeIn>
           <div style={{ textAlign: "center", marginBottom: "16px" }}>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "6px 16px", background: "rgba(99, 102, 241, 0.08)", border: "1px solid rgba(99, 102, 241, 0.15)", borderRadius: "20px", marginBottom: "20px" }}>
-              <span style={{ fontSize: "12px", color: "#6366f1", fontWeight: 600 }}>{courses.length} Programs Available</span>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "6px 16px", background: "rgba(0, 212, 255, 0.06)", border: "1px solid rgba(0, 212, 255, 0.15)", borderRadius: "20px", marginBottom: "20px" }}>
+              <span style={{ fontSize: "12px", color: "#00d4ff", fontWeight: 500 }}>{courses.length} Programs Available</span>
             </div>
           </div>
-          <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "#1e1b4b", marginBottom: "12px", textAlign: "center" }}>All Programs</h1>
+          <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "#ffffff", marginBottom: "12px", textAlign: "center" }}>All Programs</h1>
           <p style={{ fontSize: "16px", color: "#64748b", textAlign: "center", maxWidth: "500px", margin: "0 auto 40px" }}>
             Every program includes real projects, mentorship, and placement support.
           </p>
@@ -56,22 +56,22 @@ export default function CoursesPage() {
           </div>
         </FadeIn>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "16px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "14px" }}>
           {filtered.map((course, i) => (
             <ScaleIn key={course.name} delay={i * 0.03}>
               <div
-                style={{ backgroundColor: "#ffffff", borderRadius: "16px", padding: "24px", border: "1px solid rgba(99, 102, 241, 0.06)", transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)", height: "100%" }}
-                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(99, 102, 241, 0.2)"; e.currentTarget.style.boxShadow = "0 8px 30px rgba(99, 102, 241, 0.08)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(99, 102, 241, 0.06)"; e.currentTarget.style.boxShadow = "none"; e.currentTarget.style.transform = "translateY(0)"; }}
+                style={{ background: "rgba(10, 22, 40, 0.7)", borderRadius: "14px", padding: "24px", border: "1px solid rgba(148, 163, 184, 0.06)", transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)", height: "100%" }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(0, 212, 255, 0.2)"; e.currentTarget.style.boxShadow = "0 0 25px rgba(0, 212, 255, 0.05)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(148, 163, 184, 0.06)"; e.currentTarget.style.boxShadow = "none"; e.currentTarget.style.transform = "translateY(0)"; }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "12px" }}>
                   <span style={{ fontSize: "22px" }}>{course.icon}</span>
                   <div style={{ display: "flex", gap: "8px", alignItems: "center", flexWrap: "wrap" }}>
-                    <span style={{ fontSize: "11px", color: "#6366f1", backgroundColor: "rgba(99, 102, 241, 0.08)", padding: "3px 10px", borderRadius: "12px", fontWeight: 500 }}>{course.level}</span>
-                    <span style={{ fontSize: "11px", color: "#94a3b8", fontWeight: 500 }}>{course.duration}</span>
+                    <span style={{ fontSize: "11px", color: "#00d4ff", backgroundColor: "rgba(0, 212, 255, 0.08)", padding: "3px 10px", borderRadius: "12px", fontWeight: 500 }}>{course.level}</span>
+                    <span style={{ fontSize: "11px", color: "#475569", fontWeight: 500 }}>{course.duration}</span>
                   </div>
                 </div>
-                <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#1e1b4b", marginBottom: "6px" }}>{course.name}</h3>
+                <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#e2e8f0", marginBottom: "6px" }}>{course.name}</h3>
                 <p style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.6 }}>{course.desc}</p>
               </div>
             </ScaleIn>
@@ -79,13 +79,12 @@ export default function CoursesPage() {
         </div>
 
         <FadeIn delay={0.2}>
-          <div style={{ marginTop: "56px", background: "linear-gradient(135deg, #1e1b4b, #312e81)", borderRadius: "20px", padding: "36px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "20px", position: "relative", overflow: "hidden" }}>
-            <div style={{ position: "absolute", top: "-50px", right: "-50px", width: "200px", height: "200px", background: "radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%)", borderRadius: "50%" }} />
-            <div style={{ position: "relative", zIndex: 1 }}>
+          <div style={{ marginTop: "56px", background: "radial-gradient(ellipse at 50% 50%, rgba(0, 212, 255, 0.06) 0%, transparent 60%), rgba(10, 22, 40, 0.8)", borderRadius: "16px", padding: "36px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "20px", border: "1px solid rgba(0, 212, 255, 0.1)" }}>
+            <div>
               <h3 style={{ fontSize: "18px", fontWeight: 700, color: "#ffffff", marginBottom: "6px" }}>Not sure which program to choose?</h3>
-              <p style={{ fontSize: "14px", color: "#a5b4fc" }}>Get a free consultation — we&apos;ll help you pick the right path.</p>
+              <p style={{ fontSize: "14px", color: "#64748b" }}>Get a free consultation — we&apos;ll help you pick the right path.</p>
             </div>
-            <Link href="/contact" className="btn-primary" style={{ flexShrink: 0, position: "relative", zIndex: 1 }}>Talk to Us</Link>
+            <Link href="/contact" className="btn-primary" style={{ flexShrink: 0 }}>Talk to Us</Link>
           </div>
         </FadeIn>
       </div>
