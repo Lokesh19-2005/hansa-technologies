@@ -4,6 +4,7 @@ import { FadeIn, ScaleIn } from "@/components/AnimatedText";
 import Link from "next/link";
 
 const categories = ["All", "Software", "Professional", "Design & Technical", "Career Development"];
+
 const courses = [
   { name: "Full Stack Python Development", category: "Software", duration: "6 Months", level: "Beginner → Advanced", desc: "Python, Django, Flask, REST APIs, databases, deployment.", icon: "🐍" },
   { name: "Data Science & Machine Learning", category: "Software", duration: "6 Months", level: "Intermediate → Advanced", desc: "Statistical modeling, deep learning, NLP, analytics.", icon: "📊" },
@@ -33,45 +34,61 @@ export default function CoursesPage() {
   const filtered = active === "All" ? courses : courses.filter((c) => c.category === active);
 
   return (
-    <section style={{ background: "#f8fafc", padding: "80px 20px 100px" }}>
-      <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
+    <section style={{ background: "#f8fafc", padding: "80px 20px 100px", minHeight: "100vh" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+        {/* Header */}
         <FadeIn>
-          <div style={{ textAlign: "center" }}>
-            <div style={{ display: "inline-flex", alignItems: "center", padding: "7px 16px", background: "#eef2ff", border: "1px solid #e0e7ff", borderRadius: "20px", marginBottom: "20px" }}>
-              <span style={{ fontSize: "12px", color: "#4f46e5", fontWeight: 600 }}>{courses.length} Programs Available</span>
-            </div>
-            <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "#1a1a2e", marginBottom: "12px" }}>All Programs</h1>
-            <p style={{ fontSize: "16px", color: "#64748b", maxWidth: "520px", margin: "0 auto 40px" }}>Every program includes real projects, mentorship, and placement support. Online & Offline available.</p>
+          <div style={{ textAlign: "center", marginBottom: "48px" }}>
+            <h1 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 700, color: "#1a1a2e", marginBottom: "12px" }}>All Programs</h1>
+            <p style={{ fontSize: "15px", color: "#64748b", maxWidth: "500px", margin: "0 auto" }}>
+              {courses.length} programs available. Every program includes real projects, mentorship, and placement support.
+            </p>
           </div>
         </FadeIn>
 
+        {/* Filters */}
         <FadeIn delay={0.1}>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "48px", justifyContent: "center" }}>
-            {categories.map((cat) => (<button key={cat} onClick={() => setActive(cat)} className={active === cat ? "filter-btn filter-btn-active" : "filter-btn filter-btn-inactive"}>{cat}</button>))}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "40px", justifyContent: "center" }}>
+            {categories.map((cat) => (
+              <button key={cat} onClick={() => setActive(cat)} className={active === cat ? "filter-btn filter-btn-active" : "filter-btn filter-btn-inactive"}>{cat}</button>
+            ))}
           </div>
         </FadeIn>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "14px" }}>
+        {/* Course Grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "16px" }}>
           {filtered.map((course, i) => (
-            <ScaleIn key={course.name} delay={i * 0.03}>
-              <div style={{ background: "#ffffff", borderRadius: "14px", padding: "24px", border: "1px solid #f1f5f9", transition: "all 0.3s", height: "100%" }}
-                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#e0e7ff"; e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(79,70,229,0.06)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#f1f5f9"; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "12px" }}>
-                  <span style={{ fontSize: "20px" }}>{course.icon}</span>
-                  <span style={{ fontSize: "11px", color: "#4f46e5", backgroundColor: "#eef2ff", padding: "3px 10px", borderRadius: "10px", fontWeight: 500 }}>{course.level}</span>
-                  <span style={{ fontSize: "11px", color: "#94a3b8" }}>{course.duration}</span>
+            <ScaleIn key={course.name} delay={i * 0.02}>
+              <div style={{ background: "#ffffff", borderRadius: "14px", padding: "24px", border: "1px solid #f1f5f9", height: "100%", transition: "all 0.25s" }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#e0e7ff"; e.currentTarget.style.boxShadow = "0 4px 16px rgba(79,70,229,0.06)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#f1f5f9"; e.currentTarget.style.boxShadow = "none"; }}>
+                
+                {/* Top row: icon + badges */}
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "14px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                    <span style={{ fontSize: "24px" }}>{course.icon}</span>
+                    <span style={{ fontSize: "11px", color: "#4f46e5", backgroundColor: "#eef2ff", padding: "4px 10px", borderRadius: "6px", fontWeight: 600 }}>{course.level}</span>
+                  </div>
+                  <span style={{ fontSize: "12px", color: "#94a3b8", fontWeight: 500 }}>{course.duration}</span>
                 </div>
-                <h3 style={{ fontSize: "14px", fontWeight: 700, color: "#1a1a2e", marginBottom: "5px" }}>{course.name}</h3>
+
+                {/* Name */}
+                <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#1a1a2e", marginBottom: "6px" }}>{course.name}</h3>
+                
+                {/* Description */}
                 <p style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.6 }}>{course.desc}</p>
               </div>
             </ScaleIn>
           ))}
         </div>
 
-        <FadeIn delay={0.2}>
+        {/* CTA Banner */}
+        <FadeIn delay={0.15}>
           <div style={{ marginTop: "56px", background: "linear-gradient(135deg, #1a1a2e, #2d2b55)", borderRadius: "16px", padding: "36px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "20px" }}>
-            <div><h3 style={{ fontSize: "17px", fontWeight: 700, color: "#ffffff", marginBottom: "6px" }}>Not sure which program to choose?</h3><p style={{ fontSize: "14px", color: "#cbd5e1" }}>Get a free consultation — we&apos;ll help you pick the right path.</p></div>
+            <div>
+              <h3 style={{ fontSize: "17px", fontWeight: 700, color: "#ffffff", marginBottom: "6px" }}>Not sure which program to choose?</h3>
+              <p style={{ fontSize: "14px", color: "#cbd5e1" }}>Get a free consultation — we&apos;ll help you pick the right path.</p>
+            </div>
             <Link href="/contact" className="btn-primary" style={{ flexShrink: 0 }}>Talk to Us</Link>
           </div>
         </FadeIn>
