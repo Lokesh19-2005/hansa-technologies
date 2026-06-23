@@ -8,7 +8,7 @@ export default function Footer() {
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <div style={{ display: "grid", gridTemplateColumns: "2.5fr repeat(3, 1fr)", gap: "40px", marginBottom: "56px" }} className="footer-grid">
           <div>
-            <img src="/logo.png" alt="Hansa Technologies" style={{ height: "60px", width: "auto", objectFit: "contain", marginBottom: "16px" }} />
+            <img src="/logo.png" alt="Hansa Technologies" style={{ height: "80px", width: "auto", objectFit: "contain", marginBottom: "16px" }} />
             <p style={{ fontSize: "14px", color: "#94a3b8", lineHeight: 1.8, maxWidth: "320px", marginBottom: "20px" }}>
               Google 5-Star Rated AI-Based Software Training Institute. Transforming beginners into professionals since 1994.
             </p>
