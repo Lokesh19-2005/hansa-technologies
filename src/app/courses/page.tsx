@@ -79,7 +79,7 @@ export default function CoursesPage() {
 
                 {/* WhatsApp Enquiry */}
                 <a
-                  href={`https://wa.me/919949960200?text=${encodeURIComponent(`Hi HANSA Technologies! 👋\n\nI'm interested in the *${course.name}* program.\n\nDuration: ${course.duration}\nLevel: ${course.level}\n\nPlease share details about:\n• Fee structure\n• Batch timings\n• Demo class\n\nThank you!`)}`}
+                  href={`https://wa.me/919949960200?text=${encodeURIComponent(`Hi HANSA Technologies! 👋\n\nI'm interested in the *${course.name}* program.\n\nLevel: ${course.level}\n\nPlease share details about:\n• Fee structure\n• Batch timings\n• Demo class\n\nThank you!`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "13px", fontWeight: 600, color: "#25D366", textDecoration: "none", padding: "8px 14px", background: "rgba(37, 211, 102, 0.08)", borderRadius: "8px", border: "1px solid rgba(37, 211, 102, 0.15)", transition: "all 0.2s" }}
