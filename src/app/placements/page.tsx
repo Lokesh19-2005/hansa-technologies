@@ -6,36 +6,32 @@ import Link from "next/link";
 export default function PlacementsPage() {
   return (
     <>
-      <section style={{ background: "radial-gradient(ellipse at 60% 30%, rgba(0, 255, 170, 0.05) 0%, transparent 50%), #050d1a", padding: "100px 24px 80px" }}>
+      <section style={{ background: "radial-gradient(ellipse at 60% 30%, rgba(52, 211, 153, 0.05) 0%, transparent 50%), #030712", padding: "100px 20px 80px" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <FadeIn>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "6px 16px", background: "rgba(0, 255, 170, 0.06)", border: "1px solid rgba(0, 255, 170, 0.2)", borderRadius: "20px", marginBottom: "24px" }}>
-              <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#00ffaa", boxShadow: "0 0 8px #00ffaa" }} />
-              <span style={{ fontSize: "12px", color: "#00ffaa", fontWeight: 500 }}>95% PLACEMENT RATE</span>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "7px 16px", background: "rgba(52, 211, 153, 0.06)", border: "1px solid rgba(52, 211, 153, 0.15)", borderRadius: "20px", marginBottom: "24px" }}>
+              <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#34d399", boxShadow: "0 0 8px #34d399" }} />
+              <span style={{ fontSize: "12px", color: "#34d399", fontWeight: 500 }}>95% PLACEMENT RATE</span>
             </div>
             <h1 style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 700, lineHeight: 1.1, color: "#ffffff", marginBottom: "20px" }}>
-              From learning<br />
-              <span style={{ background: "linear-gradient(135deg, #00d4ff, #00ffaa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>to earning.</span>
+              From learning<br /><span style={{ background: "linear-gradient(135deg, #38bdf8, #34d399)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>to earning.</span>
             </h1>
-            <p style={{ fontSize: "16px", color: "#64748b", lineHeight: 1.8, maxWidth: "520px" }}>
-              Complete career support — from training to placement. We provide everything you need to land your first (or next) tech job.
-            </p>
+            <p style={{ fontSize: "16px", color: "#64748b", lineHeight: 1.8, maxWidth: "540px" }}>Complete career support — training, internships, interview prep, resume building, and placement assistance. Everything you need to land your tech job.</p>
           </FadeIn>
         </div>
       </section>
 
-      <section style={{ background: "#0a1628", padding: "56px 24px", borderTop: "1px solid rgba(0, 212, 255, 0.06)", borderBottom: "1px solid rgba(0, 212, 255, 0.06)" }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: "32px", textAlign: "center" }}>
+      <section style={{ background: "#0f172a", padding: "56px 20px", borderTop: "1px solid rgba(56, 189, 248, 0.05)", borderBottom: "1px solid rgba(56, 189, 248, 0.05)" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: "24px", textAlign: "center" }}>
           {[
-            { v: "1,000+", l: "Students Placed", icon: "🎯" },
-            { v: "200+", l: "Hiring Partners", icon: "🏢" },
-            { v: "95%", l: "Placement Rate", icon: "📈" },
-            { v: "30+", l: "Year Track Record", icon: "⭐" },
+            { v: "1,000+", l: "Students Placed" },
+            { v: "200+", l: "Hiring Partners" },
+            { v: "95%", l: "Placement Rate" },
+            { v: "30+", l: "Year Track Record" },
           ].map((s, i) => (
-            <ScaleIn key={s.l} delay={i * 0.08}>
+            <ScaleIn key={s.l} delay={i * 0.07}>
               <div>
-                <span style={{ fontSize: "24px", display: "block", marginBottom: "8px" }}>{s.icon}</span>
-                <span style={{ display: "block", fontSize: "28px", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, background: "linear-gradient(135deg, #00d4ff, #00ffaa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{s.v}</span>
+                <span style={{ display: "block", fontSize: "26px", fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, background: "linear-gradient(135deg, #38bdf8, #34d399)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{s.v}</span>
                 <span style={{ fontSize: "11px", color: "#475569", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.08em" }}>{s.l}</span>
               </div>
             </ScaleIn>
@@ -43,29 +39,27 @@ export default function PlacementsPage() {
         </div>
       </section>
 
-      <section style={{ background: "#050d1a", padding: "80px 24px" }}>
+      <section style={{ background: "#030712", padding: "80px 20px" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <FadeIn>
             <h2 style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)", fontWeight: 700, color: "#ffffff", marginBottom: "12px", textAlign: "center" }}>How we help</h2>
-            <p style={{ fontSize: "15px", color: "#475569", marginBottom: "48px", textAlign: "center" }}>End-to-end career support designed to get you hired.</p>
+            <p style={{ fontSize: "15px", color: "#475569", marginBottom: "48px", textAlign: "center" }}>End-to-end career support.</p>
           </FadeIn>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "14px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: "14px" }}>
             {[
-              { t: "Placement Assistance", d: "Dedicated cell connecting trained students with companies hiring for relevant roles.", icon: "🤝" },
-              { t: "Interview Preparation", d: "Mock interviews, technical rounds practice, HR prep, and group discussion training.", icon: "🎤" },
-              { t: "Resume Building", d: "Professional, ATS-optimized resumes that highlight your skills and projects effectively.", icon: "📄" },
-              { t: "CRT Training", d: "Aptitude, logical reasoning, and verbal ability — everything for campus recruitment.", icon: "🧠" },
-              { t: "Internships", d: "Real industry exposure with mentorship, project work, and experience certificates.", icon: "💼" },
-              { t: "Career Guidance", d: "One-on-one counseling to help you identify and pursue the right career path.", icon: "🧭" },
+              { t: "Placement Assistance", d: "Dedicated placement cell connecting students with hiring companies.", icon: "🤝" },
+              { t: "Interview Preparation", d: "Mock interviews, technical rounds, HR prep, group discussions.", icon: "🎤" },
+              { t: "Resume Building", d: "ATS-optimized resumes highlighting skills and projects.", icon: "📄" },
+              { t: "CRT Training", d: "Aptitude, reasoning, verbal — campus recruitment ready.", icon: "🧠" },
+              { t: "Internships", d: "Real industry exposure with mentorship and certificates.", icon: "💼" },
+              { t: "Career Guidance", d: "One-on-one counseling for the right career path.", icon: "🧭" },
             ].map((s, i) => (
-              <ScaleIn key={s.t} delay={i * 0.06}>
-                <div
-                  style={{ background: "rgba(10, 22, 40, 0.6)", borderRadius: "14px", padding: "24px", border: "1px solid rgba(148, 163, 184, 0.06)", height: "100%", transition: "all 0.3s" }}
-                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(0, 212, 255, 0.2)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(148, 163, 184, 0.06)"; e.currentTarget.style.transform = "translateY(0)"; }}
-                >
+              <ScaleIn key={s.t} delay={i * 0.05}>
+                <div style={{ background: "rgba(15, 23, 42, 0.5)", borderRadius: "14px", padding: "24px", border: "1px solid rgba(148, 163, 184, 0.05)", height: "100%", transition: "all 0.3s" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(56, 189, 248, 0.15)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(148, 163, 184, 0.05)"; e.currentTarget.style.transform = "translateY(0)"; }}>
                   <span style={{ fontSize: "24px", display: "block", marginBottom: "12px" }}>{s.icon}</span>
-                  <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#e2e8f0", marginBottom: "8px" }}>{s.t}</h3>
+                  <h3 style={{ fontSize: "14px", fontWeight: 700, color: "#e2e8f0", marginBottom: "6px" }}>{s.t}</h3>
                   <p style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.7 }}>{s.d}</p>
                 </div>
               </ScaleIn>
@@ -74,13 +68,13 @@ export default function PlacementsPage() {
         </div>
       </section>
 
-      <section style={{ background: "#0a1628", padding: "80px 24px" }}>
+      <section style={{ background: "#0f172a", padding: "80px 20px" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <FadeIn>
-            <h2 style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)", fontWeight: 700, color: "#ffffff", marginBottom: "12px", textAlign: "center" }}>Career transformations</h2>
-            <p style={{ fontSize: "15px", color: "#475569", marginBottom: "48px", textAlign: "center" }}>Real students, real placements.</p>
+            <h2 style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)", fontWeight: 700, color: "#ffffff", marginBottom: "12px", textAlign: "center" }}>Career Transformations</h2>
+            <p style={{ fontSize: "15px", color: "#475569", marginBottom: "48px", textAlign: "center" }}>Real students, real results.</p>
           </FadeIn>
-          <div style={{ background: "rgba(10, 22, 40, 0.6)", borderRadius: "16px", padding: "8px", border: "1px solid rgba(0, 212, 255, 0.06)" }}>
+          <div style={{ background: "rgba(15, 23, 42, 0.5)", borderRadius: "16px", padding: "8px", border: "1px solid rgba(56, 189, 248, 0.05)" }}>
             {[
               { name: "Arun Prasad", from: "BSc Graduate", to: "Software Engineer, Cognizant" },
               { name: "Divya Lakshmi", from: "Commerce Student", to: "Data Analyst, Deloitte" },
@@ -88,13 +82,13 @@ export default function PlacementsPage() {
               { name: "Sneha Rao", from: "BCA Student", to: "Web Developer, TCS" },
               { name: "Venkat Rao", from: "B.Com Graduate", to: "SAP Consultant, Deloitte" },
             ].map((s, i) => (
-              <FadeIn key={s.name} delay={i * 0.06}>
-                <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", padding: "18px 20px", borderBottom: i < 4 ? "1px solid rgba(148, 163, 184, 0.06)" : "none", gap: "12px" }}>
+              <FadeIn key={s.name} delay={i * 0.05}>
+                <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", padding: "16px 20px", borderBottom: i < 4 ? "1px solid rgba(148, 163, 184, 0.04)" : "none", gap: "10px" }}>
                   <span style={{ fontSize: "14px", fontWeight: 600, color: "#e2e8f0" }}>{s.name}</span>
-                  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                    <span style={{ fontSize: "12px", color: "#475569", backgroundColor: "rgba(148, 163, 184, 0.06)", padding: "3px 10px", borderRadius: "8px" }}>{s.from}</span>
-                    <span style={{ fontSize: "14px", color: "#00d4ff" }}>→</span>
-                    <span style={{ fontSize: "12px", fontWeight: 600, color: "#00ffaa", backgroundColor: "rgba(0, 255, 170, 0.06)", padding: "3px 10px", borderRadius: "8px" }}>{s.to}</span>
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+                    <span style={{ fontSize: "12px", color: "#475569", backgroundColor: "rgba(148, 163, 184, 0.06)", padding: "2px 10px", borderRadius: "6px" }}>{s.from}</span>
+                    <span style={{ color: "#38bdf8", fontSize: "13px" }}>→</span>
+                    <span style={{ fontSize: "12px", fontWeight: 600, color: "#34d399", backgroundColor: "rgba(52, 211, 153, 0.06)", padding: "2px 10px", borderRadius: "6px" }}>{s.to}</span>
                   </div>
                 </div>
               </FadeIn>

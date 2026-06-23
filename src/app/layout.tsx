@@ -3,8 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import InstagramButton from "@/components/InstagramButton";
-import LinkedInButton from "@/components/LinkedInButton";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
@@ -34,8 +32,6 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
-        <InstagramButton />
-        <LinkedInButton />
         <ScrollToTop />
       </body>
     </html>
