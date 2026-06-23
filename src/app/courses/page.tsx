@@ -76,7 +76,19 @@ export default function CoursesPage() {
                 <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#1a1a2e", marginBottom: "6px" }}>{course.name}</h3>
                 
                 {/* Description */}
-                <p style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.6 }}>{course.desc}</p>
+                <p style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.6, marginBottom: "16px" }}>{course.desc}</p>
+
+                {/* WhatsApp Enquiry */}
+                <a
+                  href={`https://wa.me/919949960200?text=${encodeURIComponent(`Hi HANSA Technologies! 👋\n\nI'm interested in the *${course.name}* program.\n\nDuration: ${course.duration}\nLevel: ${course.level}\n\nPlease share details about:\n• Fee structure\n• Batch timings\n• Demo class\n\nThank you!`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "13px", fontWeight: 600, color: "#25D366", textDecoration: "none", padding: "8px 14px", background: "rgba(37, 211, 102, 0.08)", borderRadius: "8px", border: "1px solid rgba(37, 211, 102, 0.15)", transition: "all 0.2s" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(37, 211, 102, 0.15)"; e.currentTarget.style.borderColor = "rgba(37, 211, 102, 0.3)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(37, 211, 102, 0.08)"; e.currentTarget.style.borderColor = "rgba(37, 211, 102, 0.15)"; }}
+                >
+                  💬 Enquire on WhatsApp
+                </a>
               </div>
             </ScaleIn>
           ))}
